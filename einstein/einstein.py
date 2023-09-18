@@ -5,7 +5,7 @@ mass = int(input("Enter mass (in kilograms): "))
 speed_of_light = 300000000
 
 # Calculate enerygy using the E = mc² formula
-energy = mass * (speed_of_light ** 2)
+energy = mass * (speed_of_light**2)
 
 # Print the equivalent energy as an integer
 print(energy)
