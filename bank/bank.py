@@ -6,7 +6,7 @@ def main():
     user_greeting = user_greeting.strip().lower()
 
     # Check if the greeting starts with "hello" and output the corresponding amount
-    if user_greeting_startswith("hello"):
+    if user_greeting.startswith("hello"):
         print("$0")
     elif user_greeting.startswith("h"):
         print("$20")
