@@ -6,4 +6,4 @@
 
 ## Week 1 Conditionals
 
-- [Deep Thought](deep), [Home Federal Savings Bank](bank), File Extensions, Math Interpreter, Meal Time
+- [Deep Thought](deep), [Home Federal Savings Bank](bank), [File Extensions](extensions), Math Interpreter, Meal Time
