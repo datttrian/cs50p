@@ -2,4 +2,4 @@
 
 ## Week 0 Functions
 
-- Problem Set: [Indoor Voice](/indoor), [Playback Speed](/), [Making Faces](/faces), Einstein, Tip Calculator
+- Problem Set: [Indoor Voice](/indoor), [Playback Speed](/), [Making Faces](/faces), [Einstein](/einstein), Tip Calculator
