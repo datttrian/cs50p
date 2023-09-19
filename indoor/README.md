@@ -56,6 +56,7 @@ to make a file called `indoor.py` where you’ll write your program.
 $ python indoor.py
 HELLO, WORLD
 hello, world
+$
 ```
 
 ## [How to Test](#how-to-test)

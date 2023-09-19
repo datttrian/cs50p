@@ -65,6 +65,18 @@ code faces.py
 
 to make a file called `faces.py` where you’ll write your program.
 
+## [Demo](#demo)
+
+``` highlight
+$ python faces.py
+hello :)
+hello 🙂
+$ python faces.py
+hello :(
+hello 🙁
+$
+```
+
 ## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
