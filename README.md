@@ -6,4 +6,4 @@
 
 ## Week 1 Conditionals
 
-- Problem Set: [Deep Thought](deep), [Home Federal Savings Bank](bank), [File Extensions](extensions), Math Interpreter, Meal Time
+- Problem Set: [Deep Thought](deep), [Home Federal Savings Bank](bank), [File Extensions](extensions), [Math Interpreter](interpreter), Meal Time
