@@ -22,6 +22,33 @@ Hints
 - Be sure to give \$0 not only for “hello” but also “hello there”,
   “hello, Newman”, and the like.
 
+## [Demo](#demo)
+
+``` highlight
+$ python bank.py
+Greeting: Hello
+$0
+$ python bank.py
+Greeting: Hello, Newman
+$0
+$ python bank.py
+Greeting: Hey
+$20
+$ python bank.py
+Greeting: How you doing?
+$20
+$ python bank.py
+Greeting: What's happening?
+$100
+$ python bank.py
+Greeting: What's up?
+$100
+$ python bank.py
+Greeting: How's it going?
+$20
+$
+```
+
 ## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
