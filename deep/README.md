@@ -8,7 +8,7 @@
 > “Yes…!”
 > “Of Life, the Universe and Everything…” said Deep Thought.
 > “Yes…!”
-> “Is…” said Deep Thought, and paused.
+> “Is…” said Deep Thought, and paused.z
 > “Yes…!”
 > “Is…”
 > “Yes…!!!…?”
@@ -26,6 +26,21 @@ Hints
 - No need to convert the user’s input to an `int` if you check for
   equality with `"42"`, a `str`, rather than `42`, an `int`!
 - It’s okay if your output or the user’s wraps onto multiple lines.
+
+## [Demo](#demo)
+
+``` highlight
+$ python deep.py
+What is the Answer to the Great Question of Life, the Universe, and Everything? 42
+Yes
+$ python deep.py
+What is the Answer to the Great Question of Life, the Universe, and Everything? forty-two
+Yes
+$ python deep.py
+What is the Answer to the Great Question of Life, the Universe, and Everything? forty two
+Yes
+$
+```
 
 ## [Before You Begin](#before-you-begin)
 
