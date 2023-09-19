@@ -30,7 +30,20 @@ Amount Due: 25
 Insert Coin: 10
 Amount Due: 15
 Insert Coin: 10
-Amount Due: 5 
+Amount Due: 5
+Insert Coin: 5
+Change Owed: 0
+$ python coke.py
+Amount Due: 50
+Insert Coin: 25
+Amount Due: 25
+Insert Coin: 10
+Amount Due: 15
+Insert Coin: 10
+Amount Due: 5
+Insert Coin: 10
+Change Owed: 5
+$
 ```
 
 ## [Before You Begin](#before-you-begin)
