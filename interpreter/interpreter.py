@@ -23,3 +23,6 @@ def main():
 
     # Format and print the result to one decimal place
     print(f"{result:.1f}")
+
+if __name__ == "__main__":
+    main()
