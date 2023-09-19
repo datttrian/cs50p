@@ -2,8 +2,24 @@
 
 ## Week 0 Functions
 
-- Problem Set: [Indoor Voice](indoor), [Playback Speed](playback), [Making Faces](faces), [Einstein](einstein), Tip Calculator
+- [Indoor Voice](indoor)
+- [Playback Speed](playback)
+- [Making Faces](faces)
+- [Einstein](einstein)
+- [Tip Calculator](tip)
 
 ## Week 1 Conditionals
 
-- Problem Set: [Deep Thought](deep), [Home Federal Savings Bank](bank), [File Extensions](extensions), [Math Interpreter](interpreter), [Meal Time](meal)
+- [Deep Thought](deep)
+- [Home Federal Savings Bank](bank)
+- [File Extensions](extensions)
+- [Math Interpreter](interpreter)
+- [Meal Time](meal)
+
+## Week 2 Loops
+
+- camelCase
+- Coke Machine
+- Just setting up my twttr
+- Vanity Plates
+- Nutrition Facts
