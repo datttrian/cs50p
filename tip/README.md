@@ -51,6 +51,16 @@ Hints
 - Recall that a `str` comes with quite a few methods, per
   [docs.python.org/3/library/stdtypes.html#string-methods](https://docs.python.org/3/library/stdtypes.html#string-methods).
 
+## [Demo](#demo)
+
+``` highlight
+$ python tip.py
+How much was the meal? $50.00
+What percentage would you like to tip? 15%
+Leave $7.50
+$
+```
+
 ## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,

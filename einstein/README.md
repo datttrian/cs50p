@@ -22,6 +22,15 @@ Hints
 - Recall that Python comes with several built-in functions, per
   [docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html).
 
+## [Demo](#demo)
+
+``` highlight
+$ python einstein.py
+m : 50
+E: 4500000000000000000
+$
+```
+
 ## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
