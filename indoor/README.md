@@ -50,6 +50,14 @@ code indoor.py
 
 to make a file called `indoor.py` where you’ll write your program.
 
+## [Demo](#demo)
+
+``` highlight
+$ python indoor.py
+HELLO, WORLD
+hello, world
+```
+
 ## [How to Test](#how-to-test)
 
 Here’s how to test your code manually. At the `indoor/ $` prompt in your
