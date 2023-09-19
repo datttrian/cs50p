@@ -2,7 +2,7 @@
 
 ## Week 0 Functions
 
-- Problem Set: [Indoor Voice](indoor), [Playback Speed](), [Making Faces](faces), [Einstein](einstein), [Tip Calculator](tip)
+- Problem Set: Indoor Voice, Playback Speed, Making Faces, Einstein, Tip Calculator
 
 ## Week 1 Conditionals
 
