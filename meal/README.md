@@ -48,6 +48,26 @@ Hints
 
 - Keep in mind that there are 60 minutes in 1 hour.
 
+## [Demo](#demo)
+
+``` highlight
+$ python meal.py
+What time is it? 7:00
+breakfast time
+$ python meal.py
+What time is it? 7:30
+breakfast time
+$ python meal.py
+What time is it? 8:01
+$ python meal.py
+What time is it? 18:01
+dinner time
+$ python meal.py
+What time is it? 18:59
+dinner time
+$
+```
+
 ## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,

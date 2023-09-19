@@ -3,18 +3,21 @@ def main():
     time_str = input("What time is it? ")
 
     # Convert the input time to toal hours as a float
-    total_hours = convert(time_str)
+    try:
+        total_hours = convert(time_str)
 
-    # Check if it's breakfast, lunch or dinner time
-    if 7 <= total_hours < 8:
-        print("breakfast time")
-    elif 12 <= total_hours <= 13:
-        print("lunch time")
-    elif 18 <= total_hours <= 19:
-        print("dinner time")
-    else:
-        # If it's not mealtime, don't output anything
-        pass
+        # Check if it's breakfast, lunch or dinner time
+        if 7 <= total_hours < 8:
+            print("breakfast time")
+        elif 12 <= total_hours <= 13:
+            print("lunch time")
+        elif 18 <= total_hours <= 19:
+            print("dinner time")
+        else:
+            # If it's not mealtime, don't output anything
+            pass
+    except ValueError:
+        print("Invalid time format.")
 
 
 def convert(time):
