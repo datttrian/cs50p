@@ -32,7 +32,7 @@ Hints
   code like:
   ``` py
   for c in s:
-  print(c, end="")
+    print(c, end="")
   ```
 
 ## [Demo](#demo)

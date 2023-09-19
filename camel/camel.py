@@ -1,5 +1,5 @@
 def main():
-  camel_case_input = input("")
+  camel_case_input = input("camelCase: ")
 
 
 def camel_to_snake(time):
