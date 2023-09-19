@@ -43,6 +43,24 @@ Hints
 - Recall that a `str` comes with quite a few methods, per
   [docs.python.org/3/library/stdtypes.html#string-methods](https://docs.python.org/3/library/stdtypes.html#string-methods).
 
+## [Demo](#demo)
+
+``` highlight
+$ python extensions.py
+File name: cat.gif
+image/gif
+$ python extensions.py
+File name: cat.jpg
+image/jpeg
+$ python extensions.py
+File name: cat.jpeg
+image/jpeg
+$ python extensions.py
+File name: cat
+application/octet-stream
+$
+```
+
 ## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,

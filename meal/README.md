@@ -19,7 +19,7 @@ format, to the corresponding number of hours as a `float`. For instance,
 given a `time` like `"7:30"` (i.e., 7 hours and 30 minutes), `convert`
 should return `7.5` (i.e., 7.5 hours).
 
-``` highlight
+``` py
 def main():
   ...
 
@@ -152,9 +152,9 @@ what output it expected, and what output your program actually gave.
 If you are failing the checks but are sure your program behaves
 correctly, make sure that you haven’t removed the
 
-``` highlight
+``` py
 if __name__ == "__main__":
-main()
+  main()
 ```
 
 line from the code structure you were given. That allows `check50` to

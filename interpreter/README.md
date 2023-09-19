@@ -36,6 +36,24 @@ will assign `1` to `x`, `+` to `y`, and `1` to `z`.
 
 ## [Before You Begin](#before-you-begin)
 
+``` highlight
+$ python interpreter.py
+Expression: 1 + 1
+2.0
+$ python interpreter.py
+Expression: 4 / 3
+1.3
+$ python interpreter.py
+Expression: 100 - 1
+99.0
+$ python interpreter.py
+Expression: -1 + 100
+99.0
+$
+```
+
+## [Before You Begin](#before-you-begin)
+
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
 and execute `cd` by itself. You should find that your terminal window’s
 prompt resembles the below:
