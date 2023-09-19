@@ -12,7 +12,26 @@ integers, and ignore any integer that isn’t an accepted denomination.
 
 ## [Demo](#demo)
 
-Recorded with [asciinema](https://asciinema.org)
+``` highlight
+$ python coke.py
+Amount Due: 50
+Insert Coin: 25
+Amount Due: 25
+Insert Coin: 25
+Change Owed: 0
+$ python coke.py
+Amount Due: 50
+Insert Coin: 50
+Amount Due: 50
+Insert Coin: 49
+Amount Due: 50
+Insert Coin: 25
+Amount Due: 25
+Insert Coin: 10
+Amount Due: 15
+Insert Coin: 10
+Amount Due: 5 
+```
 
 ## [Before You Begin](#before-you-begin)
 
