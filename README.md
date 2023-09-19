@@ -18,7 +18,7 @@
 
 ## Week 2 Loops
 
-- camelCase
+- [camelCase](camel)
 - Coke Machine
 - Just setting up my twttr
 - Vanity Plates
