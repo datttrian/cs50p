@@ -21,15 +21,15 @@ should return `7.5` (i.e., 7.5 hours).
 
 ``` highlight
 def main():
-...
+  ...
 
 
 def convert(time):
-...
+  ...
 
 
 if __name__ == "__main__":
-main()
+  main()
 ```
 
 Hints
