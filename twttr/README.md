@@ -22,7 +22,18 @@ Hints
 
 ## [Demo](#demo)
 
-Recorded with [asciinema](https://asciinema.org)
+``` highlight
+$ python twttr.py
+Input: Twitter
+Output: Twttr
+$ python twttr.py
+Input: What's your name?
+Output: Wht's yr nm?
+$ python twttr.py
+Input: CS50
+Output: CS50
+$
+```
 
 ## [Before You Begin](#before-you-begin)
 
