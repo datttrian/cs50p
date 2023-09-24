@@ -9,27 +9,17 @@ def main():
         print("Invalid")
 
 
-def is_valid(plate):
-    # Check if the plate starts with at least two letters
-    if not re.match(r'^[A-Z]{2,}', plate):
-        return False
+def is_valid(b):
+    if 6 >= len(b) >= 2 and b [0:2].isalpha() and b.isalnum():
+        for char in b:
+            if char.isdigit():
+                index = b.index(char)
+                if b[index:].isdigit()and int(char) !=0:
 
-    # Remove the letters from the plate and check for remaining characters
-    remaining_chars = re.sub(r'[A-Z]', '', plate)
-
-    # Check if the remaining characters consist of numbers only
-    if not re.match(r'^[0-9]+$', remaining_chars):
-        return False
-
-    # Check if the first number is not '0'
-    if remaining_chars[0] == '0':
-        return False
-
-    # Check if the total length of the plate is within the range 2-6 characters
-    if len(plate) < 2 or len(plate) > 6:
-        return False
-
-    return True
+                        return True
+                else:
+                    return False
+        return True
 
 
 if __name__ == "__main__":
