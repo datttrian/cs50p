@@ -16,7 +16,7 @@ def is_valid(s):
     if not s[2:].isalnum():
         return False
 
-    if s[2:].isdigit() and s[2] == "0":
+    if not s[-1].isdigit() or s[2].isdigit() and s[2] == '0':
         return False
 
     if any(char in ". ,;!@#$%^&*()-_+=<>/\\?:" for char in s):
