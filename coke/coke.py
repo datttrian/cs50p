@@ -16,7 +16,7 @@ def main():
         change_owed = total_inserted - 50
         print(f"Change Owed: {change_owed}")
     else:
-        print("No change owed. Enjoy your Coke!")
+        print("Change Owed: 0")
 
 
 if __name__ == "__main__":

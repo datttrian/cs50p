@@ -19,7 +19,7 @@
 ## Week 2 Loops
 
 - [camelCase](camel)
-- Coke Machine
+- [Coke Machine](coke)
 - Just setting up my twttr
 - Vanity Plates
 - Nutrition Facts
