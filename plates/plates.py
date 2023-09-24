@@ -16,8 +16,9 @@ def is_valid(s):
         return False
 
     # Requirement 3: Numbers must come at the end, and the first number cannot be '0'
-    if s[2].isdigit() and s[2] == '0':
-        return False
+    if any(char.isdigit() for char in s[2:]):
+        if not s[-1].isdigit() or s[2] == '0':
+            return False
 
     # Requirement 4: No periods, spaces, or punctuation marks are allowed
     if any(char in s for char in ". ,;:!?"):
