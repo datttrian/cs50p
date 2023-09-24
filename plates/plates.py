@@ -10,13 +10,16 @@ def main():
 
 
 def is_valid(b):
-    if (
-        2 <= len(b) <= 6
-        and b.isalnum()
-        and any(char.isdigit() and int(char) != 0 for char in b)
-    ):
+    if 6 >= len(b) >= 2 and b [0:2].isalpha() and b.isalnum():
+        for char in b:
+            if char.isdigit():
+                index = b.index(char)
+                if b[index:].isdigit()and int(char) !=0:
+
+                        return True
+                else:
+                    return False
         return True
-    return False
 
 
 if __name__ == "__main__":
