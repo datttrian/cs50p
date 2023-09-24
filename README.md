@@ -20,6 +20,6 @@
 
 - [camelCase](camel)
 - [Coke Machine](coke)
-- Just setting up my twttr
+- [Just setting up my twttr](twttr)
 - Vanity Plates
 - Nutrition Facts
