@@ -6,25 +6,26 @@ def main():
         print("Invalid")
 
 
-def is_valid(s):
-    # Requirement 1: Must start with at least two letters
-    if len(s) < 2 or not s[:2].isalpha():
+def is_valid(plate):
+    # Check if the plate starts with at least two letters
+    if not re.match(r'^[A-Z]{2,}', plate):
         return False
 
-    # Requirement 2: Maximum of 6 characters (letters or numbers) and a minimum of 2 characters
-    if not (2 <= len(s) <= 6):
+    # Remove the letters from the plate and check for remaining characters
+    remaining_chars = re.sub(r'[A-Z]', '', plate)
+
+    # Check if the remaining characters consist of numbers only
+    if not re.match(r'^[0-9]+$', remaining_chars):
         return False
 
-    # Requirement 3: Numbers must come at the end, and the first number cannot be '0'
-    if any(char.isdigit() for char in s[2:]):
-        if not s[-1].isdigit() or s[2] == '0':
-            return False
-
-    # Requirement 4: No periods, spaces, or punctuation marks are allowed
-    if any(char in s for char in ". ,;:!?"):
+    # Check if the first number is not '0'
+    if remaining_chars[0] == '0':
         return False
 
-    # If all requirements are met, the plate is valid
+    # Check if the total length of the plate is within the range 2-6 characters
+    if len(plate) < 2 or len(plate) > 6:
+        return False
+
     return True
 
 
