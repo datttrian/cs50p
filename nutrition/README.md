@@ -25,9 +25,9 @@ Hints
   calories!
 - If `k` is a `str` and `d` is a `dict`, you can check whether `k` is a
   key in `d` with code like:
-  ``` highlight
+  ``` py
   if k in d:
-  ...
+    ...
   ```
 - Take care to output the fruit’s calories, not calories from fat!
 
