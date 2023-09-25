@@ -20,14 +20,24 @@ def calculate_percentage(x, y):
 
 def main():
     while True:
-        x, y = get_fraction()
-        if x / y <= 0.01:
-            print("E")
-        elif x / y >= 0.99:
-            print("F")
-        else:
-            percentage = calculate_percentage(x, y)
-            print(f"{percentage}%")
+        try:
+            fraction_str = input("Fraction: ")
+            x, y = map(int, fraction_str.split("/"))
+
+            if not (0 <= x <= y):
+                raise ValueError(
+                    "Invalid input. Numerator (X) must be between 0 and the denominator (Y)."
+                )
+
+            percent = (x / y) * 100
+            if percent <= 1:
+                print("E")
+            elif percent >= 99:
+                print("F")
+            else:
+                print(f"{round(percent)}%")
+        except (ValueError, ZeroDivisionError) as e:
+            print(f"Invalid input. {e}")
 
 
 if __name__ == "__main__":
