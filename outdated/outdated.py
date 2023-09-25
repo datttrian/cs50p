@@ -1,16 +1,27 @@
 # List of month names
 months = [
+    "Jan",
     "January",
+    "Feb",
     "February",
+    "Mar",
     "March",
+    "Apr",
     "April",
     "May",
+    "Jun",
     "June",
+    "Jul",
     "July",
+    "Aug",
     "August",
+    "Sep",
     "September",
+    "Oct",
     "October",
+    "Nov",
     "November",
+    "Dec",
     "December",
 ]
 
@@ -20,7 +31,7 @@ def validate_date(input_date):
 
     if len(parts) == 3:
         month = parts[0]
-        day = parts[1].strip(',')
+        day = parts[1].strip(",")
         year = parts[2]
 
         if month in months:
@@ -28,12 +39,12 @@ def validate_date(input_date):
                 day = int(day)
                 year = int(year)
                 if 1 <= day <= 31 and 0 <= year <= 9999:
-                    return f"{year:04d}-{months.index(month) + 1:02d}-{day:02d}"
+                    return f"{year:04d}-{months[months.index(month) + 1]:02d}-{day:02d}"
             except ValueError:
                 pass
 
     elif len(parts) == 1:
-        date_parts = parts[0].split('/')
+        date_parts = parts[0].split("/")
         if len(date_parts) == 3:
             try:
                 month = int(date_parts[0])
@@ -46,6 +57,7 @@ def validate_date(input_date):
 
     return None
 
+
 def main():
     while True:
         user_input = input("Date: ")
@@ -57,6 +69,7 @@ def main():
             break
         else:
             print("Invalid date. Please enter a valid date in the specified formats.")
+
 
 if __name__ == "__main__":
     main()
