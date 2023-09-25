@@ -20,6 +20,10 @@ fruit_calories = {
     "cantaloupe": 64,
     "figs": 74,
     "pomegranate": 83,
+    "kiwifruit": 90,
+    "pear": 100,
+    "sweet cherries": 100
+
 }
 
 # Prompt the user for input (fruit name)
@@ -31,4 +35,4 @@ if user_input in fruit_calories:
     print(f"Calories: {fruit_calories[user_input]}")
 else:
     # If it doesn't exist, inform the user that the input is not a recognized fruit
-    print("Fruit not found in database.")
+    pass  # Do nothing for invalid input
