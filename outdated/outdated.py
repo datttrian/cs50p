@@ -14,49 +14,36 @@ months = [
     "December",
 ]
 
+while True:
+    user_input = input("Date: ")
 
-def validate_date(input_date):
-    parts = input_date.split()  # Split the input by whitespace
+    # Try to split the input into parts
+    date_parts = user_input.split()
 
-    if len(parts) == 3:
-        month = parts[0]
-        day = parts[1].strip(',')
-        year = parts[2]
+    # Check if there are at least 3 parts
+    if len(date_parts) >= 3:
+        # Extract month, day, and year
+        month = date_parts[0]
+        day = date_parts[1].strip(",")
+        year = date_parts[2]
 
+        # Check if month is valid
         if month in months:
+            # Try to convert day and year to integers
             try:
                 day = int(day)
                 year = int(year)
-                if 1 <= day <= 31 and 0 <= year <= 9999:
-                    return f"{year:04d}-{months.index(month) + 1:02d}-{day:02d}"
             except ValueError:
                 pass
+            else:
+                # Check if day and year are within reasonable ranges
+                if 1 <= day <= 31 and 1 <= year <= 9999:
+                    # Convert month to its numeric representation (1-12)
+                    month_number = months.index(month) + 1
 
-    elif len(parts) == 1:
-        date_parts = parts[0].split('/')
-        if len(date_parts) == 3:
-            try:
-                month = int(date_parts[0])
-                day = int(date_parts[1])
-                year = int(date_parts[2])
-                if 1 <= month <= 12 and 1 <= day <= 31 and 0 <= year <= 9999:
-                    return f"{year:04d}-{month:02d}-{day:02d}"
-            except ValueError:
-                pass
+                    # Format the date as YYYY-MM-DD
+                    formatted_date = f"{year:04d}-{month_number:02d}-{day:02d}"
+                    print(formatted_date)
+                    break
 
-    return None
-
-def main():
-    while True:
-        user_input = input("Date: ")
-        user_input = user_input.strip()  # Remove leading/trailing whitespace
-        converted_date = validate_date(user_input)
-
-        if converted_date:
-            print(converted_date)
-            break
-        else:
-            print("Invalid date. Please enter a valid date in the specified formats.")
-
-if __name__ == "__main__":
-    main()
+    print("Invalid date. Please enter a valid date in month-day-year format.")
