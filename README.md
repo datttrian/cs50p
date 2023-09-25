@@ -23,3 +23,10 @@
 - [Just setting up my twttr](twttr)
 - [Vanity Plates](plates)
 - [Nutrition Facts](nutrition)
+
+## Week 3 Exceptions
+
+- Fuel Gauge
+- Felipe’s Taqueria
+- Grocery List
+- Outdated
