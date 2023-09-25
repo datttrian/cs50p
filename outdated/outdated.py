@@ -20,7 +20,7 @@ def validate_date(input_date):
 
     if len(parts) == 3:
         month = parts[0]
-        day = parts[1].strip(",")
+        day = parts[1].strip(',')
         year = parts[2]
 
         if month in months:
@@ -33,7 +33,7 @@ def validate_date(input_date):
                 pass
 
     elif len(parts) == 1:
-        date_parts = parts[0].split("/")
+        date_parts = parts[0].split('/')
         if len(date_parts) == 3:
             try:
                 month = int(date_parts[0])
