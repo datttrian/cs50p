@@ -1,5 +1,8 @@
+import re
+
+
 def main():
-    plate = input("Plat: ")
+    plate = input("Plate: ")
     if is_valid(plate):
         print("Valid")
     else:
@@ -8,7 +11,7 @@ def main():
 
 def is_valid(s):
     # Check if the length of the string is between 2 and 6 characters (inclusive)
-    if 2 <= len(s) <= 6:
+    if 6 >= len(s) >= 2:
         # Check if the first two characters are alphabetic
         if s[0:2].isalpha():
             # Check if the entire string consists of alphanumeric characters
@@ -24,5 +27,11 @@ def is_valid(s):
                             return True
                         else:
                             return False
+                # If there are no digits or all digits are zeros, return True
+                return True
+    # If any of the conditions fail, return False
+    return False
 
-                    # If there are no digits or all digits 
+
+if __name__ == "__main__":
+    main()

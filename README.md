@@ -22,4 +22,4 @@
 - [Coke Machine](coke)
 - [Just setting up my twttr](twttr)
 - [Vanity Plates](plates)
-- Nutrition Facts
+- [Nutrition Facts](nutrition)
