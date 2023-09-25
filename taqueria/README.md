@@ -7,7 +7,7 @@ Taqueria](https://www.felipesboston.com/), which offers a
 below, wherein the value of each key is a price in dollars:
 
 ``` json
-    {
+{
     "Baja Taco": 4.00,
     "Burrito": 7.50,
     "Bowl": 8.50,
@@ -17,7 +17,7 @@ below, wherein the value of each key is a price in dollars:
     "Super Quesadilla": 9.50,
     "Taco": 3.00,
     "Tortilla Salad": 8.00
-    }
+}
 ```
 
 In a file called `taqueria.py`, implement a program that enables a user
