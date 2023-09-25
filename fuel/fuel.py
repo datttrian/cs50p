@@ -14,7 +14,7 @@ def main():
             # Calculate the percentage of fuel and round it to the nearest integer
             percent = (numerator / denominator) * 100
 
-            # Check if the tank is essentially empty (1% or less)
+            # Check if the tank is essentially empty(1%but  or less)
             if percent <= 1:
                 print("E")
             # Check if the tank is essentially full (99% or more)
