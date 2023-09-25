@@ -22,12 +22,13 @@ fruit_calories = {
     "pomegranate": 83,
 }
 
-# Prompt the user for input
-item = input("Item: ").lower()  # Convert input to lowercase for case insensitivity
+# Prompt the user for input (fruit name)
+user_input = input("Enter a fruit: ").lower()  # Convert input to lowercase for case-insensitive matching
 
-# Check if the input is a valid fruit in the dictionary
-if item in fruit_calories:
-    calories = fruit_calories[item]
-    print(f"Calories: {calories}")
+# Check if the entered fruit exists in the dictionary
+if user_input in fruit_calories:
+    # If it exists, print the calories for that fruit
+    print(f"Calories: {fruit_calories[user_input]}")
 else:
-    print("Invalid input. Please enter a valid fruit.")
+    # If it doesn't exist, inform the user that the input is not a recognized fruit
+    print("Fruit not found in database.")
