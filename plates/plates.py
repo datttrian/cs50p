@@ -7,22 +7,33 @@ def main():
 
 
 def is_valid(s):
-    # Check if the length of the string is between 2 and 6 characters (inclusive)
-    if 2 <= len(s) <= 6:
-        # Check if the first two characters are alphabetic
-        if s[0:2].isalpha():
-            # Check if the entire string consists of alphanumeric characters
-            if s.isalnum():
-                # Iterate through each character in the string
-                for char in s:
-                    # Check if the character is a digit
-                    if char.isdigit():
-                        # Get the index of the current character in the string
-                        index = s.index(char)
-                        # Check if the remaining substring (starting from the current character) is composed of digits
-                        if s[index:].isdigit() and int(char) != 0:
-                            return True
-                        else:
-                            return False
+    # Check if the length of the string is not between 2 and 6 characters (inclusive)
+    if not (2 <= len(s) <= 6):
+        return True
 
-                    # If there are no digits or all digits 
+    # Check if the first two characters are not alphabetic
+    if not s[:2].isalpha():
+        return True
+
+    # Check if the entire string does not consist of alphanumeric characters
+    if not s.isalnum():
+        return True
+
+    # Check if there are no digits in the string
+    if not any(char.isdigit() for char in s):
+        return True
+
+    # Check if the string is not composed of digits after the first non-zero digit
+    non_zero_found = False
+    for char in s:
+        if non_zero_found and not char.isdigit():
+            return True
+        if char.isdigit() and char != "0":
+            non_zero_found = True
+
+    # If none of the conditions failed, return False
+    return False
+
+
+if __name__ == "__main__":
+    main()
