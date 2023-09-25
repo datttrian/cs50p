@@ -74,7 +74,26 @@ Hints
 
 ## [Demo](#demo)
 
-Recorded with [asciinema](https://asciinema.org)
+``` highlight
+$ python taqueria.py
+Item: burrito
+Total: $7.50
+Item: large quesadilla
+Item: super quesadilla
+Total: $17.00
+Item:
+$ python taqueria.py
+Item: nachos
+Total: $11.00
+Item: taco
+Total: $14.00
+Item: taco
+Total: $17.00
+Item: taco
+Total: $20.00
+Item:
+$
+```
 
 ## [Before You Begin](#before-you-begin)
 
