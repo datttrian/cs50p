@@ -33,7 +33,17 @@ Hints
 
 ## [Demo](#demo)
 
-Recorded with [asciinema](https://asciinema.org)
+``` highlight
+$ python nutrition.py
+Item: apple
+Calories: 130
+$ python nutrition.py
+Item: banana
+Calories: 110
+$ python nutrition.py
+Item: chocolate
+$
+```
 
 ## [Before You Begin](#before-you-begin)
 
