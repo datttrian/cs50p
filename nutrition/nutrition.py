@@ -22,12 +22,13 @@ fruit_calories = {
     "pomegranate": 83,
     "kiwifruit": 90,
     "pear": 100,
-    "sweet cherries": 100
-
+    "sweet cherries": 100,
 }
 
 # Prompt the user for input (fruit name)
-user_input = input("Enter a fruit: ").lower()  # Convert input to lowercase for case-insensitive matching
+user_input = input(
+    "Enter a fruit: "
+).lower()  # Convert input to lowercase for case-insensitive matching
 
 # Check if the entered fruit exists in the dictionary
 if user_input in fruit_calories:
