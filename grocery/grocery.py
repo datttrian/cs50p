@@ -4,7 +4,7 @@ def main():
 
     try:
         while True:
-            item = input().strip().lower() # read user input and convert to lowercase
+            item = input().strip().lower()  # read user input and convert to lowercase
 
             # Check if the item is already in the dictionary
             if item in grocery_list:
@@ -13,13 +13,13 @@ def main():
                 grocery_list[item] = 1
 
     except EOFError:
-        pass # end of input
+        pass  # end of input
 
     # Sort the dictionary by keys in a case-insensitive manner
-    sorted_list = sorted(grocery_list.items(), key = lambda x: x[0].casefold())
+    sorted_list = sorted(grocery_list.items(), key=lambda x: x[0].casefold())
 
     # Print the grocery list in the desired format
-    for item, count in sorted list:
+    for item, count in sorted_list:
         print(f"{count} {item.upper()}")
 
 
