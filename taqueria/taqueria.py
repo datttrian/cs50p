@@ -18,7 +18,7 @@ def main():
     # Main loop to take user input
     try:
         while True:
-            item = input("Item: ").strip().title() # Normalize user input
+            item = input("Item: ").strip().title()  # Normalize user input
             if item in menu:
                 total_cost += menu[item]
                 print(f"Total: ${total_cost:.2f}")
@@ -26,7 +26,8 @@ def main():
                 print("Invalid item. Please choose from the menu.")
 
     except EOFError:
-        pass # exit the llop when Control-D is pressed
+        pass  # exit the loop when Control-D is pressed
 
-def __init__ == "__main__":
+
+if __name__ == "__main__":
     main()
