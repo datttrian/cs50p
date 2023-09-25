@@ -40,3 +40,7 @@ def main():
             # If no exceptions were raised, the date is valid, so print it in the yyyy-mm-dd format
             print(f"{int(yyyy)}-{int(mm):02}-{int(dd):02}")
             break
+
+
+if __name__ == "__main__":
+    main()

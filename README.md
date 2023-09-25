@@ -29,4 +29,4 @@
 - [Fuel Gauge](fuel)
 - [Felipe’s Taqueria](taqueria)
 - [Grocery List]()
-- [Outdated]()
+- [Outdated](outdated)
