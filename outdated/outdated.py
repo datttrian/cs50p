@@ -46,7 +46,6 @@ def validate_date(input_date):
 
     return None
 
-
 def main():
     while True:
         user_input = input("Date: ")
@@ -58,7 +57,6 @@ def main():
             break
         else:
             print("Invalid date. Please enter a valid date in the specified formats.")
-
 
 if __name__ == "__main__":
     main()
