@@ -21,5 +21,5 @@
 - [camelCase](camel)
 - [Coke Machine](coke)
 - [Just setting up my twttr](twttr)
-- Vanity Plates
+- [Vanity Plates](plates)
 - Nutrition Facts
