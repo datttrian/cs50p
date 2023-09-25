@@ -1,75 +1,32 @@
-# List of month names
 months = [
-    "Jan",
     "January",
-    "Feb",
     "February",
-    "Mar",
     "March",
-    "Apr",
     "April",
     "May",
-    "Jun",
     "June",
-    "Jul",
     "July",
-    "Aug",
     "August",
-    "Sep",
     "September",
-    "Oct",
     "October",
-    "Nov",
     "November",
-    "Dec",
     "December",
 ]
 
-
-def validate_date(input_date):
-    parts = input_date.split()  # Split the input by whitespace
-
-    if len(parts) == 3:
-        month = parts[0]
-        day = parts[1].strip(",")
-        year = parts[2]
-
-        if month in months:
-            try:
-                day = int(day)
-                year = int(year)
-                if 1 <= day <= 31 and 0 <= year <= 9999:
-                    return f"{year:04d}-{months[months.index(month) + 1]:02d}-{day:02d}"
-            except ValueError:
-                pass
-
-    elif len(parts) == 1:
-        date_parts = parts[0].split("/")
-        if len(date_parts) == 3:
-            try:
-                month = int(date_parts[0])
-                day = int(date_parts[1])
-                year = int(date_parts[2])
-                if 1 <= month <= 12 and 1 <= day <= 31 and 0 <= year <= 9999:
-                    return f"{year:04d}-{month:02d}-{day:02d}"
-            except ValueError:
-                pass
-
-    return None
-
-
-def main():
-    while True:
-        user_input = input("Date: ")
-        user_input = user_input.strip()  # Remove leading/trailing whitespace
-        converted_date = validate_date(user_input)
-
-        if converted_date:
-            print(converted_date)
-            break
-        else:
-            print("Invalid date. Please enter a valid date in the specified formats.")
-
-
-if __name__ == "__main__":
-    main()
+while True:
+    date = input("Date: ")
+    try:
+        if "/" in date:
+            mm, dd, yyyy = date.split("/")
+        elif "," in date:
+            mmdd, yyyy = date.split(", ")
+            mm, dd = mmdd.split(" ")
+            # No need to check if mm in months. KeyError is handled separately.
+            mm = (months.index(mm)) + 1
+        if int(mm) > 12 or int(dd) > 31:
+            raise ValueError
+    except (AttributeError, ValueError, NameError, KeyError):
+        pass
+    else:
+        print(f"{int(yyyy)}-{int(mm):02}-{int(dd):02}")
+        break
