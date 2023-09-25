@@ -27,6 +27,6 @@
 ## Week 3 Exceptions
 
 - [Fuel Gauge](fuel)
-- Felipe’s Taqueria
-- Grocery List
+- [Felipe’s Taqueria]()
+- [Grocery List]()
 - Outdated
