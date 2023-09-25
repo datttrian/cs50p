@@ -50,6 +50,7 @@ def validate_date(input_date):
 def main():
     while True:
         user_input = input("Date: ")
+        user_input = user_input.strip()  # Remove leading/trailing whitespace
         converted_date = validate_date(user_input)
 
         if converted_date:
