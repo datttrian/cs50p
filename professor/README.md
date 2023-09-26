@@ -67,7 +67,26 @@ Hints
 
 ## [Demo](#demo)
 
-Recorded with [asciinema](https://asciinema.org)
+$ python professor.py
+Level: 1
+2 + 8 = 10
+3 + 7 = 10
+9 + 4 = 10
+EEE
+9 + 4 = 11
+EEE
+9 + 4 = 12
+EEE
+9 + 4 = 13
+4 + 7 = 11
+6 + 4 = 10
+7 + 4 = 11
+1 + 4 = cat
+EEE
+1 + 4 = dog
+EEE
+1 + 4 = bird
+EEE   
 
 ## [Before You Begin](#before-you-begin)
 
