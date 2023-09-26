@@ -33,7 +33,7 @@
 
 ## Week 4 Libraries
 
-- [Emojize](emojize)
+- Emojize
 - Frank, Ian and Glen’s Letters
 - Adieu, Adieu
 - Guessing Game
