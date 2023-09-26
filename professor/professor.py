@@ -9,8 +9,9 @@ def main():
         x = generate_integer(level)
         y = generate_integer(level)
         correct_answer = x + y
+        attempts = 0
 
-        while True:
+        while attempts < 3:
             user_answer = input(f"{x} + {y} = ")
 
             if user_answer.isdigit():
@@ -21,11 +22,19 @@ def main():
                     score += 1
                     break
                 else:
-                    print("EEE")
+                    attempts += 1
+                    if attempts == 3:
+                        print(f"EEE {x} + {y} = {correct_answer}")
+                    else:
+                        print("EEE")
             else:
-                print("EEE")
+                attempts += 1
+                if attempts == 3:
+                    print(f"EEE {x} + {y} = {correct_answer}")
+                else:
+                    print("EEE")
 
-    print(f"Score: {score}/10")
+    print(f"Score: {score}")
 
 
 def get_level():
@@ -44,9 +53,9 @@ def generate_integer(level):
     if level == 1:
         return random.randint(0, 9)
     elif level == 2:
-        return random.randint(0, 99)
+        return random.randint(10, 99)
     elif level == 3:
-        return random.randint(0, 999)
+        return random.randint(100, 999)
     else:
         raise ValueError("Invalid level")
 
