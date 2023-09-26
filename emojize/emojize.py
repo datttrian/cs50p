@@ -2,9 +2,8 @@ import emoji
 
 
 def main():
-    user_input = input("Input: ")
-    emojized_text = emoji.emojize(user_input, use_aliases=True)
-    print("Output:", emojized_text)
+    text = input("Input: ")
+    print("Output:", emoji.emojize(text))
 
 
 if __name__ == "__main__":
