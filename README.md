@@ -30,3 +30,12 @@
 - [Felipe’s Taqueria](taqueria)
 - [Grocery List]()
 - [Outdated](outdated)
+
+## Week 4 Libraries
+
+- Emojize
+- Frank, Ian and Glen’s Letters
+- Adieu, Adieu
+- Guessing Game
+- Little Professor
+- Bitcoin Price Index
