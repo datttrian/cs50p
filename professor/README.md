@@ -67,6 +67,7 @@ Hints
 
 ## [Demo](#demo)
 
+``` highlight
 $ python professor.py
 Level: 1
 2 + 8 = 10
@@ -86,7 +87,14 @@ EEE
 1 + 4 = dog
 EEE
 1 + 4 = bird
-EEE   
+EEE
+1 + 4 = 5
+9 + 3 = 12
+2 + 2 = 4
+0 + 0 = 0
+Score: 8
+$
+```
 
 ## [Before You Begin](#before-you-begin)
 
