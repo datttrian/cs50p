@@ -29,7 +29,24 @@ Hints
 
 ## [Demo](#demo)
 
-Recorded with [asciinema](https://asciinema.org)
+``` highlight
+$ python emojize.py
+Input: :thumbs_up:
+Output: 👍
+$ python emojize.py
+Input: :thumbsup:
+Output: 👍
+$ python emojize.py
+Input: hello, :earth_africa:
+Output: hello, 🌍
+$ python emojize.py
+Input: hello, :earth_americas:
+Output: hello, 🌎
+$ python emojize.py
+Input: hello, :earth_asia:
+Output: hello, 🌏
+$
+```
 
 ## [Before You Begin](#before-you-begin)
 
