@@ -39,6 +39,17 @@ Guess: 5
 Too large!
 Guess: 3
 Just right!
+$ python game.py
+Level: cat
+Level: 10
+Guess: cat
+Guess: dog
+Guess: 5
+Too large!
+Guess: 2
+Too small!
+Guess: 3
+Just right!
 $
 ```
 

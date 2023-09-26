@@ -33,9 +33,9 @@
 
 ## Week 4 Libraries
 
-- Emojize
-- Frank, Ian and Glen’s Letters
+- [Emojize]()
+- [Frank, Ian and Glen’s Letters]()
 - [Adieu, Adieu](adieu)
-- Guessing Game
+- [Guessing Game](game)
 - Little Professor
 - Bitcoin Price Index
