@@ -10,7 +10,7 @@ if len(sys.argv) != 2:
 try:
     bitcoins_to_buy = float(sys.argv[1])
 except ValueError:
-    print("Command-line argument is not a number")
+    print("Command-line argument is not a valid number")
     sys.exit(1)
 
 # Make a request to the CoinDesk API
@@ -24,7 +24,7 @@ except requests.RequestException as e:
 # Parse the JSON response
 try:
     data = response.json()
-    price_usd = float(data["bpi"]["USD"]["rate_float"])
+    price_usd = float(data["bpi"]["USD"]["rate"].replace(",", ""))
 except (ValueError, KeyError):
     print("Error parsing API response")
     sys.exit(1)
@@ -33,5 +33,5 @@ except (ValueError, KeyError):
 total_cost = price_usd * bitcoins_to_buy
 
 # Format and print the total cost with thousands separators and four decimal places
-formatted_cost = f"${total_cost:,.4f}"
+formatted_cost = f"${total_cost:.4f}"
 print(formatted_cost)
