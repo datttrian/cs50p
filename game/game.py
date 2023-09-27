@@ -60,6 +60,7 @@ def get_guess():
                 print(
                     "Please enter a positive integer."
                 )  # prompt for a valid positive integer if guess <= 0
+
         except ValueError:
             print(
                 "Please enter a positive integer."

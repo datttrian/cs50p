@@ -20,6 +20,7 @@ def main():
 
             # Append the ented name to the 'names' list
             names.append(name)
+
         except EOFError:
             # Exit the loop if an End of File (EOF) error is encountered
             break
