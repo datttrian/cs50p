@@ -1,45 +1,19 @@
 import random
 
-
-def get_level():
-    while True:
-        try:
-            level = int(input("Level: "))
-            if level > 0:
-                return level
-            else:
-                print("Please enter a positive integer.")
-        except ValueError:
-            print("Please enter a positive integer.")
-
-
-def get_guess():
-    while True:
-        try:
-            guess = int(input("Guess: "))
-            if guess > 0:
-                return guess
-            else:
-                print("Please enter a positive integer.")
-        except ValueError:
-            print("Please enter a positive integer.")
-
-
 def main():
+    # Call 'get_level' to get the game level from the user
     level = get_level()
-    secret_number = random.randint(1, level)
 
+    # Generate a random target number between 1 and the chosen level
+    target_number = random.randint(1, level)
+
+    # Display a welcome message and provide the range of numbers for the guessing game
+    print("Welcome to the Number Guessing Game!")
+    print(f"I'm thinking of a number between 1 and {level}.")
+
+    # Start a loop to repeatedly get the user's guesses until they guess correctly
     while True:
+        # Call 'get_guess' to get the user's guess
         guess = get_guess()
 
-        if guess < secret_number:
-            print("Too small!")
-        elif guess > secret_number:
-            print("Too large!")
-        else:
-            print("Just right!")
-            break
-
-
-if __name__ == "__main__":
-    main()
+        # Compare the user's guess 
