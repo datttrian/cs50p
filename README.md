@@ -35,7 +35,7 @@
 
 - Emojize
 - Frank, Ian and Glen’s Letters
-- [Adieu, Adieu]()
+- [Adieu, Adieu](adieu)
 - [Guessing Game]()
 - [Little Professor]()
 - [Bitcoin Price Index]()
