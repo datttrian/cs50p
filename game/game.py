@@ -1,5 +1,6 @@
 import random
 
+
 def main():
     # Call 'get_level' to get the game level from the user
     level = get_level()
@@ -16,4 +17,55 @@ def main():
         # Call 'get_guess' to get the user's guess
         guess = get_guess()
 
-        # Compare the user's guess 
+        # Compare the user's guess with the target number and provide feedback
+        if guess < target_number:
+            print("Too small! Try again.")
+
+        elif guess > target_number:
+            print("Too large! Try again.")
+
+        else:
+            print(
+                "Congratulations! You guessed it right."
+            )  # display a success message if the guess is correct
+            break
+
+
+# Define a function called 'get_level' to get the user's desired game level
+def get_level():
+    while True:
+        try:
+            # Prompt the user to enter a positive integer and convert the input to an integer
+            level = int(input("Enter the level (positive integer): "))
+
+            # Check if the entered level is greater than 0
+            if level > 0:
+                return level
+            else:
+                print("Please enter a positive integer.")
+        except ValueError:
+            print("Please enter a positive integer.")
+
+
+# Define a function called 'get_guess' to get the user's guessed number
+def get_guess():
+    while True:
+        try:
+            # Prompt the user to enter a positive integer and convert the input to an integer
+            guess = int(input("Enter your guess (positive integer): "))
+
+            # Check if the entered guess is greater than 0
+            if guess > 0:
+                return guess
+            else:
+                print(
+                    "Please enter a positive integer."
+                )  # prompt for a valid positive integer if guess <= 0
+        except ValueError:
+            print(
+                "Please enter a positive integer."
+            )  # prompt for a valid positive integer if input is not an integer
+
+
+if __name__ == "__main__":
+    main()
