@@ -25,9 +25,7 @@ def main():
             print("Too large! Try again.")
 
         else:
-            print(
-                "Just right!"
-            )  # display a success message if the guess is correct
+            print("Just right!")  # display a success message if the guess is correct
             break
 
 
@@ -43,6 +41,7 @@ def get_level():
                 return level
             else:
                 print("Please enter a positive integer.")
+
         except ValueError:
             print("Please enter a positive integer.")
 

@@ -38,7 +38,7 @@
 - [Adieu, Adieu](adieu)
 - [Guessing Game](game)
 - [Little Professor](professor)
-- [Bitcoin Price Index]()
+- [Bitcoin Price Index](bitcoin)
 
 ## Week 4 Unit Tests
 

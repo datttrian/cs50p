@@ -13,6 +13,7 @@ def main():
         try:
             # Prompt the user to input a name
             name = input("Name: ")
+
             # If the input is empty, exit the loop
             if not name:
                 break
@@ -26,8 +27,10 @@ def main():
     # Check the number of names entered and print a farewell message accordingly
     if len(names) == 1:
         print(f"Adieu, adieu, to {names[0]}")
+
     elif len(names) == 2:
         print(f"Adieu, adieu, to {names[0]} and {names[1]}")
+
     else:
         # Join all names except the last one with commas and add "and" before the last name
         names_str = ", ".join(names[:-1])
