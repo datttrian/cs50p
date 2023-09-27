@@ -1,5 +1,6 @@
 import random
 
+
 def main():
     # Call 'get_level' to get the game level from the user and initialize the score to 0
     level = get_level()
@@ -10,7 +11,7 @@ def main():
         # Generate two random integers based on the selected level
         x = generate_integer(level)
         y = generate_integer(level)
-        correct_answer = x + y # calculate the correct answer
+        correct_answer = x + y  # calculate the correct answer
         attempts = 0
 
         # Allow the player up to 3 attempts to answer correctly
@@ -24,17 +25,20 @@ def main():
                 # Compare the user's answer with the correct answer
                 if user_answer == correct_answer:
                     print("Correct!")
-                    score += 1 # increment the score for a correct answer
+                    score += 1  # increment the score for a correct answer
                     break
                 else:
-                    attempts += 1 # increment the attempt count
+                    attempts += 1  # increment the attempt count
                     if attempts == 3:
-                        print(f"EEE {x} + {y} = {correct_answer}") # display the correct answer after 3 incorrect attempts
+                        print(
+                            f"EEE {x} + {y} = {correct_answer}"
+                        )  # display the correct answer after 3 incorrect attempts
                     else:
-                        print("EEE") # display an error message for non-integer input
+                        print("EEE")  # display an error message for non-integer input
 
     # Display the final score after 10 rounds
     print(f"Score: {score}")
+
 
 # Define a function called 'get_level' to get the user's desired game level
 def get_level():
@@ -44,11 +48,29 @@ def get_level():
             level = int(input("Level: "))
 
             # Check if the entered level is one of the valid options (1, 2, or 3)
-            if level in (1,2,3):
+            if level in (1, 2, 3):
                 return level
             else:
-                print("Please enter 1, 2, or 3.") # prompt for a valid level if not in the allowed range
+                print(
+                    "Please enter 1, 2, or 3."
+                )  # prompt for a valid level if not in the allowed range
         except ValueError:
-            print("Please enter a valid level (1, 2, or 3).") # prompt for a valid level if input is not an integer
+            print(
+                "Please enter a valid level (1, 2, or 3)."
+            )  # prompt for a valid level if input is not an integer
 
-            
+
+# Define a function called 'generate_integer' to generate random integers based on the selected level
+def generate_integer(level):
+    if level == 1:
+        return random.randint(0, 9)
+    elif level == 2:
+        return random.randint(10, 99)
+    elif level == 3:
+        return random.randint(100, 999)
+    else:
+        raise ValueError("Invalid level")  # raise an error for an invalid level
+
+
+if __name__ == "__main__":
+    main()
