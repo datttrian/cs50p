@@ -26,7 +26,7 @@ def main():
 
         else:
             print(
-                "Congratulations! You guessed it right."
+                "Just right!"
             )  # display a success message if the guess is correct
             break
 
