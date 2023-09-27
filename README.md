@@ -39,3 +39,10 @@
 - [Guessing Game]()
 - [Little Professor]()
 - [Bitcoin Price Index]()
+
+## Week 4 Unit Tests
+
+- Testing my twttr
+- Back to the Bank
+- Re-requesting a Vanity Plate
+- Refueling
