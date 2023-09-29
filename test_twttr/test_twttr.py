@@ -16,5 +16,8 @@ def test_shorten():
     # Test with a word that contains spaces and special characters
     assert twttr.shorten("Th!s @ is a test") == "Th!s @ s  tst"
 
+    # Test with a word that contains numbers
+    assert twttr.shorten("12345") == "12345"
+
 if __name__ == "__main__":
     test_shorten()
