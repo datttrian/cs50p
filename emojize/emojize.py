@@ -3,7 +3,7 @@ import emoji
 
 def emojize_text(input_text):
     # Use the emoji module to convert codes/aliases to emojis
-    emojized_text = emoji.emojize(input_text, use_aliases=True)
+    emojized_text = emoji.emojize(input_text)
     return emojized_text
 
 
