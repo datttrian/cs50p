@@ -74,9 +74,39 @@ Hints
 
 ## [Demo](#demo)
 
-This demo’s first output used a random font. Your output may vary.
+``` highlight
+$ python figlet.py
+Input: hello, world
+Output:
+ _          _ _                             _     _
+| |__   ___| | | ___    __      _____  _ __| | __| |
+| '_ \ / _ \ | |/ _ \   \ \ /\ / / _ \| '__| |/ _` |
+| | | |  __/ | | (_) |   \ V  V / (_) | |  | | (_| |
+|_| |_|\___|_|_|\___( )   \_/\_/ \___/|_|  |_|\__,_|
+                    |/
 
-Recorded with [asciinema](https://asciinema.org)
+$ python figlet.py -f slant
+Input: hello, world
+Output:
+    __         ____                               __    __
+   / /_  ___  / / /___       _      ______  _____/ /___/ /
+  / __ \/ _ \/ / / __ \     | | /| / / __ \/ ___/ / __  /
+ / / / /  __/ / / /_/ /     | |/ |/ / /_/ / /  / / /_/ /
+/_/ /_/\___/_/_/\____( )    |__/|__/\____/_/  /_/\__,_/
+                     |/
+
+$ python figlet.py --font rectangles
+Input: hello, world
+Output:
+
+ _       _ _                        _   _
+| |_ ___| | |___      _ _ _ ___ ___| |_| |
+|   | -_| | | . |_   | | | | . |  _| | . |
+|_|_|___|_|_|___| |  |_____|___|_| |_|___|
+                |_|
+
+$
+```
 
 ## [Before You Begin](#before-you-begin)
 
