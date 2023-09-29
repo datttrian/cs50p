@@ -1,34 +1,20 @@
 import twttr
 
-# Define test functions, each starting with "test_"
-def test_shorten_no_vowels():
-    # Test case: No vowels in the input word
-    result = twttr.shorten("xyz")
-    assert result == "xyz"
+def test_shorten():
+    # Test with a word that contains both uppercase and lowercase vowels
+    assert twttr.shorten("Hello World") == "Hll Wrld"
 
-def test_shorten_only_vowels():
-    # Test case: Input consists of only vowels
-    result = twttr.shorten("AEIOUaeiou")
-    assert result == ""
+    # Test with a word that contains only uppercase vowels
+    assert twttr.shorten("AEIOU") == ""
 
-def test_shorten_mixed_case():
-    # Test case: Input contains mixed case vowels
-    result = twttr.shorten("AaEeIiOoUu")
-    assert result == ""
+    # Test with a word that contains only lowercase vowels
+    assert twttr.shorten("aeiou") == ""
 
-def test_shorten_mixed_characters():
-    # Test case: Input contains consonants and mixed case vowels
-    result = twttr.shorten("Hello World AEIOUaeiou")
-    assert result == "Hll Wrld"
+    # Test with a word that contains no vowels
+    assert twttr.shorten("Hll Wrld") == "Hll Wrld"
 
-def test_shorten_with_special_characters():
-    # Test case: Input contains special characters and mixed case vowels
-    result = twttr.shorten("!@#AEIOUaeiou")
-    assert result == "!@#"
+    # Test with a word that contains spaces and special characters
+    assert twttr.shorten("Th!s @ is a test") == "Th!s @ s  tst"
 
-# Add more test cases as needed
-
-# Ensure that the tests are executed only if this script is run directly
 if __name__ == "__main__":
-    import pytest
-    pytest.main()
+    test_shorten()
