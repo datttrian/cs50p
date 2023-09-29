@@ -42,8 +42,8 @@
 
 ## Week 5 Unit Tests
 
-- [Testing my twttr]()
-- [Back to the Bank]()
-- Re-requesting a Vanity Plate
+- [Testing my twttr](test_plates/test_plates.py)
+- [Back to the Bank](test_plates/test_plates.py)
+- [Re-requesting a Vanity Plate]()
 - Refueling
 
