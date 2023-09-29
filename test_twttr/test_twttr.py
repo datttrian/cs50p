@@ -1,4 +1,4 @@
-import twttr  # Import the twttr module you want to test
+import twttr
 
 # Define test functions, each starting with "test_"
 def test_shorten_no_vowels():
