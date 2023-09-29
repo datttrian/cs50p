@@ -1,3 +1,13 @@
+def main():
+    # Prompt the user for input
+    input_str = input("Input: ")
+
+    # Call the shorten function to remove vowels
+    output = shorten(input_str)
+
+    # Print the resulting string with vowels omitted
+    print("Output:", output)
+
 def shorten(word):
     # Initialize an empty string to store the output
     output = ""
@@ -11,3 +21,6 @@ def shorten(word):
 
     # Return the resulting string with vowels omitted
     return output
+
+if __name__ == "__main__":
+    main()
