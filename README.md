@@ -33,8 +33,8 @@
 
 ## Week 4 Libraries
 
-- Emojize
-- Frank, Ian and Glen’s Letters
+- [Emojize](emojize)
+- [Frank, Ian and Glen’s Letters](figlet)
 - [Adieu, Adieu](adieu)
 - [Guessing Game](game)
 - [Little Professor](professor)
