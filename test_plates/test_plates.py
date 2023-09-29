@@ -26,3 +26,15 @@ def test_is_valid_long_plate():
 
 def test_is_invalid_long_plate():
     assert plates.is_valid("ABCDEFG12345") == False
+
+if __name__ == "__main__":
+    test_is_valid_plate()
+    test_is_invalid_length()
+    test_is_non_alphabetic_characters()
+    test_is_non_alphanumeric_characters()
+    test_is_non_alpha_start()
+    test_is_contains_zero()
+    test_is_valid_single_digit()
+    test_is_valid_long_plate()
+    test_is_invalid_long_plate()
+    print("All tests passed!")
