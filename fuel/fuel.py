@@ -34,18 +34,18 @@ def calculate_fuel_percentage(x, y):
         return str(round(percentage)) + "%"
 
 
-# The main function to execute the program.
+# The main function to execute the program
 def main():
-    # Get a valid fraction from the user.
+    # Get a valid fraction from the user
     x, y = get_fraction()
 
-    # Calculate the fuel percentage.
-    result = calculate_fuel_percentage(x, y)
+    # Calculate the fuel percentage
+    result = calculate_fuel(x, y)
 
-    # Display the result.
+    # Display the result
     print(result)
 
 
-# This block ensures that the main function is executed when the script is run.
+# This block ensures that the main function is executed when the script is run
 if __name__ == "__main__":
     main()
