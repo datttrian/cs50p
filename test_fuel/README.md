@@ -45,13 +45,13 @@ Hints
 
 - Be sure to include
 
-  ``` highlight
+  ``` py
   import fuel
   ```
 
   or
 
-  ``` highlight
+  ``` py
   from fuel import convert, gauge
   ```
 
