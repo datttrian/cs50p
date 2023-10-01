@@ -11,18 +11,24 @@ def main():
             if denominator == 0 or numerator > denominator:
                 raise ValueError
 
-            # Calculate the percentage of fuel and round it to the nearest integer
+            # Calculate the percentage of fuel and around it to the nearest integer
             percent = (numerator / denominator) * 100
 
-            # Check if the tank is essentially empty(1%but  or less)
+            # Check if the tank is essentially empty (1% or less)
             if percent <= 1:
                 print("E")
+
+            # Check if the tank is essentially empty (1% or less)
+            if percent <= 1:
+                print("E")
+
             # Check if the tank is essentially full (99% or more)
             elif percent >= 99:
                 print("F")
+
             # Display the rounded percentage if it's neither empty nor full
             else:
-                print(f"{round(percent)}%")
+                print(f"{round(percent)}")
 
             # Exit the loop as valid input has been processed
             break
