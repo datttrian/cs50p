@@ -44,6 +44,6 @@
 
 - [Testing my twttr](test_twttr)
 - [Back to the Bank](test_bank)
-- [Re-requesting a Vanity Plate]()
+- [Re-requesting a Vanity Plate](test_plates)
 - Refueling
 
