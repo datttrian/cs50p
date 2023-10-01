@@ -1,42 +1,30 @@
 def main():
-    while True:
-        try:
-            # Prompt the user for a fraction input
-            fraction = input("Fraction: ")
+    frac = input("Fraction: ")
+    pct = convert(frac)
+    print(gauge(pct))
 
-            # Split the input into numerator and denominator, and convert them to integers
-            numerator, denominator = map(int, fraction.split("/"))
 
-            # Check for invalid input conditions
-            if denominator == 0 or numerator > denominator:
-                raise ValueError
+def convert(fraction):
+    x, y = fraction.split("/")
+    if int(x) / int(y) > 1:
+        raise ValueError
+    elif int(y) == 0:
+        raise ZeroDivisionError
+    return int(int(x) / int(y) * 100)
 
-            # Calculate the percentage of fuel and around it to the nearest integer
-            percent = (numerator / denominator) * 100
 
-            # Check if the tank is essentially empty (1% or less)
-            if percent <= 1:
-                print("E")
-
-            # Check if the tank is essentially empty (1% or less)
-            if percent <= 1:
-                print("E")
-
-            # Check if the tank is essentially full (99% or more)
-            elif percent >= 99:
-                print("F")
-
-            # Display the rounded percentage if it's neither empty nor full
-            else:
-                print(f"{round(percent)}")
-
-            # Exit the loop as valid input has been processed
-            break
-        except (ValueError, ZeroDivisionError):
-            # Handle exceptions for invalid input
-            print(
-                "Invalid input. Please enter a valid fraction (X/Y) where X and Y are integers."
-            )
+def gauge(percentage):
+    try:
+        if 0 <= percentage <= 1:
+            return "E"
+        elif 99 <= percentage <= 100:
+            return "F"
+        elif 1 < percentage < 99:
+            return f"{int(percentage)}%"
+        else:
+            raise TypeError
+    except TypeError:
+        pass
 
 
 if __name__ == "__main__":
