@@ -1,24 +1,25 @@
-def get_fuel_percentage():
+def get_fraction():
     while True:
         try:
             fraction = input("Fraction: ")
-            x, y = map(int, fraction.split("/"))
-
-            if y == 0 or x > y or x < 0:
-                raise ValueError
-
-            percentage = (x / y) * 100
-
-            if percentage <= 1:
-                print("E")
-            elif percentage >= 99:
-                print("F")
+            x, y = map(int, fraction.split('/'))
+            if x <= y and y > 0:
+                return x, y
             else:
-                print(f"{round(percentage)}%")
-            break
+                print("Invalid fraction. Please try again.")
         except (ValueError, ZeroDivisionError):
-            print("Invalid input. Please enter a valid fraction (X/Y).")
+            print("Invalid input. Please enter a fraction in the format X/Y where X and Y are integers.")
 
+def calculate_fuel_percentage(x, y):
+    percentage = (x / y) * 100
+    if percentage <= 1:
+        return "E"
+    elif percentage >= 99:
+        return "F"
+    else:
+        return str(round(percentage)) + "%"
 
 if __name__ == "__main__":
-    main()
+    x, y = get_fraction()
+    result = calculate_fuel_percentage(x, y)
+    print(result)
