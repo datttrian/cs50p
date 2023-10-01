@@ -1,30 +1,23 @@
-def main():
-    frac = input("Fraction: ")
-    pct = convert(frac)
-    print(gauge(pct))
+def get_fuel_percentage():
+    while True:
+        try:
+            fraction = input("Fraction: ")
+            x, y = map(int, fraction.split("/"))
 
+            if y == 0 or x > y or x < 0:
+                raise ValueError
 
-def convert(fraction):
-    x, y = fraction.split("/")
-    if int(x) / int(y) > 1:
-        raise ValueError
-    elif int(y) == 0:
-        raise ZeroDivisionError
-    return int(int(x) / int(y) * 100)
+            percentage = (x / y) * 100
 
-
-def gauge(percentage):
-    try:
-        if 0 <= percentage <= 1:
-            return "E"
-        elif 99 <= percentage <= 100:
-            return "F"
-        elif 1 < percentage < 99:
-            return f"{int(percentage)}%"
-        else:
-            raise TypeError
-    except TypeError:
-        pass
+            if percentage <= 1:
+                print("E")
+            elif percentage >= 99:
+                print("F")
+            else:
+                print(f"{round(percentage)}%")
+            break
+        except (ValueError, ZeroDivisionError):
+            print("Invalid input. Please enter a valid fraction (X/Y).")
 
 
 if __name__ == "__main__":
