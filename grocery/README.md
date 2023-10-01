@@ -16,10 +16,10 @@ Hints
   catching an
   [`EOFError`](https://docs.python.org/3/library/exceptions.html#EOFError)
   with code like:
-  ``` highlight
+  ``` py
   try:
-  item = input()
-  except EOFError:
+    item = input()
+    except EOFError:
   ...
   ```
 
@@ -29,15 +29,15 @@ Hints
   [docs.python.org/3/library/stdtypes.html#mapping-types-dict](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict),
   among them `get`, and supports operations like:
 
-  ``` highlight
+  ``` py
   d[key]
   ```
 
   and
 
-  ``` highlight
+  ``` py
   if key in d:
-  ...
+    ...
   ```
 
   wherein `d` is a `dict` and `key` is a `str`.
