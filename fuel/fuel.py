@@ -1,36 +1,34 @@
-# This function is defined to get a valid fraction from the user
-def get_fraction():
-    while True:
-        try:
-            # Prompt the user for input and store it in the 'fraction' variable
-            fraction = input("Fraction: ")
+def get_fuel_percentage(fraction_str):
+    try:
+        # Split the fraction string into numerator and denominator
+        numerator, denominator = map(int, fraction_str.split('/'))
 
-            # Split the input by the '/' character and convert the parts to integers
-            x, y map
+        # Check if denominator is zero or numerator is greater than denominator
+        if denominator == 0 or numerator > denominator:
+            raise ValueError
 
-            # Check if the fraction is valid (x <= y and y > 0)
+        # Calculate fuel percentage
+        percentage = numerator / denominator * 100
 
-        # Handle exceptions that can occur during input or conversion
+        # Round percentage to the nearest integer
+        rounded_percentage = round(percentage)
 
+        # Check if tank is essentially empty or full
+        if rounded_percentage <= 1:
+            return 'E'
+        elif rounded_percentage >= 99:
+            return 'F'
+        else:
+            return f'{rounded_percentage}%'
 
-# This function calculates the fuel percentage based on x and y values
-def calculate_fuel(x, y):
-
-    # Check the percentage and return appropriate values
-
-
-# The main function to execute the program
-def main():
-    # Get a valid fraction from the user
-    x, y = get_fraction()
-
-    # Calculate the fuel percentage
-    result = calculate_fuel(x, y)
-
-    # Display the result
-    print(result)
+    except (ValueError, ZeroDivisionError):
+        # Prompt the user again if input is invalid
+        print("Invalid input. Please enter a valid fraction (X/Y), where X and Y are integers and Y is not zero.")
+        fraction_str = input("Fraction: ")
+        return get_fuel_percentage(fraction_str)
 
 
-# This block ensures that the main function is executed when the script is run
 if __name__ == "__main__":
-    main()
+    fraction_str = input("Fraction: ")
+    fuel_percentage = get_fuel_percentage(fraction_str)
+    print(fuel_percentage)
