@@ -12,7 +12,7 @@ def get_fuel_percentage(fraction):
             raise ValueError
 
         # Calculate the percentage of fuel
-        percentage = (numearator / denominator) * 100
+        percentage = (numerator / denominator) * 100
 
         # Check if fuel is almost empty
         if percentage <= 1:
