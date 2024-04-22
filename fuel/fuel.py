@@ -3,11 +3,12 @@ def get_fuel_percentage(fraction_str):
         # Split the fraction string into numerator and denominator
         numerator, denominator = map(int, fraction_str.split('/'))
 
-        # Be sure to catch any exceptions like ValueError
+        # Catch exception ValueError
         if denominator == 0 or numerator > denominator:
-            raise
+            raise ValueError
 
         # Calculate fuel percentage
+        percentage = numerator / denominator * 100
 
         # Round percentage to the nearest integer
 
