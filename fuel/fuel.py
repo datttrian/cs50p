@@ -7,12 +7,16 @@ def get_fuel_percentage(fraction_str):
         if denominator == 0 or numerator > denominator:
             raise ValueError
 
-        # Calculate fuel percentage
-        percentage = numerator / denominator * 100
-
-        # Round percentage to the nearest integer
+        # Calculate fuel percentage and round it to the nearest integer
+        percentage = round(numerator / denominator * 100)
 
         # Check if tank is essentially empty or full
+        if percentage <= 1:
+            return 'E'
+        elif percentage >= 99:
+            return 'F'
+        else:
+            return f'{percentage}%'
 
         # Prompt the user again if input is invalid
 
