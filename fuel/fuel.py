@@ -18,7 +18,11 @@ def get_fuel_percentage(fraction_str):
         else:
             return f'{percentage}%'
 
+    except (ValueError, ZeroDivisionError):
         # Prompt the user again if input is invalid
+        print('Invalid input. Please enter a valid fraction (X/Y), where X and Y are integers and Y is not zero.')
+        fraction_str = input("Fraction: ")
+        return get_fuel_percentage(fraction_str)
 
 
 if __name__ == "__main__":
