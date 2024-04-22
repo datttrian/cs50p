@@ -22,7 +22,7 @@ def get_fraction():
 
 
 # This function calculates the fuel percentage based on x and y values
-def calculate_fuel_percentage(x, y):
+def calculate_fuel(x, y):
     percentage = (x / y) * 100
 
     # Check the percentage and return appropriate values
