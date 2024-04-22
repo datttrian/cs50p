@@ -6,6 +6,7 @@ def get_fraction():
             fraction = input("Fraction: ")
 
             # Split the input by the '/' character and convert the parts to integers
+            x, y map
 
             # Check if the fraction is valid (x <= y and y > 0)
 
