@@ -1,32 +1,29 @@
-def get_fuel_percentage():
-    fraction_str = input("Fraction: ")
-
+def get_fuel_percentage(fraction):
     try:
-        # Split the fraction string into numerator and denominator
-        numerator, denominator = map(int, fraction_str.split('/'))
-
-        # Catch exception ValueError
-        if denominator == 0 or numerator > denominator:
+        numerator, denominator = map(int, fraction.split('/'))
+        if denominator == 0:
+            raise ZeroDivisionError
+        if numerator > denominator or numerator < 0:
             raise ValueError
-
-        # Calculate fuel percentage and round it to the nearest integer
-        percentage = round(numerator / denominator * 100)
-
-        # Check if tank is essentially empty or full
+        percentage = (numerator / denominator) * 100
         if percentage <= 1:
             return 'E'
         elif percentage >= 99:
             return 'F'
         else:
-            return f'{percentage}%'
-
+            return f"{round(percentage)}%"
     except (ValueError, ZeroDivisionError):
-        # Prompt the user again if input is invalid
-        print('Invalid input. Please enter a valid fraction (X/Y), where X and Y are integers and Y is not zero.')
-        fraction_str = input("Fraction: ")
-        return get_fuel_percentage(fraction_str)
+        return None
 
+def main():
+    while True:
+        fraction = input("Fraction: ")
+        percentage = get_fuel_percentage(fraction)
+        if percentage:
+            print(percentage)
+            break
+        else:
+            print("Invalid input. Please enter a valid fraction.")
 
 if __name__ == "__main__":
-    fuel_percentage = get_fuel_percentage()
-    print(fuel_percentage)
+    main()
