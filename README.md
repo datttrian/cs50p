@@ -26,26 +26,23 @@
 
 ## Week 3 Exceptions
 
-- [Fuel Gauge](fuel)
-- [Felipe’s Taqueria](taqueria)
-- [Grocery List](grocery)
-- [Outdated](outdated)
+- Fuel Gauge
+- Felipe’s Taqueria
+- Grocery List
+- Outdated
 
 ## Week 4 Libraries
 
-- [Emojize](emojize)
-- [Frank, Ian and Glen’s Letters](figlet)
-- [Adieu, Adieu](adieu)
-- [Guessing Game](game)
-- [Little Professor](professor)
-- [Bitcoin Price Index](bitcoin)
+- Emojize
+- Frank, Ian and Glen’s Letters
+- Adieu, Adieu
+- Guessing Game
+- Little Professor
+- Bitcoin Price Index
 
 ## Week 5 Unit Tests
 
-- [Testing my twttr](test_twttr)
-- [Back to the Bank](test_bank)
-- [Re-requesting a Vanity Plate](test_plates)
-- [Refueling](test_fuel)
-
-
-
+- Testing my twttr
+- Back to the Bank
+- Re-requesting a Vanity Plate
+- Refueling

@@ -1,4 +1,5 @@
 {
     "gitdoc.enabled": true,
-    "git.postCommitCommand": "push"
+    "git.postCommitCommand": "push",
+    "git.autofetch": true
 }
