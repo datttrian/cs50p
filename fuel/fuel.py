@@ -28,7 +28,7 @@ def get_fuel_percentage(fraction):
 
     # Catch errors for invalid inputs
     except (ValueError, ZeroDivisionError):
-        return None
+        return False
 
 def main():
     while True:
