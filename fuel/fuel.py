@@ -24,7 +24,7 @@ def get_fuel_percentage(fraction):
 
         # Return the percentage rounded to the nearest integer
         else:
-            return f'{round(percentage)}'
+            return f'{round(percentage)}%'
 
     # Catch errors for invalid inputs
     except (ValueError, ZeroDivisionError):
