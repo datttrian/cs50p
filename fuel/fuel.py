@@ -1,4 +1,6 @@
-def get_fuel_percentage(fraction_str):
+def get_fuel_percentage():
+    fraction_str = input("Fraction: ")
+
     try:
         # Split the fraction string into numerator and denominator
         numerator, denominator = map(int, fraction_str.split('/'))
@@ -26,6 +28,5 @@ def get_fuel_percentage(fraction_str):
 
 
 if __name__ == "__main__":
-    fraction_str = input("Fraction: ")
-    fuel_percentage = get_fuel_percentage(fraction_str)
+    fuel_percentage = get_fuel_percentage()
     print(fuel_percentage)
