@@ -36,9 +36,5 @@ def main():
             print("Invalid item. Please choose from the menu.")
 
 
-    except EOFError:
-        pass  # exit the loop when Control-D is pressed
-
-
 if __name__ == "__main__":
     main()
