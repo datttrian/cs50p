@@ -30,8 +30,9 @@ def main():
                 raise ValueError
         except (AttributeError, ValueError, NameError, KeyError):
             pass
-
-        print(f"{int(yyyy)}-{int(mm):02}-{int(dd):02}")
+        else:
+            print(f"{int(yyyy)}-{int(mm):02}-{int(dd):02}")
+            break
 
 
 if __name__ == "__main__":
