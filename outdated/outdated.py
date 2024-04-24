@@ -21,33 +21,31 @@ def main():
 
         try:
             # If date format contains "/"
-            if "in" in date:
-
+            if "/" in date:
                 # Splitting date into 3 components by "/"
                 mm, dd, yyyy = date.split("/")
 
             # Otherwise
             else:
-
                 # Splitting date into 2 components by ", "
                 mmdd, yyyy = date.split(", ")
 
                 # Splitting the first component by " "
-                mm, dd = date.split(" ")
+                mm, dd = mmdd.split(" ")
 
                 # Indexing month from the list
                 mm = months.index(mm) + 1
 
             # Validating month and day values
-            if mm > 12 or int(dd) > 31:
+            if int(mm) > 12 or int(dd) > 31:
                 raise ValueError
 
             # Printing formatted date
-            print(f"{int(yyyy)}-{mm:02}-{int(dd):02}")
+            print(f"{int(yyyy)}-{int(mm):02}-{int(dd):02}")
             break
 
         # Handling exceptions
-        except (ValueError):
+        except ValueError:
             pass
 
 
