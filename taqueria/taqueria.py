@@ -18,6 +18,7 @@ def main():
     try:
         # Continuously prompt the user for an item until manually stopped
         while True:
+
             # Prompt the user to input an item
             item = input("Item: ")
 
@@ -29,12 +30,16 @@ def main():
 
             # If the item is found in the menu
             if item in menu:
+
                 # Add its cost to the total_cost variable
                 total_cost += menu[item]
+
                 # Print the current total cost formatted to two decimal places
                 print(f"Total: ${total_cost:.2f}")
+
             # Otherwise
             else:
+
                 # Inform the user and prompt them to choose from the menu
                 print("Invalid item. Please choose from the menu.")
 
