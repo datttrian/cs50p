@@ -1,4 +1,5 @@
 def main():
+    # Define a list of months
     months = [
         "January",
         "February",
@@ -14,20 +15,19 @@ def main():
         "December",
     ]
 
-    # Infinite loop until a valid date is entered
     while True:
-        # Prompt the user for a date input
+        # Continuously prompt the user for a date until manually stopped
         date = input("Date: ")
+
         try:
-            # Check if the input date uses "/" as a separator
+            # If the input date uses "/" as a separator
             if "/" in date:
                 mm, dd, yyyy = date.split("/")
-            # Check if the input date uses "," as a separator
+
+            # Otherwise
             else:
                 mmdd, yyyy = date.split(", ")
                 mm, dd = mmdd.split(" ")
-
-                # Convert month name to its corresponding numerical value
                 mm = (months.index(mm)) + 1
 
             # Check for invalid month or day values
