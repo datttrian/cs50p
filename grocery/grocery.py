@@ -4,7 +4,8 @@ def main():
 
     try:
         while True:
-            item = input().strip().lower()  # read user input and convert to lowercase
+            # Read user input and convert to lowercase
+            item = input().strip().lower()
 
             # Check if the item is already in the dictionary
             if item in grocery_list:
