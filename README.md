@@ -29,7 +29,7 @@
 - [Fuel Gauge](fuel)
 - [Felipe’s Taqueria](taqueria)
 - [Grocery List](grocery)
-- Outdated
+- [Outdated](outdated)
 
 ## Week 4 Libraries
 
