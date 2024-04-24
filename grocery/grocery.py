@@ -34,6 +34,7 @@ def main():
     sorted_list = sorted(grocery_list.items(), key=lambda x: x[0].casefold())
 
     # Print the grocery list in the desired format
+    print()
     for item, count in sorted_list:
         print(f"\n{count} {item.upper()}")
 
