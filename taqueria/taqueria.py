@@ -27,13 +27,15 @@ def main():
             # Capitalize the first letter of each word
             item = item.title()
 
+            # If the item is found in the menu
             if item in menu:
-                # If the item is found in the menu, add its cost to the total_cost variable
+                # Add its cost to the total_cost variable
                 total_cost += menu[item]
                 # Print the current total cost formatted to two decimal places
                 print(f"Total: ${total_cost:.2f}")
+            # Otherwise
             else:
-                # If the item is not found in the menu, inform the user and prompt them to choose from the menu
+                # Inform the user and prompt them to choose from the menu
                 print("Invalid item. Please choose from the menu.")
 
     # Exit the loop when Control-D is pressed
