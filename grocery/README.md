@@ -19,8 +19,8 @@ Hints
   ``` py
   try:
     item = input()
-    except EOFError:
-  ...
+  except EOFError:
+    ...
   ```
 
 - Odds are you’ll want to store your grocery list as a `dict`.
