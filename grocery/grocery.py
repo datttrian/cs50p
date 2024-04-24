@@ -3,6 +3,7 @@ def main():
     grocery_list = {}
 
     try:
+
         # Prompt the user for an item until manually stopped
         while True:
 
