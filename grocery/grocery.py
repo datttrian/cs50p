@@ -7,7 +7,7 @@ def main():
         while True:
 
             # Prompt the user to input an item
-            item = input("")
+            item = input()
 
             # Remove leading/trailing whitespaces
             item = item.strip()
