@@ -15,25 +15,30 @@ def main():
     # Initialize the total cost
     total_cost = 0
 
-    # Continuously prompt the user for an item until manually stopped
-    while True:
-        # Prompt the user to input an item
-        item = input("Item: ").strip().title()
+    try:
+        # Continuously prompt the user for an item until manually stopped
+        while True:
+            # Prompt the user to input an item
+            item = input("Item: ")
 
-        # Remove leading/trailing whitespaces
-        item = item.strip()
+            # Remove leading/trailing whitespaces
+            item = item.strip()
 
-        # Capitalize the first letter of each word
-        item = item.title()
+            # Capitalize the first letter of each word
+            item = item.title()
 
-        if item in menu:
-            # If the item is found in the menu, add its cost to the total_cost variable
-            total_cost += menu[item]
-            # Print the current total cost formatted to two decimal places
-            print(f"Total: ${total_cost:.2f}")
-        else:
-            # If the item is not found in the menu, inform the user and prompt them to choose from the menu
-            print("Invalid item. Please choose from the menu.")
+            if item in menu:
+                # If the item is found in the menu, add its cost to the total_cost variable
+                total_cost += menu[item]
+                # Print the current total cost formatted to two decimal places
+                print(f"Total: ${total_cost:.2f}")
+            else:
+                # If the item is not found in the menu, inform the user and prompt them to choose from the menu
+                print("Invalid item. Please choose from the menu.")
+
+    # Exit the loop when Control-D is pressed
+    except EOFError:
+        pass
 
 
 if __name__ == "__main__":
