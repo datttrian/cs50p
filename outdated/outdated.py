@@ -28,11 +28,11 @@ def main():
 
             if int(mm) > 12 or int(dd) > 31:
                 raise ValueError
-        except (AttributeError, ValueError, NameError, KeyError):
-            pass
-        else:
+
             print(f"{int(yyyy)}-{int(mm):02}-{int(dd):02}")
             break
+        except (AttributeError, ValueError, NameError, KeyError):
+            pass
 
 
 if __name__ == "__main__":
