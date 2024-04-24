@@ -3,10 +3,10 @@
 Because emoji aren’t quite as easy to type as text, at least on laptops
 and desktops, some programs support “codes,” whereby you can type, for
 instance, `:thumbs_up:`, which will be automatically converted to
-![👍](https://twemoji.maxcdn.com/v/14.0.2/72x72/1f44d.png). Some
+👍. Some
 programs additionally support aliases, whereby you can more succinctly
 type, for instance, `:thumbsup:`, which will also be automatically
-converted to ![👍](https://twemoji.maxcdn.com/v/14.0.2/72x72/1f44d.png).
+converted to 👍.
 
 See
 [carpedm20.github.io/emoji/all.html?enableList=enable_list_alias](https://carpedm20.github.io/emoji/all.html?enableList=enable_list_alias)
