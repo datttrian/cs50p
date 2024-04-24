@@ -3,17 +3,17 @@ def main():
     grocery_list = {}
 
     try:
-        # Continuously prompt the user for an item until manually stopped
+        # Prompt the user for an item until manually stopped
         while True:
 
             # Prompt the user to input an item
-            item = input("Item: ")
+            item = input("")
 
             # Remove leading/trailing whitespaces
             item = item.strip()
 
             # Lower the words
-            item = item.title()
+            item = item.lower()
 
             # If the item already exists
             if item in grocery_list:
@@ -36,7 +36,7 @@ def main():
     # Print the grocery list in the desired format
     print()
     for item, count in sorted_list:
-        print(f"\n{count} {item.upper()}")
+        print(f"{count} {item.upper()}")
 
 
 if __name__ == "__main__":
