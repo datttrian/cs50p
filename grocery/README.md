@@ -44,6 +44,8 @@ Hints
 
 - Be sure to avoid or catch any
   [`KeyError`](https://docs.python.org/3/library/exceptions.html#KeyError).
+- Note that you can sort a dictionary’s keys alphabetically by passing that dictionary as an argument to [`sorted`](https://docs.python.org/3/library/functions.html#sorted).
+
 
 ## [Demo](#demo)
 
