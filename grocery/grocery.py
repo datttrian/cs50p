@@ -35,7 +35,7 @@ def main():
 
     # Print the grocery list in the desired format
     for item, count in sorted_list:
-        print(f"{count} {item.upper()}")
+        print(f"\n{count} {item.upper()}")
 
 
 if __name__ == "__main__":
