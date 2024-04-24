@@ -1,5 +1,5 @@
 def main():
-    # Define the menu and their respective prices
+    # Define the menu and their prices
     menu = {
         "Baja Taco": 4.25,
         "Burrito": 7.50,
