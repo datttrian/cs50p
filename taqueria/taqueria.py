@@ -32,7 +32,7 @@ def main():
             if item in menu:
 
                 # Add its cost to the total_cost variable
-                total_cost += menu[item]
+                total_cost = total_cost + menu[item]
 
                 # Print the current total cost formatted to two decimal places
                 print(f"Total: ${total_cost:.2f}")
