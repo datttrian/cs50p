@@ -23,7 +23,7 @@ def main():
             if "/" in date:
                 mm, dd, yyyy = date.split("/")
             # Check if the input date uses "," as a separator
-            elif "," in date:
+            else:
                 mmdd, yyyy = date.split(", ")
                 mm, dd = mmdd.split(" ")
 
