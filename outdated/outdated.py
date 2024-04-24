@@ -39,11 +39,16 @@ def main():
                 mm = months.index(mm) + 1
 
             # Validating month and day values
-            if 
+            if mm > 12 or int(dd) > 31:
+                raise ValueError
 
             # Printing formatted date
+            print(f"{int(yyyy)}-{mm:02}-{int(dd):02}")
+            break
 
         # Handling exceptions
+        except (ValueError):
+            pass
 
 
 if __name__ == "__main__":
