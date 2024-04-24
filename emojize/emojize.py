@@ -1,13 +1,21 @@
 import emoji
 
+def main():
+    n = input("Input: ")
 
-def emojize_text(input_text):
-    # Use the emoji module to convert codes/aliases to emojis
-    emojized_text = emoji.emojize(input_text)
-    return emojized_text
+    if "," in n:
+        n = n.split(",")
+        print(n[0] + "," + emo(n[1]))
+    else:
+        print(emo(n))
 
+def emo(name):
+    try:
+        o = emoji.emojize(name)
+    except:
+        pass
+    else:
+        o = emoji.emojize(name, language='alias')
+    return o
 
-if __name__ == "__main__":
-    user_input = input("Input: ")
-    emojized_output = emojize_text(user_input)
-    print("Output:", emojized_output)
+main()
