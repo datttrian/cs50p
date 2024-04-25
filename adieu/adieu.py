@@ -11,6 +11,7 @@ def main():
     # Prompt the user for a item until manually stopped
     while True:
         try:
+
             # Prompt the user to input a name
             name = input("Name: ")
 
