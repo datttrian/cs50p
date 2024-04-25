@@ -1,3 +1,5 @@
+import inflect
+
 def bid_adieu(names):
     if len(names) == 1:
         return f"Adieu, adieu, to {names[0]}"
@@ -9,6 +11,7 @@ def bid_adieu(names):
         return f"Adieu, adieu, to {names_str}, and {last_name}"
 
 def main():
+    inflect_engine = inflect.engine()
     names = []
     print("Enter names (press Ctrl+D when done):")
     try:
@@ -21,6 +24,7 @@ def main():
 
     if names:
         farewell_message = bid_adieu(names)
+        farewell_message = inflect_engine.plural(farewell_message, len(names) != 1)
         print(farewell_message)
 
 if __name__ == "__main__":
