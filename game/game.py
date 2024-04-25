@@ -1,57 +1,25 @@
-import random
+from random import randint
 
+while True:
+    try:
+        n = int(input("Level: "))
+        if n <= 0:
+            raise ValueError
+        break
+    except ValueError:
+        print("Invalid input. Please enter a positive integer.")
 
-def main():
-    level = get_level()
-    target_number = random.randint(1, level)
+x = randint(1, n)
 
-    print("Welcome to the Number Guessing Game!")
-    print(f"I'm thinking of a number between 1 and {level}.")
-
-    while True:
-
-        guess = get_guess()
-
-        if guess < target_number:
-            print("Too small! Try again.")
-        elif guess > target_number:
-            print("Too large! Try again.")
-        else:
+while True:
+    try:
+        g = int(input("Guess: "))
+        if g == x:
             print("Just right!")
             break
-
-
-def get_level():
-    while True:
-        try:
-            level = int(input("Enter the level (positive integer): "))
-
-            if level > 0:
-                return level
-            else:
-                print("Please enter a positive integer.")
-
-        except ValueError:
-            print("Please enter a positive integer.")
-
-
-def get_guess():
-    while True:
-        try:
-            guess = int(input("Enter your guess (positive integer): "))
-
-            if guess > 0:
-                return guess
-            else:
-                print(
-                    "Please enter a positive integer."
-                )
-
-        except ValueError:
-            print(
-                "Please enter a positive integer."
-            )
-
-
-if __name__ == "__main__":
-    main()
+        elif g < x:
+            print("Too small!")
+        else:
+            print("Too large!")
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
