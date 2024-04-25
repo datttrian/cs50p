@@ -16,7 +16,7 @@ def main():
     ]
 
     while True:
-        # Prompt the user for a date
+        # Prompt the user to input a date
         date = input("Date: ")
 
         try:

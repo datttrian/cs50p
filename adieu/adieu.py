@@ -22,7 +22,6 @@ def main():
             names.append(name)
 
         except EOFError:
-            # Exit the loop if an End of File (EOF) error is encountered
             break
 
     # Check the number of names entered and print a farewell message accordingly
