@@ -1,4 +1,4 @@
-# Import the 'inflect' module, which helps in pluralizing and singularizing English words
+# Import inflect to pluralize and singularize English words
 import inflect
 
 def main():
@@ -12,9 +12,7 @@ def main():
         try:
             # Prompt the user to enter a name
             name = input("Name: ")
-        except EOFError:  # Handle the end of file error (Ctrl+D in Unix-like systems)
-            # Print a new line and exit the loop if the end of file is encountered
-            print()
+        except EOFError:
             break
         else:
             # Append the entered name to the 'names' list
