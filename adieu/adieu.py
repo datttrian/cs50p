@@ -1,20 +1,15 @@
 import inflect
 
 def bid_adieu(names):
-    # Create an inflect engine
     engine = inflect.engine()
 
-    # Number of names
     num_names = len(names)
 
-    # Special case for one name
     if num_names == 1:
         return f"Adieu, adieu, to {names[0]}"
 
-    # Joining names with commas and one "and" before the last name
     adieu_str = ", ".join(names[:-1]) + f", and {names[-1]}"
 
-    # Add appropriate commas based on the number of names
     if num_names > 2:
         adieu_str = adieu_str.replace(",", ",", num_names - 2)
 
