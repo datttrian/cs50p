@@ -36,7 +36,7 @@
 - [Emojize](emojize)
 - [Frank, Ian and Glen’s Letters](figlet)
 - [Adieu, Adieu](adieu)
-- Guessing Game
+- [Guessing Game](game)
 - Little Professor
 - Bitcoin Price Index
 
