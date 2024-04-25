@@ -2,9 +2,7 @@ import random
 
 
 def main():
-
     level = get_level()
-
     target_number = random.randint(1, level)
 
     print("Welcome to the Number Guessing Game!")
@@ -16,10 +14,8 @@ def main():
 
         if guess < target_number:
             print("Too small! Try again.")
-
         elif guess > target_number:
             print("Too large! Try again.")
-
         else:
             print("Just right!")
             break
@@ -28,7 +24,6 @@ def main():
 def get_level():
     while True:
         try:
-
             level = int(input("Enter the level (positive integer): "))
 
             if level > 0:
@@ -43,7 +38,6 @@ def get_level():
 def get_guess():
     while True:
         try:
-
             guess = int(input("Enter your guess (positive integer): "))
 
             if guess > 0:
