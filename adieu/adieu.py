@@ -8,7 +8,7 @@ def main():
     # Initialize the inflect engine for text manipulation
     p = inflect.engine()
 
-    # Start an infinite loop to input names until an empty input or EOFError is encountered
+    # Prompt the user for a item until manually stopped
     while True:
         try:
             # Prompt the user to input a name
