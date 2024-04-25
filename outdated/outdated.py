@@ -44,7 +44,6 @@ def main():
             print(f"{int(yyyy)}-{int(mm):02}-{int(dd):02}")
             break
 
-        # Handling exceptions
         except ValueError:
             pass
 

@@ -1,33 +1,50 @@
-menu = {
-    "Baja Taco": 4.00,
-    "Burrito": 7.50,
-    "Bowl": 8.50,
-    "Nachos": 11.00,
-    "Quesadilla": 8.50,
-    "Super Burrito": 8.50,
-    "Super Quesadilla": 9.50,
-    "Taco": 3.00,
-    "Tortilla Salad": 8.00,
-}
+def main():
+    # Define the menu and their prices
+    menu = {
+        "Baja Taco": 4.25,
+        "Burrito": 7.50,
+        "Bowl": 8.50,
+        "Nachos": 11.00,
+        "Quesadilla": 8.50,
+        "Super Burrito": 8.50,
+        "Super Quesadilla": 9.50,
+        "Taco": 3.00,
+        "Tortilla Salad": 8.00
+    }
 
-total_cost = 0.0
+    # Initialize the total cost
+    total_cost = 0
 
-try:
-    while True:
-        item = input("Enter an item: ").strip()  # Prompt the user for input
+    try:
+        while True:
 
-        # Check if the input is empty
-        if not item:
-            continue
+            # Prompt the user to input an item
+            item = input("Item: ")
 
-        # Convert the input to title case and look up the price in the menu
-        price = menu.get(item.title())
+            # Remove leading/trailing whitespaces
+            item = item.strip()
 
-        if price is not None:
-            total_cost += price
-            print(f"Total: ${total_cost:.2f}")
-        else:
-            print("Invalid item. Please choose from the menu.")
-except EOFError:
-    # User has inputted control-d, so we exit the loop
-    pass
+            # Capitalize the first letter of each word
+            item = item.title()
+
+            # If the item is found in the menu
+            if item in menu:
+
+                # Add its cost to the total_cost variable
+                total_cost = total_cost + menu[item]
+
+                # Print the current total cost formatted to two decimal places
+                print(f"Total: ${total_cost:.2f}")
+
+            # Otherwise
+            else:
+
+                # Inform the user and prompt them to choose from the menu
+                print("Invalid item. Please choose from the menu.")
+
+    except EOFError:
+        pass
+
+
+if __name__ == "__main__":
+    main()
