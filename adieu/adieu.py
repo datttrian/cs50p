@@ -1,6 +1,7 @@
 # Import inflect to pluralize and singularize English words
 import inflect
 
+
 def main():
     # Create an instance of the inflect engine
     p = inflect.engine()
@@ -19,8 +20,12 @@ def main():
         else:
             names.append(name)
 
-    # Print a farewell message using the inflect engine to join the names with proper grammar
-    print(f"Adieu, adieu, to {p.join(names)}")
+    # Use the inflect engine to join the names with proper grammar
+    farewell_message = p.join(names)
+
+    # Print a farewell message
+    print(f"Adieu, adieu, to {farewell_message}")
+
 
 if __name__ == "__main__":
     main()
