@@ -24,9 +24,10 @@ def get_level():
             print("Invalid level. Please enter 1, 2, or 3.")
 
 def generate_integer(level):
-    # Check if the provided 'level' argument is one of the valid options: 1, 2, or 3.
+    # Raise ValueError if the input provided is not one of 1, 2, or 3
     if level not in [1, 2, 3]:
-        # If 'level' is not valid, raise a ValueError with a message explaining the issue.
+
+        # If level is not valid, with a message explaining the issue.
         raise ValueError("Level must be 1, 2, or 3")
 
     # Generate a random integer based on the level specified.
