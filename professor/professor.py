@@ -17,13 +17,16 @@ def main():
 def get_level():
     # Start an infinite loop. This will keep running until it is explicitly broken.
     while True:
+
         # Ask the user to input their level and store it in the variable 'level'.
         level = input("Level: ")
 
         # Check if the input level is one of '1', '2', or '3'.
         if level in ["1", "2", "3"]:
+
             # If the level is valid, convert it to an integer and return it, breaking the loop.
             return int(level)
+
         else:
             # If the level is not valid, print an error message.
             print("Invalid level. Please enter 1, 2, or 3.")
@@ -45,7 +48,6 @@ def generate_integer(level):
         # If the level is 3, generate a random integer between 100 and 999, inclusive.
         return random.randint(100, 999)
 
-
 def generate_problems(level):
     # Initialize an empty list to hold the problems.
     problems = []
@@ -61,7 +63,6 @@ def generate_problems(level):
 
     # After the loop, return the list of problems containing 10 tuples of integers (X, Y).
     return problems
-
 
 def solve_problems(problems):
     # Initialize the score to 0. This variable will keep track of how many problems the user solves correctly.
