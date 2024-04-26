@@ -55,13 +55,15 @@ def solve_problems(problems):
 
     # Iterate through each problem in the list of problems
     for problem in problems:
+
         # Calculate the correct answer for the current problem.
         X, Y = problem
         correct_answer = X + Y
 
-        # Allow the user up to 3 attempts to solve the problem.
+        # Allow the user up to 3 attempts to solve the problem
         attempts = 0
         while attempts < 3:
+
             # Prompt the user to enter their answer.
             user_answer = input(f"{X} + {Y} = ")
 
