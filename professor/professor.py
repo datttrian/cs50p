@@ -1,26 +1,12 @@
 import random
 
 def main():
-    """
-    Main function to execute the program.
-    """
-    # Get the level of difficulty from the user
     level = get_level()
-
-    # Generate a list of arithmetic problems based on the level
     problems = generate_problems(level)
-
-    # Solve the generated problems and calculate the score
     score = solve_problems(problems)
-
-    # Print the final score
     print(f"Score: {score}")
 
 def get_level():
-    """
-    Prompt the user to input the level of difficulty.
-    Ensure that the input is valid (1, 2, or 3).
-    """
     while True:
         level = input("Level: ")
         if level in ['1', '2', '3']:
@@ -29,18 +15,6 @@ def get_level():
             print("Invalid level. Please enter 1, 2, or 3.")
 
 def generate_integer(level):
-    """
-    Generate a random integer based on the specified level.
-
-    Args:
-        level (int): The level of difficulty (1, 2, or 3).
-
-    Returns:
-        int: A random integer within the specified range.
-
-    Raises:
-        ValueError: If the level is not 1, 2, or 3.
-    """
     if level not in [1, 2, 3]:
         raise ValueError("Level must be 1, 2, or 3")
     if level == 1:
@@ -51,15 +25,6 @@ def generate_integer(level):
         return random.randint(100, 999)
 
 def generate_problems(level):
-    """
-    Generate a list of arithmetic problems based on the specified level.
-
-    Args:
-        level (int): The level of difficulty (1, 2, or 3).
-
-    Returns:
-        list: A list of tuples representing arithmetic problems.
-    """
     problems = []
     for _ in range(10):
         X = generate_integer(level)
@@ -68,15 +33,6 @@ def generate_problems(level):
     return problems
 
 def solve_problems(problems):
-    """
-    Solve the arithmetic problems and calculate the score.
-
-    Args:
-        problems (list): A list of tuples representing arithmetic problems.
-
-    Returns:
-        int: The total score based on the correct answers.
-    """
     score = 0
     for problem in problems:
         X, Y = problem
@@ -90,10 +46,10 @@ def solve_problems(problems):
                     score += 1
                     break
                 else:
-                    print("Incorrect answer. Try again.")
+                    print("EEE")
                     attempts += 1
             except ValueError:
-                print("Invalid input. Please enter an integer.")
+                print("EEE")
                 attempts += 1
         else:
             print(f"The correct answer is: {correct_answer}")
