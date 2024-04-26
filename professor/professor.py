@@ -21,22 +21,23 @@ def get_level():
             print("Invalid level. Please enter 1, 2, or 3.")
 
 def generate_integer(level):
+    # Check if the provided 'level' parameter is not one of the expected values (1, 2, 3).
     if level not in [1, 2, 3]:
+        # If 'level' is invalid, raise a ValueError with a descriptive message.
         raise ValueError("Level must be 1, 2, or 3")
-    if level == 1:
-        return random.randint(0, 9)
-    elif level == 2:
-        return random.randint(10, 99)
-    elif level == 3:
-        return random.randint(100, 999)
 
-def generate_problems(level):
-    problems = []
-    for _ in range(10):
-        X = generate_integer(level)
-        Y = generate_integer(level)
-        problems.append((X, Y))
-    return problems
+    # Check if the level is 1.
+    if level == 1:
+        # Return a random integer between 0 and 9 (inclusive) if the level is 1.
+        return random.randint(0, 9)
+    # Check if the level is 2.
+    elif level == 2:
+        # Return a random integer between 10 and 99 (inclusive) if the level is 2.
+        return random.randint(10, 99)
+    # Check if the level is 3.
+    elif level == 3:
+        # Return a random integer between 100 and 999 (inclusive) if the level is 3.
+        return random.randint(100, 999)
 
 def solve_problems(problems):
     score = 0
