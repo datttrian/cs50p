@@ -2,96 +2,70 @@ import random
 
 
 def main():
-    # Prompt the user to choose a difficulty level
+    # Get the difficulty level from the user
     level = get_level()
-
-    # Get a list of problems based on the difficulty level
-    problems = generate_problems(level)
-
-    # Allow the user to attempt to solve each problem and returns the score
-    score = solve_problems(problems)
-
-    # Print the final score to the console
-    print(f"Score: {score}")
+    error = 0
+    score = 0
+    # Loop through 10 rounds of addition questions
+    for _ in range(0, 10):
+        X = generate_integer(level)
+        Y = generate_integer(level)
+        # Loop until the user provides a valid integer input
+        while True:
+            try:
+                temp = int(input(f"{X} + {Y} = "))
+                break
+            except ValueError:
+                print("EEE")
+                error += 1
+                break
+        # Check if the user's answer is correct
+        if temp != X + Y:
+            print("EEE")
+            while True:
+                try:
+                    temp = int(input(f"{X} + {Y} = "))
+                except ValueError:
+                    print("EEE")
+                    error += 1
+                    break
+                else:
+                    if temp == X + Y:
+                        score += 1
+                        break
+                    error += 1
+                    print("EEE")
+                    if error == 2:
+                        print(f"{X} + {Y} = {X+Y}")
+                        error = 0
+                        break
+        else:
+            score += 1
+    print("Score:", score)
 
 
 def get_level():
-    # Prompt the user to input level '1', '2', or '3'
+    # Prompt the user to input the difficulty level
     while True:
-        level = input("Level: ")
-        if level in ["1", "2", "3"]:
-            return int(level)
+        try:
+            l = int(input("Level: "))
+        except ValueError:
+            pass
         else:
-            print("Invalid level. Please enter 1, 2, or 3.")
+            if l == 1 or l == 2 or l == 3:
+                return l
+            else:
+                pass
 
 
 def generate_integer(level):
-    # Raise ValueError if the input provided is not one of 1, 2, or 3
-    if level not in [1, 2, 3]:
-        raise ValueError("Level must be 1, 2, or 3")
-
-    # Generate a random integer based on the level specified
+    # Generate random integers based on the difficulty level
     if level == 1:
         return random.randint(0, 9)
     elif level == 2:
         return random.randint(10, 99)
-    elif level == 3:
+    else:
         return random.randint(100, 999)
-
-
-def generate_problems(level):
-    # Initialize an empty list to hold the problems
-    problems = []
-
-    # Get 10 random tuple (X, Y) and add them to the list
-    for _ in range(10):
-        X = generate_integer(level)
-        Y = generate_integer(level)
-        problems.append((X, Y))
-
-    # Return the list of problems
-    return problems
-
-
-def solve_problems(problems):
-    # Initialize the score to 0 to keep track of correctly solved problems
-    score = 0
-
-    # Iterate through each problem in the list of problems
-    for problem in problems:
-        # Calculate the correct answer for the current problem.
-        X, Y = problem
-        correct_answer = X + Y
-
-        # Allow the user up to 3 attempts to solve the problem
-        attempts = 0
-        while attempts < 3:
-            # Prompt the user to enter their answer.
-            user_answer = input(f"{X} + {Y} = ")
-            user_answer = int(user_answer)
-
-            try:
-                # if the user's answer is correct, increase the score by 1
-                if user_answer == correct_answer:
-                    score += 1
-                    break
-
-                else:
-                    # Print "EEE" if the answer is incorrect and increase the attempts counter
-                    print("EEE")
-                    attempts += 1
-
-            except ValueError:
-                # Print "EEE" if the user's input is not a valid integer and increase the attempts counter
-                print("EEE")
-                attempts += 1
-
-        else:
-            # If the user exhausts all attempts, display the correct answer
-            print(f"The correct answer is: {correct_answer}")
-
-    # After all problems have been attempted, return the final score.
-    return score
 
 
 if __name__ == "__main__":
