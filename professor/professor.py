@@ -1,10 +1,12 @@
 import random
 
+
 def main():
     level = get_level()
     problems = generate_problems(level)
     score = solve_problems(problems)
     print(f"Score: {score}")
+
 
 def get_level():
     # Start an infinite loop. This will keep running until it is explicitly broken.
@@ -13,12 +15,13 @@ def get_level():
         level = input("Level: ")
 
         # Check if the input level is one of '1', '2', or '3'.
-        if level in ['1', '2', '3']:
+        if level in ["1", "2", "3"]:
             # If the level is valid, convert it to an integer and return it, breaking the loop.
             return int(level)
         else:
             # If the level is not valid, print an error message.
             print("Invalid level. Please enter 1, 2, or 3.")
+
 
 def generate_integer(level):
     # Check if the provided 'level' argument is one of the valid options: 1, 2, or 3.
@@ -54,28 +57,52 @@ def generate_problems(level):
     # After the loop, return the list of problems containing 10 tuples of integers (X, Y).
     return problems
 
+
 def solve_problems(problems):
+    # Initialize the score to 0. This variable will keep track of how many problems the user solves correctly.
     score = 0
+
+    # Iterate through each problem in the list of problems.
     for problem in problems:
+        # Unpack the tuple into X and Y, which are the two numbers in the problem.
         X, Y = problem
+        # Calculate the correct answer for the current problem.
         correct_answer = X + Y
+
+        # Initialize the attempt counter to 0.
         attempts = 0
+
+        # Allow the user up to 3 attempts to solve the problem.
         while attempts < 3:
+            # Prompt the user to enter their answer.
             user_answer = input(f"{X} + {Y} = ")
+
             try:
+                # Try to convert the user's answer to an integer.
                 user_answer = int(user_answer)
+
+                # Check if the user's answer is correct.
                 if user_answer == correct_answer:
+                    # Increment the score by 1 since the answer is correct.
                     score += 1
+                    # Break out of the while loop because the problem was solved correctly.
                     break
                 else:
+                    # If the answer is incorrect, print "EEE" to indicate an error.
                     print("EEE")
+                    # Increment the attempts counter.
                     attempts += 1
             except ValueError:
+                # If the user's input is not a valid integer, print "EEE" and increment the attempts counter.
                 print("EEE")
                 attempts += 1
         else:
+            # If the user exhausts all attempts, display the correct answer.
             print(f"The correct answer is: {correct_answer}")
+
+    # After all problems have been attempted, return the final score.
     return score
+
 
 if __name__ == "__main__":
     main()
