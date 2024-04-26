@@ -2,15 +2,13 @@ import random
 
 
 def main():
-    # Get the difficulty level from the user
     level = get_level()
     error = 0
     score = 0
-    # Loop through 10 rounds of addition questions
     for _ in range(0, 10):
         X = generate_integer(level)
         Y = generate_integer(level)
-        # Loop until the user provides a valid integer input
+
         while True:
             try:
                 temp = int(input(f"{X} + {Y} = "))
@@ -19,7 +17,6 @@ def main():
                 print("EEE")
                 error += 1
                 break
-        # Check if the user's answer is correct
         if temp != X + Y:
             print("EEE")
             while True:
@@ -45,21 +42,18 @@ def main():
 
 
 def get_level():
-    # Prompt the user to input the difficulty level
     while True:
         try:
-            level = int(input("Level: "))
+            level= int(input("Level: "))
         except ValueError:
             pass
         else:
-            if level == 1 or level == 2 or level == 3:
-                return l
+            if level== 1 or level== 2 or level== 3:
+                return level
             else:
                 pass
 
-
 def generate_integer(level):
-    # Generate random integers based on the difficulty level
     if level == 1:
         return random.randint(0, 9)
     elif level == 2:
