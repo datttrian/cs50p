@@ -26,19 +26,14 @@ def get_level():
 def generate_integer(level):
     # Raise ValueError if the input provided is not one of 1, 2, or 3
     if level not in [1, 2, 3]:
-
-        # If level is not valid, with a message explaining the issue.
         raise ValueError("Level must be 1, 2, or 3")
 
     # Generate a random integer based on the level specified.
     if level == 1:
-        # If the level is 1, generate a random integer between 0 and 9, inclusive.
         return random.randint(0, 9)
     elif level == 2:
-        # If the level is 2, generate a random integer between 10 and 99, inclusive.
         return random.randint(10, 99)
     elif level == 3:
-        # If the level is 3, generate a random integer between 100 and 999, inclusive.
         return random.randint(100, 999)
 
 def generate_problems(level):
