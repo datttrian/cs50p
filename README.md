@@ -37,7 +37,7 @@
 - [Frank, Ian and Glen’s Letters](figlet)
 - [Adieu, Adieu](adieu)
 - [Guessing Game](game)
-- [Little Professor]()
+- [Little Professor](professor)
 - Bitcoin Price Index
 
 ## Week 5 Unit Tests
