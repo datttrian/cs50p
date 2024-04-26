@@ -59,10 +59,8 @@ def solve_problems(problems):
         X, Y = problem
         correct_answer = X + Y
 
-        # Initialize the attempt counter to 0.
-        attempts = 0
-
         # Allow the user up to 3 attempts to solve the problem.
+        attempts = 0
         while attempts < 3:
             # Prompt the user to enter their answer.
             user_answer = input(f"{X} + {Y} = ")
