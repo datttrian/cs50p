@@ -2,11 +2,17 @@ import random
 
 
 def main():
+    # Prompt the user to choose a difficulty level
     level = get_level()
-    problems = generate_problems(level)
-    score = solve_problems(problems)
-    print(f"Score: {score}")
 
+    # Get a list of problems based on the difficulty level
+    problems = generate_problems(level)
+
+    # Allow the user to attempt to solve each problem and returns the score
+    score = solve_problems(problems)
+
+    # Print the final score to the console
+    print(f"Score: {score}")
 
 def get_level():
     # Start an infinite loop. This will keep running until it is explicitly broken.
@@ -21,7 +27,6 @@ def get_level():
         else:
             # If the level is not valid, print an error message.
             print("Invalid level. Please enter 1, 2, or 3.")
-
 
 def generate_integer(level):
     # Check if the provided 'level' argument is one of the valid options: 1, 2, or 3.
