@@ -49,11 +49,6 @@ def generate_integer(level):
 
 if __name__ == "__main__":
     main()
-...
-
-
-if __name__ == "__main__":
-  main()
 ```
 
 Hints
