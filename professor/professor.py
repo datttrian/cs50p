@@ -7,11 +7,17 @@ def main():
     print(f"Score: {score}")
 
 def get_level():
+    # Start an infinite loop to continually prompt the user for input.
     while True:
+        # Ask the user to enter a level and store the input in the variable 'level'.
         level = input("Level: ")
+
+        # Check if the entered level is one of the allowed values ('1', '2', '3').
         if level in ['1', '2', '3']:
+            # If the level is valid, convert the level to an integer and return it.
             return int(level)
         else:
+            # If the level is not valid, inform the user and repeat the loop.
             print("Invalid level. Please enter 1, 2, or 3.")
 
 def generate_integer(level):
