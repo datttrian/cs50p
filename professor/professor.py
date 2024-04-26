@@ -53,11 +53,10 @@ def solve_problems(problems):
     # Initialize the score to 0 to keep track of correctly solved problems
     score = 0
 
-    # Iterate through each problem in the list of problems.
+    # Iterate through each problem in the list of problems
     for problem in problems:
-        # Unpack the tuple into X and Y, which are the two numbers in the problem.
-        X, Y = problem
         # Calculate the correct answer for the current problem.
+        X, Y = problem
         correct_answer = X + Y
 
         # Initialize the attempt counter to 0.
