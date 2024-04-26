@@ -28,7 +28,7 @@ def generate_integer(level):
     if level not in [1, 2, 3]:
         raise ValueError("Level must be 1, 2, or 3")
 
-    # Generate a random integer based on the level specified.
+    # Generate a random integer based on the level specified
     if level == 1:
         return random.randint(0, 9)
     elif level == 2:
@@ -37,23 +37,20 @@ def generate_integer(level):
         return random.randint(100, 999)
 
 def generate_problems(level):
-    # Initialize an empty list to hold the problems.
+    # Initialize an empty list to hold the problems
     problems = []
 
-    # Loop 10 times using a for loop with a range of 10.
+    # Get 10 random tuple (X, Y) and add them to the list
     for _ in range(10):
-        # Call the generate_integer function with the provided level to get a random integer X.
         X = generate_integer(level)
-        # Call the generate_integer function again to get another random integer Y.
         Y = generate_integer(level)
-        # Add the tuple (X, Y) to the list of problems.
         problems.append((X, Y))
 
-    # After the loop, return the list of problems containing 10 tuples of integers (X, Y).
+    # Return the list of problems
     return problems
 
 def solve_problems(problems):
-    # Initialize the score to 0. This variable will keep track of how many problems the user solves correctly.
+    # Initialize the score to 0 to keep track of correctly solved problems
     score = 0
 
     # Iterate through each problem in the list of problems.
