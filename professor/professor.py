@@ -5,7 +5,7 @@ def main():
     # Retrieve the difficulty level from the user
     level = get_level()
 
-    # Repeat the problem 10 times
+    # Repeat a loop for 10 problems
     error = 0
     score = 0
     for _ in range(0, 10):
@@ -48,6 +48,7 @@ def main():
                         error = 0
                         break
 
+        # If the answer is correct, increase the score and go to the next problem
         else:
             score += 1
 
