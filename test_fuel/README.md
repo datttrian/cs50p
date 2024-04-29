@@ -1,72 +1,69 @@
-# [Fuel Gauge](#fuel-gauge)
+# [Refueling](#refueling)
 
-Fuel gauges indicate, often with fractions, just how much fuel is in a
-tank. For instance 1/4 indicates that a tank is 25% full, 1/2 indicates
-that a tank is 50% full, and 3/4 indicates that a tank is 75% full.
+In a file called `fuel.py`, reimplement [Fuel Gauge](../../3/fuel/) from
+[Problem Set 3](../../3/), restructuring your code per the below,
+wherein:
 
-In a file called `fuel.py`, implement a program that prompts the user
-for a fraction, formatted as `X/Y`, wherein each of `X` and `Y` is an
-integer, and then outputs, as a percentage rounded to the nearest
-integer, how much fuel is in the tank. If, though, 1% or less remains,
-output `E` instead to indicate that the tank is essentially empty. And
-if 99% or more remains, output `F` instead to indicate that the tank is
-essentially full.
+- `convert` expects a `str` in `X/Y` format as input, wherein each of
+  `X` and `Y` is an integer, and returns that fraction as a percentage
+  rounded to the nearest `int` between `0` and `100`, inclusive. If `X`
+  and/or `Y` is not an integer, or if `X` is greater than `Y`, then
+  `convert` should raise a `ValueError`. If `Y` is `0`, then `convert`
+  should raise a `ZeroDivisionError`.
+- `gauge` expects an `int` and returns a `str` that is:
+  - `"E"` if that `int` is less than or equal to `1`,
+  - `"F"` if that `int` is greater than or equal to `99`,
+  - and `"Z%"` otherwise, wherein `Z` is that same `int`.
 
-If, though, `X` or `Y` is not an integer, `X` is greater than `Y`, or
-`Y` is `0`, instead prompt the user again. (It is not necessary for `Y`
-to be `4`.) Be sure to catch any exceptions like
-[`ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError)
-or
-[`ZeroDivisionError`](https://docs.python.org/3/library/exceptions.html#ZeroDivisionError).
+``` py
+def main():
+    ...
+
+
+def convert(fraction):
+    ...
+
+
+def gauge(percentage):
+    ...
+
+
+if __name__ == "__main__":
+    main()
+```
+
+Then, in a file called `test_fuel.py`, implement **two or more**
+functions that collectively test your implementations of `convert` and
+`gauge` thoroughly, each of whose names should begin with `test_` so
+that you can execute your tests with:
+
+``` highlight
+pytest test_fuel.py
+```
 
 Hints
 
-- Recall that a `str` comes with quite a few methods, per
-  [docs.python.org/3/library/stdtypes.html#string-methods](https://docs.python.org/3/library/stdtypes.html#string-methods),
-  including `split`.
-
-- Note that you can handle two exceptions separately with code like:
+- Be sure to include
 
   ``` py
-  try:
-    ...
-  except ValueError:
-    ...
-  except ZeroDivisionError:
-    ...
+  import fuel
   ```
 
-  Or you can handle two exceptions together with code like:
+  or
 
   ``` py
-  try:
-    ...
-  except (ValueError, ZeroDivisionError):
-    ...
+  from fuel import convert, gauge
   ```
 
-## [Demo](#demo)
+  atop `test_fuel.py` so that you can call `convert` and `gauge` in your
+  tests.
 
-``` hightlight
-$ python fuel.py
-Fraction: cat/dog
-Fraction: 1/4
-25%
-$ python fuel.py
-Fraction: 1/2
-50%
-$ python fuel.py
-Fraction: 3/4
-75%
-$ python fuel.py
-Fraction: 4/4
-F
-$ python fuel.py
-Fraction: 1/0
-Fraction: 0/1
-E
-$
-```
+- Take care to `return`, not `print`, an `int` in `convert` and a `str`
+  in `gauge`. Only `main` should call `print`.
+
+- Note that you can check with `pytest` whether a function has raised an
+  exception, per
+  [docs.pytest.org/en/latest/how-to/assert.html#assertions-about-expected-exceptions](https://docs.pytest.org/en/latest/how-to/assert.html#assertions-about-expected-exceptions).
 
 ## [Before You Begin](#before-you-begin)
 
@@ -81,71 +78,53 @@ $
 Next execute
 
 ``` highlight
-mkdir fuel
+mkdir test_fuel
 ```
 
-to make a folder called `fuel` in your codespace.
+to make a folder called `test_fuel` in your codespace.
 
 Then execute
 
 ``` highlight
-cd fuel
+cd test_fuel
 ```
 
 to change directories into that folder. You should now see your terminal
-prompt as `fuel/ $`. You can now execute
+prompt as `test_fuel/ $`. You can now execute
 
 ``` highlight
-code fuel.py
+code test_fuel.py
 ```
 
-to make a file called `fuel.py` where you’ll write your program.
+to make a file called `test_fuel.py` where you’ll write your tests.
 
 ## [How to Test](#how-to-test)
 
-Here’s how to test your code manually:
+To test your tests, run `pytest test_fuel.py`. Be sure you have a copy
+of a `fuel.py` file in the same folder. Try to use correct and incorrect
+versions of `fuel.py` to determine how well your tests spot errors:
 
-- Run your program with `python fuel.py`. Type `3/4` and press Enter.
-  Your program should output:
-  ``` highlight
-  75%
-  ```
-- Run your program with `python fuel.py`. Type `1/4` and press Enter.
-  Your program should output:
-  ``` highlight
-  25%
-  ```
-- Run your program with `python fuel.py`. Type `4/4` and press Enter.
-  Your program should output:
-  ``` highlight
-  F
-  ```
-- Run your program with `python fuel.py`. Type `0/4` and press Enter.
-  Your program should output:
-  ``` highlight
-  E
-  ```
-- Run your program with `python fuel.py`. Type `4/0` and press Enter.
-  Your program should handle a
-  [`ZeroDivisionError`](https://docs.python.org/3/library/exceptions.html#ZeroDivisionError)
-  and prompt the user again.
-- Run your program with `python fuel.py`. Type `three/four` and press
-  Enter. Your program should handle a
-  [`ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError)
-  and prompt the user again.
-- Run your program with `python fuel.py`. Type `1.5/3` and press Enter.
-  Your program should handle a
-  [`ValueError`](https://docs.python.org/3/library/exceptions.html#ValueError)
-  and prompt the user again.
-- Run your program with `python fuel.py`. Type `5/4` and press Enter.
-  Your program should prompt the user again.
+- Ensure you have a correct version of `fuel.py`. Run your tests by
+  executing `pytest test_fuel.py`. `pytest` should show that all of your
+  tests have passed.
+- Modify the correct version of `fuel.py`, changing the return values of
+  `convert`. Your program might, for example, mistakenly return a `str`
+  instead of an `int`. Run your tests by executing
+  `pytest test_fuel.py`. `pytest` should show that at least one of your
+  tests has failed.
+- Similarly, modify the correct version of `fuel.py`, changing the
+  return values of `gauge`. Your program might, for example, mistakenly
+  omit a `%` in the resulting `str`. Run your tests by executing
+  `pytest test_fuel.py`. `pytest` should show that at least one of your
+  tests has failed.
 
-You can execute the below to check your code using `check50`, a program
-that CS50 will use to test your code when you submit. But be sure to
-test it yourself as well!
+You can execute the below to check your tests using `check50`, a program
+CS50 will use to test your code when you submit. (Now there are tests to
+test your tests!). Be sure to test your tests yourself and determine
+which tests are needed to ensure `fuel.py` is checked thoroughly.
 
 ``` highlight
-check50 cs50/problems/2022/python/fuel
+check50 cs50/problems/2022/python/tests/fuel
 ```
 
 Green smilies mean your program has passed a test! Red frownies will
@@ -158,5 +137,5 @@ what output it expected, and what output your program actually gave.
 In your terminal, execute the below to submit your work.
 
 ``` highlight
-submit50 cs50/problems/2022/python/fuel
+submit50 cs50/problems/2022/python/tests/fuel
 ```
