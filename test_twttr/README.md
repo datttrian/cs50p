@@ -1,39 +1,54 @@
-# [Just setting up my twttr](#just-setting-up-my-twttr)
 
-When texting or tweeting, it’s not uncommon to shorten words to save
-time or space, as by omitting vowels, much like Twitter was originally
-called *twttr*. In a file called `twttr.py`, implement a program that
-prompts the user for a `str` of text and then outputs that same text but
-with all vowels (A, E, I, O, and U) omitted, whether inputted in
-uppercase or lowercase.
+
+# [Testing my twttr](#testing-my-twttr)
+
+In a file called `twttr.py`, reimplement [Setting up my
+twttr](../../2/twttr/) from [Problem Set 2](../../2/), restructuring
+your code per the below, wherein `shorten` expects a `str` as input and
+returns that same `str` but with all vowels (A, E, I, O, and U) omitted,
+whether inputted in uppercase or lowercase.
+
+``` python
+def main():
+  ...
+
+
+def shorten(word):
+  ...
+
+
+if __name__ == "__main__":
+  main()
+```
+
+Then, in a file called `test_twttr.py`, implement **one or more**
+functions that collectively test your implementation of `shorten`
+thoroughly, each of whose names should begin with `test_` so that you
+can execute your tests with:
+
+``` python
+pytest test_twttr.py
+```
 
 Hints
 
-- Recall that a `str` comes with quite a few methods, per
-  [docs.python.org/3/library/stdtypes.html#string-methods](https://docs.python.org/3/library/stdtypes.html#string-methods).
-- Much like a `list`, a `str` is “iterable,” which means you can iterate
-  over each of its characters in a loop. For instance, if `s` is a
-  `str`, you could print each of its characters, one at a time, with
-  code like:
-  ``` highlight
-  for c in s:
-  print(c, end="")
-  ```
+-   Be sure to include
 
-## [Demo](#demo)
+    ``` python
+    import twttr
+    ```
 
-``` highlight
-$ python twttr.py
-Input: Twitter
-Output: Twttr
-$ python twttr.py
-Input: What's your name?
-Output: Wht's yr nm?
-$ python twttr.py
-Input: CS50
-Output: CS50
-$
-```
+    or
+
+    ``` python
+    from twttr import shorten
+    ```
+
+    atop `test_twttr.py` so that you can call `shorten` in your tests.
+
+-   Take care to `return`, not `print`, a `str` in `shorten`. Only
+    `main` should call `print`.
+
 
 ## [Before You Begin](#before-you-begin)
 
@@ -48,52 +63,50 @@ $
 Next execute
 
 ``` highlight
-mkdir twttr
+mkdir test_twttr
 ```
 
-to make a folder called `twttr` in your codespace.
+to make a folder called `test_twttr` in your codespace.
 
 Then execute
 
 ``` highlight
-cd twttr
+cd test_twttr
 ```
 
 to change directories into that folder. You should now see your terminal
-prompt as `twttr/ $`. You can now execute
+prompt as `test_twttr/ $`. You can now execute
 
 ``` highlight
-code twttr.py
+code test_twttr.py
 ```
 
-to make a file called `twttr.py` where you’ll write your program.
+to make a file called `test_twttr.py` where you’ll write your tests.
+
 
 ## [How to Test](#how-to-test)
 
-Here’s how to test your code manually:
+To test your tests, run `pytest test_twttr.py`. Be sure you have a copy
+of a `twttr.py` file in the same folder. Try to use correct and
+incorrect versions of `twttr.py` to determine how well your tests spot
+errors:
 
-- Run your program with `python twttr.py`. Type `Twitter` and press
-  Enter. Your program should output:
-  ``` highlight
-  Twttr
-  ```
-- Run your program with `python twttr.py`. Type `What's your name?` and
-  press Enter. Your program should output:
-  ``` highlight
-  Wht's yr nm?
-  ```
-- Run your program with `python twttr.py`. Type `CS50` and press Enter.
-  Your program should output
-  ``` highlight
-  CS50
-  ```
+-   Ensure you have a correct version of `twttr.py`. Run your tests by
+    executing `pytest test_twttr.py`. `pytest` should show that all of
+    your tests have passed.
+-   Modify the correct version of `twttr.py` in such a way as to create
+    a bug. Your program might, for example, mistakenly only omit
+    lowercase vowels! Run your tests by executing
+    `pytest test_twttr.py`. `pytest` should show that at least one of
+    your tests has failed.
 
-You can execute the below to check your code using `check50`, a program
-that CS50 will use to test your code when you submit. But be sure to
-test it yourself as well!
+You can execute the below to check your tests using `check50`, a program
+CS50 will use to test your code when you submit. (Now there are tests to
+test your tests!). Be sure to test your tests yourself and determine
+which tests are needed to ensure `twttr.py` is checked thoroughly.
 
 ``` highlight
-check50 cs50/problems/2022/python/twttr
+check50 cs50/problems/2022/python/tests/twttr
 ```
 
 Green smilies mean your program has passed a test! Red frownies will
@@ -101,10 +114,11 @@ indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
 
+
 ## [How to Submit](#how-to-submit)
 
 In your terminal, execute the below to submit your work.
 
 ``` highlight
-submit50 cs50/problems/2022/python/twttr
+submit50 cs50/problems/2022/python/tests/twttr
 ```
