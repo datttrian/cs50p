@@ -18,21 +18,29 @@ def main():
     # Loop to allow the user to guess the number
     while True:
         try:
+
             # Ask the user to input their guess
             g = int(input("Guess: "))
 
             # Check if the guess matches the random number
             if g == x:
+
                 # Display a message if the guess is correct and ending the game
                 print("Just right!")
                 break
+
             elif g < x:
+
                 # Display a message if the guess is smaller than the random number
                 print("Too small!")
+
             else:
+
                 # Display a message if the guess is larger than the random number
                 print("Too large!")
+
         except ValueError:
+
             # Handle the ValueError if the input is not an integer
             print("Invalid input. Please enter an integer.")
 
