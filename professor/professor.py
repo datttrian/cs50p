@@ -26,7 +26,7 @@ def main():
 
         if temp != X + Y:
             print("EEE")
-            # If the user's answer is correct, solve the problem again
+            
             while True:
                 try:
                     temp = int(input(f"{X} + {Y} = "))
