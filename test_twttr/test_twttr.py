@@ -14,5 +14,5 @@ import pytest
         ("beautiful", "btfl"),
     ],
 )
-def test_isAnagram(input_str, expected):
+def test_twttr(input_str, expected):
     assert shorten(input_str) == expected
