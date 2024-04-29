@@ -1,78 +1,52 @@
-# [Vanity Plates](#vanity-plates)
+# [Re-requesting a Vanity Plate](#re-requesting-a-vanity-plate)
 
-In Massachusetts, home to Harvard University, it’s possible to [request
-a vanity license
-plate](https://www.mass.gov/how-to/request-a-vanity-license-plate) for
-your car, with your choice of letters and numbers instead of random
-ones. Among the requirements, though, are:
-
-- “All vanity plates must start with at least two letters.”
-- “… vanity plates may contain a maximum of 6 characters (letters or
-  numbers) and a minimum of 2 characters.”
-- “Numbers cannot be used in the middle of a plate; they must come at
-  the end. For example, AAA222 would be an acceptable … vanity plate;
-  AAA22A would not be acceptable. The first number used cannot be a
-  ‘0’.”
-- “No periods, spaces, or punctuation marks are allowed.”
-
-In `plates.py`, implement a program that prompts the user for a vanity
-plate and then output `Valid` if meets all of the requirements or
-`Invalid` if it does not. Assume that any letters in the user’s input
-will be uppercase. Structure your program per the below, wherein
-`is_valid` returns `True` if `s` meets all requirements and `False` if
-it does not. Assume that `s` will be a `str`. You’re welcome to
-implement additional functions for `is_valid` to call (e.g., one
-function per requirement).
+In a file called `plates.py`, reimplement [Vanity
+Plates](../../2/plates/) from [Problem Set 2](../../2/), restructuring
+your code per the below, wherein `is_valid` still expects a `str` as
+input and returns `True` if that `str` meets all requirements and
+`False` if it does not, but `main` is only called if the value of
+`__name__` is `"__main__"`:
 
 ``` py
 def main():
-    plate = input("Plate: ")
-    if is_valid(plate):
-        print("Valid")
-    else:
-        print("Invalid")
+    ...
 
 
 def is_valid(s):
     ...
 
 
-main()
+if __name__ == "__main__":
+    main()
+```
+
+Then, in a file called `test_plates.py`, implement **four or more**
+functions that collectively test your implementation of `is_valid`
+thoroughly, each of whose names should begin with `test_` so that you
+can execute your tests with:
+
+``` highlight
+pytest test_plates.py
 ```
 
 Hints
 
-- Recall that a `str` comes with quite a few methods, per
-  [docs.python.org/3/library/stdtypes.html#string-methods](https://docs.python.org/3/library/stdtypes.html#string-methods).
-- Much like a `list`, a `str` is a “sequence” (of characters), which
-  means it can be
-  “[sliced](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations)”
-  into shorter strings with syntax like `s[i:j]`. For instance, if `s`
-  is `"CS50"`, then `s[0:2]` would be `"CS"`.
+- Be sure to include
 
-## [Demo](#demo)
+  ``` py
+  import plates
+  ```
 
-``` highlight
-$ python plates.py
-Plate: HELLO
-Valid
-$ python plates.py
-Plate: HELLO, WORLD
-Invalid
-$ python plates.py
-Plate: GOODBYE
-Invalid
-$ python plates.py
-Plate: CS50
-Valid
-$ python plates.py
-Plate: CS05
-Invalid
-$ python plates.py
-Plate: 50
-Invalid
-$
-```
+  or
+
+  ``` py
+  from plates import is_valid
+  ```
+
+  atop `test_plates.py` so that you can call `is_valid` in your tests.
+
+- Take care to `return`, not `print`, a `bool` in `is_valid`. Only
+  `main` should call `print`.
 
 ## [Before You Begin](#before-you-begin)
 
@@ -87,67 +61,49 @@ $
 Next execute
 
 ``` highlight
-mkdir plates
+mkdir test_plates
 ```
 
-to make a folder called `plates` in your codespace.
+to make a folder called `test_plates` in your codespace.
 
 Then execute
 
 ``` highlight
-cd plates
+cd test_plates
 ```
 
 to change directories into that folder. You should now see your terminal
-prompt as `plates/ $`. You can now execute
+prompt as `test_plates/ $`. You can now execute
 
 ``` highlight
-code plates.py
+code test_plates.py
 ```
 
-to make a file called `plates.py` where you’ll write your program.
+to make a file called `test_plates.py` where you’ll write your tests.
 
 ## [How to Test](#how-to-test)
 
-Here’s how to test your code manually:
+To test your tests, run `pytest test_plates.py`. Be sure you have a copy
+of a `plates.py` file in the same folder. Try to use correct and
+incorrect versions of `plates.py` to determine how well your tests spot
+errors:
 
-- Run your program with `python plates.py`. Type `CS50` and press Enter.
-  Your program should output:
-  ``` highlight
-  Valid
-  ```
-- Run your program with `python plates.py`. Type `CS05` and press Enter.
-  Your program should output:
-  ``` highlight
-  Invalid
-  ```
-- Run your program with `python plates.py`. Type `CS50P` and press
-  Enter. Your program should output
-  ``` highlight
-  Invalid
-  ```
-- Run your program with `python plates.py`. Type `PI3.14` and press
-  Enter. Your program should output
-  ``` highlight
-  Invalid
-  ```
-- Run your program with `python plates.py`. Type `H` and press Enter.
-  Your program should output
-  ``` highlight
-  Invalid
-  ```
-- Run your program with `python plates.py`. Type `OUTATIME` and press
-  Enter. Your program should output
-  ``` highlight
-  Invalid
-  ```
+- Ensure you have a correct version of `plates.py`. Run your tests by
+  executing `pytest test_plates.py`. `pytest` should show that all of
+  your tests have passed.
+- Modify the correct version of `plates.py`, perhaps eliminating some of
+  its constraints. Your program might, for example, mistakenly print
+  “Valid” for a license plate of any length! Run your tests by executing
+  `pytest test_plates.py`. `pytest` should show that at least one of
+  your tests has failed.
 
-You can execute the below to check your code using `check50`, a program
-that CS50 will use to test your code when you submit. But be sure to
-test it yourself as well!
+You can execute the below to check your tests using `check50`, a program
+CS50 will use to test your code when you submit. (Now there are tests to
+test your tests!). Be sure to test your tests yourself and determine
+which tests are needed to ensure `plates.py` is checked thoroughly.
 
 ``` highlight
-check50 cs50/problems/2022/python/plates
+check50 cs50/problems/2022/python/tests/plates
 ```
 
 Green smilies mean your program has passed a test! Red frownies will
@@ -160,5 +116,5 @@ what output it expected, and what output your program actually gave.
 In your terminal, execute the below to submit your work.
 
 ``` highlight
-submit50 cs50/problems/2022/python/plates
+submit50 cs50/problems/2022/python/tests/plates
 ```
