@@ -5,16 +5,15 @@ import pytest
 @pytest.mark.parametrize(
     ("input_str", "expected"),
     [
-        ("hello", 0),
-        ("Hello there!", 0),
-        ("hi", 2),
-        ("how are you?", 2),
-        ("good morning", 1),
-        ("Bye", 1),
-        ("HELLO", 0),
-        ("hELLo world", 0),
-        ("HI EVERYONE", 2),
-        ("Greetings", 1),
+        ("hello world", 0),
+        ("  hello ", 0),
+        ("HeLLo", 0),
+        ("hi there", 20),
+        ("  hey ", 20),
+        ("Hullo", 20),
+        ("good morning", 100),
+        (" yes ", 100),
+        ("Ahoy", 100),
     ],
 )
 def test_bank(input_str, expected):
