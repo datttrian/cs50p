@@ -4,14 +4,13 @@ def shorten(input_str):
 
     # Iterate through each character in the input string
     for char in input_str:
-
         # Check if the character is a vowel (in either uppercase or lowercase)
         if char.lower() not in "aeiou":
-
             # If it's not a vowel, add it to the output
             output += char
 
     return output
+
 
 def main():
     # Prompt the user for input
