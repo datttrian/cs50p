@@ -5,14 +5,12 @@ def main():
     # Retrieve the difficulty level from the user
     level = get_level()
 
-    # Initialize variables to track the number of errors and the user's score
+    # Repeat the problem 10 times
     error = 0
     score = 0
-
-    # Repeat the problem 10 times
     for _ in range(0, 10):
 
-        # Prompt the user to solve the addition problem and handle errors
+        # Prompt the user to answer the problem
         X = generate_integer(level)
         Y = generate_integer(level)
         while True:
@@ -24,9 +22,10 @@ def main():
                 error += 1
                 break
 
+        # If the answer is incorrect, print error and allow up to 2 retries
         if temp != X + Y:
             print("EEE")
-            
+
             while True:
                 try:
                     temp = int(input(f"{X} + {Y} = "))
@@ -35,21 +34,22 @@ def main():
                     error += 1
                     break
                 else:
-                    # Check if the new answer is correct.
+
+                    # If the answer is correct, increase the score and exit the loop on success
                     if temp == X + Y:
-                        # Increase the score for the correct answer.
                         score += 1
-                        break  # Exit the loop on success.
-                    # Increment the error count for each wrong answer.
-                    error += 1
-                    print("EEE")  # Print an error message for a wrong answer.
+                        break
+
                     # If errors reach 2, show the correct answer and reset the error count.
+                    error += 1
+                    print("EEE")
                     if error == 2:
                         print(f"{X} + {Y} = {X+Y}")
                         error = 0
                         break
+
         else:
-            score += 1  # Increase the score for the correct answer.
+            score += 1
 
     # After completing all iterations, print the final score.
     print("Score:", score)
