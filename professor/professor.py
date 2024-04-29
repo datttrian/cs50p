@@ -12,7 +12,7 @@ def main():
     # Repeat the problem 10 times
     for _ in range(0, 10):
 
-        # Prompt the user to solve the addition problem and handle input errors
+        # Prompt the user to solve the addition problem and handle errors
         X = generate_integer(level)
         Y = generate_integer(level)
         while True:
@@ -24,18 +24,16 @@ def main():
                 error += 1
                 break
 
-        # Check if the user's answer is correct.
         if temp != X + Y:
-            print("EEE")  # Print an error message if the answer is wrong.
-            # Allow the user another chance to solve the problem.
+            print("EEE")
+            # If the user's answer is correct, solve the problem again
             while True:
                 try:
-                    # Prompt again for the user's input.
                     temp = int(input(f"{X} + {Y} = "))
                 except ValueError:
-                    print("EEE")  # Print an error message for invalid input.
-                    error += 1  # Increase the error count.
-                    break  # Exit the loop on error.
+                    print("EEE")
+                    error += 1
+                    break
                 else:
                     # Check if the new answer is correct.
                     if temp == X + Y:
