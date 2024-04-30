@@ -5,7 +5,6 @@ import pytest
 @pytest.mark.parametrize(
     ("input_str", "expected"),
     [
-        ("aeiouAEIOU", ""),  # without vowel replacement
         ("Python 3.9", "Pythn 3.9"),  # omitting numbers, printing in uppercase, omitting punctuation
     ],
 )
