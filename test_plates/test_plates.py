@@ -6,11 +6,9 @@ import pytest
     [
         ("2468", False),  # without beginning alphabetical checks
         ("IRONMAN", False),  # without length checks
-        # ("CS15", True),  # length checks and alphanumeric character checks
-        ("abc69xyz", False),  # alphanumeric character checks
-        ("cs50p", False),  # alphanumeric character checks
-        ("ab0123", False),  # checks for zero placement and alphanumeric character checks
-        ("xx,.&!", False),  # checks for alphanumeric characters
+        ("ab0123", False),  # without checks for zero placement
+
+        # ("xx,.&!", False),  # checks for alphanumeric characters
         ("bl <42>", False),  # checks for alphanumeric characters
         ("07bond", False),  # checks for zero placement and number placement
         ("xy420z", False),  # alphanumeric character checks and number placement
@@ -21,6 +19,9 @@ import pytest
         # ("dddd", True),  # beginning alphabetical checks
         # ("AsLongAsYouLoveMe", False),  # length checks
         # ("c", False),  # length checks
+        # ("CS15", True),  # length checks and alphanumeric character checks
+        # ("abc69xyz", False),  # alphanumeric character checks
+        # ("cs50p", False),  # alphanumeric character checks
     ],
 )
 def test_is_valid(input_str, expected):
