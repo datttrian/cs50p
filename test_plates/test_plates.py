@@ -1,9 +1,3 @@
-:( test_plates catches plates.py without beginning alphabetical checks
-    expected exit code 1, not 0
-:( test_plates catches plates.py without length checks
-    expected exit code 1, not 0
-
-
 from plates import is_valid
 import pytest
 
@@ -11,16 +5,15 @@ import pytest
 @pytest.mark.parametrize(
     ("input_str", "expected"),
     [
-        (
-            "Ab123",
-            True,
-        ),  # Valid: starts with two letters, followed by non-zero leading digits
-        ("Ab012", False),  # Invalid: has zero as first digit
-        ("Ab12a3", False),  # Invalid: digits not contiguous or non-digit after digit
-        ("Ab", True),  # Valid: just two letters, no digits
-        ("AB1", True),  # Valid: starts with two letters, followed by a non-zero digit
-        ("ABCD", True),  # Valid: alphabetic within valid length
-        ("AB!", False),  # Invalid: contains a non-alphanumeric character
+        ("", False),  # Invalid: empty string
+        ("123", False),  # Invalid: only digits
+        ("Ab1234", False),  # Invalid: too many digits
+        ("A1", False),  # Invalid: only one letter
+        ("A!23", False),  # Invalid: contains a non-alphanumeric character
+        ("aB123", False),  # Invalid: lowercase letter
+        ("A123B", False),  # Invalid: letters not at the beginning
+        ("!Ab123", False),  # Invalid: starts with a non-alphanumeric character
+        ("A123B!", False),  # Invalid: ends with a non-alphanumeric character
     ],
 )
 def test_is_valid(input_str, expected):
