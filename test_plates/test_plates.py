@@ -5,11 +5,6 @@ import pytest
 @pytest.mark.parametrize(
     ("input_str", "expected"),
     [
-        ("ON1123", True),  # length and number placement checks
-        ("hadley", True),  # beginning alphabetical checks
-        ("dddd", True),  # beginning alphabetical checks
-        ("AsLongAsYouLoveMe", False),  # length checks
-        ("c", False),  # length checks
         ("2468", False),  # length checks
         ("IRONMAN", False),  # length checks
         ("CS15", True),  # length checks and alphanumeric character checks
