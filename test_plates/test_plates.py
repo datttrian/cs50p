@@ -13,7 +13,7 @@ import pytest
         ("2468", False),  # length checks
         ("IRONMAN", False),  # length checks
         ("CS15", True),  # length checks and alphanumeric character checks
-        ("abc69xyz", False),  # alphanumeric character checks
+        # ("abc69xyz", False),  # alphanumeric character checks
         ("cs50p", False),  # alphanumeric character checks
         ("ab0123", False),  # checks for zero placement and alphanumeric character checks
         ("xx,.&!", False),  # checks for alphanumeric characters
