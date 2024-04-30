@@ -13,7 +13,7 @@ import pytest
         ("cs50p", False),
         ("ab0123", False),
         ("xy420z", False),
-        ("mnp,!&.", False),
+        ("xx,.&!", False),
         ("bl <42>", False),
         ("07bond", False),
         ("c1ix", False),
