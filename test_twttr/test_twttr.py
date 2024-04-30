@@ -5,7 +5,8 @@ import pytest
 @pytest.mark.parametrize(
     ("input_str", "expected"),
     [
-        ("Python 3.9", "Pythn 3.9"),  # omitting numbers, printing in uppercase, omitting punctuation
+        ("aeiouAEIOU", ""),
+        ("Python 3.9", "Pythn 3.9"),
     ],
 )
 def test_shorten(input_str, expected):
