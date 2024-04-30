@@ -20,7 +20,7 @@ def is_valid(s):
                         # Get the index of the current character in the string
                         index = s.index(char)
                         # Check if the remaining substring (starting from the current character) is composed of digits
-                        if s[index].isdigit() and int(char) != 0:
+                        if s[index:].isdigit() and int(char) != 0:
                             return True
                         else:
                             return False
