@@ -1,6 +1,4 @@
-<span id="scourgify" data-id="" style="top: -58px;"></span>
-
-# <a href="#scourgify" data-id="">Scourgify</a>
+# [Scourgify](#scourgify)
 
 > “Ah, well,” said Tonks, slamming the trunk’s lid shut, “at least it’s
 > all in. That could do with a bit of cleaning, too.” She pointed her
@@ -92,15 +90,15 @@ Rather than with, for instance:
 
 In a file called `scourgify.py`, implement a program that:
 
--   <span class="fa-li"></span>Expects the user to provide two
+- Expects the user to provide two
     command-line arguments:
-    -   <span class="fa-li"></span>the name of an existing CSV file to
+  - the name of an existing CSV file to
         read as input, whose columns are assumed to be, in order, `name`
         and `house`, and
-    -   <span class="fa-li"></span>the name of a new CSV to write as
+  - the name of a new CSV to write as
         output, whose columns should be, in order, `first`, `last`, and
         `house`.
--   <span class="fa-li"></span>Converts that input to that output,
+- Converts that input to that output,
     splitting each `name` into a `first` name and `last` name. Assume
     that each student will have both a first name and last name.
 
@@ -110,25 +108,21 @@ error message.
 
 Hints
 
--   <span class="fa-li"></span>Note that `csv` module comes with quite a
+- Note that `csv` module comes with quite a
     few methods, per
     [docs.python.org/3/library/csv.html](https://docs.python.org/3/library/csv.html),
     among which are `DictReader`, per
     [docs.python.org/3/library/csv.html#csv.DictReader](https://docs.python.org/3/library/csv.html#csv.DictReader)
     and `DictWriter`, per
     [docs.python.org/3/library/csv.html#csv.DictWriter](https://docs.python.org/3/library/csv.html#csv.DictWriter).
--   <span class="fa-li"></span>Note that you can tell a `DictWriter` to
+- Note that you can tell a `DictWriter` to
     write its `fieldnames` to a file using `writeheader` with no
     arguments, per
     [docs.python.org/3/library/csv.html#csv.DictWriter.writeheader](https://docs.python.org/3/library/csv.html#csv.DictWriter.writeheader).
 
-<span id="demo" data-id="" style="top: -58px;"></span>
+## [Demo](#demo)
 
-## <a href="#demo" data-id="">Demo</a>
-
-<span id="before-you-begin" data-id="" style="top: -58px;"></span>
-
-## <a href="#before-you-begin" data-id="">Before You Begin</a>
+## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
 and execute `cd` by itself. You should find that your terminal window’s
@@ -168,32 +162,36 @@ wget https://cs50.harvard.edu/python/2022/psets/6/scourgify/before.csv
 
 to download [before.csv](before.csv) into your folder.
 
-<span id="how-to-test" data-id="" style="top: -58px;"></span>
-
-## <a href="#how-to-test" data-id="">How to Test</a>
+## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   <span class="fa-li"></span>Run your program with
+- Run your program with
     `python scourgify.py`. Your program should exit using `sys.exit` and
     provide an error message:
+
     ``` highlight
     Too few command-line arguments
     ```
--   <span class="fa-li"></span>Create empty files `1.csv`, `2.csv`, and
+
+- Create empty files `1.csv`, `2.csv`, and
     `3.csv`. Run your program with
     `python scourgify.py 1.csv 2.csv 3.csv`. Your program should output:
+
     ``` highlight
     Too many command-line arguments
     ```
--   <span class="fa-li"></span>Run your program with
+
+- Run your program with
     `python scourgify.py invalid_file.csv output.csv`. Assuming
     `invalid_file.csv` doesn’t exist, your program should exit using
     `sys.exit` and provide an error message:
+
     ``` highlight
     Could not read invalid_file.csv
     ```
--   <span class="fa-li"></span>Run your program with
+
+- Run your program with
     `python scourgify.py before.csv after.csv`. Assuming `before.csv`
     exists, your program should create a new file, `after.csv`, whose
     columns should be, in order, `first`, `last`, and `house`.
@@ -211,9 +209,7 @@ indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
 
-<span id="how-to-submit" data-id="" style="top: -58px;"></span>
-
-## <a href="#how-to-submit" data-id="">How to Submit</a>
+## [How to Submit](#how-to-submit)
 
 In your terminal, execute the below to submit your work.
 
