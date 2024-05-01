@@ -45,7 +45,7 @@
 - [Testing my twttr](test_twttr)
 - [Back to the Bank](test_bank)
 - [Re-requesting a Vanity Plate](test_plates)
-- Refueling
+- [Refueling](test_fuel)
 
 ## Week 6 File I/O
 

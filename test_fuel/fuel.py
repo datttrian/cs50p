@@ -22,7 +22,9 @@ def convert(fraction):
             raise ZeroDivisionError("Denominator cannot be zero.")
         return round((numerator / denominator) * 100)
     except ValueError:
-        raise ValueError("Invalid fraction format. Please enter a fraction in X/Y format where X and Y are integers.")
+        raise ValueError(
+            "Invalid fraction format. Please enter a fraction in X/Y format where X and Y are integers."
+        )
 
 
 def gauge(percentage):
