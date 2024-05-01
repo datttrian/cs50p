@@ -48,3 +48,8 @@
 - Refueling
 
 ## Week 6 File I/O
+
+- Lines of Code
+- Pizza Py
+- Scourgify
+- CS50 P-Shirt
