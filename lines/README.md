@@ -53,21 +53,19 @@ a comment.) Assume that any line that only contains whitespace is blank.
 
 Hints
 
--   <span class="fa-li"></span>Recall that a `str` comes with quite a
+- Recall that a `str` comes with quite a
     few methods, per
     [docs.python.org/3/library/stdtypes.html#string-methods](https://docs.python.org/3/library/stdtypes.html#string-methods),
     including `lstrip` and `startswith`.
--   <span class="fa-li"></span>Note that `open` can `raise` a
+- Note that `open` can `raise` a
     `FileNotFoundError`, per
     [docs.python.org/3/library/exceptions.html#FileNotFoundError](https://docs.python.org/3/library/exceptions.html#FileNotFoundError).
--   <span class="fa-li"></span>You might find it helpful to test your
+- You might find it helpful to test your
     program on, e.g., some of [Week 6’s source
     code](https://cdn.cs50.net/python/2022/x/lectures/6/src6/) as well
     as on programs of your own.
 
-
 ## [Demo](#demo)
-
 
 ## [Before You Begin](#before-you-begin)
 
@@ -102,38 +100,45 @@ code lines.py
 
 to make a file called `lines.py` where you’ll write your program.
 
-
 ## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   <span class="fa-li"></span>Run your program with `python lines.py`.
+- Run your program with `python lines.py`.
     Your program should exit with `sys.exit` and provide an error
     message:
+
     ``` highlight
     Too few command-line arguments
     ```
--   <span class="fa-li"></span>Create two python programs, `hello.py`
+
+- Create two python programs, `hello.py`
     and `goodbye.py`. Run `python lines.py hello.py goodbye.py`. Your
     program should exit with `sys.exit` and provide an error message:
+
     ``` highlight
     Too many command-line arguments
     ```
--   <span class="fa-li"></span>Create a text file called
+
+- Create a text file called
     `invalid_extension.txt`. Run your program with
     `python lines.py invalid_extension.txt`. Your program should exit
     with `sys.exit` and provide an error message:
+
     ``` highlight
     Not a Python file
     ```
--   <span class="fa-li"></span>Run your program with
+
+- Run your program with
     `python lines.py non_existent_file.py`. Assuming
     `non_existent_file.py` doesn’t exist, your program should exit with
     `sys.exit` and provide an error message:
+
     ``` highlight
     File does not exist
     ```
--   <span class="fa-li"></span>Create additional python programs which
+
+- Create additional python programs which
     vary in complexity: create some with comments, some docstrings, and
     some whitespace. For each of these files run
     `python lines.py FILENAME` where `FILENAME` is the name of the file.
@@ -152,7 +157,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
 
 ## [How to Submit](#how-to-submit)
 
