@@ -1,6 +1,5 @@
-<span id="pizza-py" data-id="" style="top: -58px;"></span>
 
-# <a href="#pizza-py" data-id="">Pizza Py</a>
+# [Pizza Py](#pizza-py)
 
 Perhaps the most popular place for pizza in [Harvard
 Square](https://en.wikipedia.org/wiki/Harvard_Square) is [Pinocchio’s
@@ -56,31 +55,28 @@ the program should instead exit via `sys.exit`.
 
 Hints
 
--   <span class="fa-li"></span>Recall that the `csv` module comes with
+- Recall that the `csv` module comes with
     quite a few methods, per
     [docs.python.org/3/library/csv.html](https://docs.python.org/3/library/csv.html),
     among which are `reader`, per
     [docs.python.org/3/library/csv.html#csv.reader](https://docs.python.org/3/library/csv.html#csv.reader),
     and `DictReader`, per
     [docs.python.org/3/library/csv.html#csv.DictReader](https://docs.python.org/3/library/csv.html#csv.DictReader).
--   <span class="fa-li"></span>Note that `open` can `raise` a
+- Note that `open` can `raise` a
     `FileNotFoundError`, per
     [docs.python.org/3/library/exceptions.html#FileNotFoundError](https://docs.python.org/3/library/exceptions.html#FileNotFoundError).
--   <span class="fa-li"></span>Note that the `tabulate` package comes
+- Note that the `tabulate` package comes
     with just one function, per
     [pypi.org/project/tabulate](https://pypi.org/project/tabulate/). You
     can install the package with:
+
     ``` highlight
     pip install tabulate
     ```
 
-<span id="demo" data-id="" style="top: -58px;"></span>
+## [Demo](#demo)
 
-## <a href="#demo" data-id="">Demo</a>
-
-<span id="before-you-begin" data-id="" style="top: -58px;"></span>
-
-## <a href="#before-you-begin" data-id="">Before You Begin</a>
+## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
 and execute `cd` by itself. You should find that your terminal window’s
@@ -126,43 +122,50 @@ wget https://cs50.harvard.edu/python/2022/psets/6/pizza/regular.csv
 
 to download [regular.csv](regular.csv) into your folder.
 
-<span id="how-to-test" data-id="" style="top: -58px;"></span>
-
-## <a href="#how-to-test" data-id="">How to Test</a>
+## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   <span class="fa-li"></span>Run your program with `python pizza.py`.
+- Run your program with `python pizza.py`.
     Your program should exit using `sys.exit` and provide an error
     message:
+
     ``` highlight
     Too few command-line arguments
     ```
--   <span class="fa-li"></span>Be sure to download
+
+- Be sure to download
     [regular.csv](regular.csv) and [sicilian.csv](sicilian.csv), placing
     them in the same folder as `pizza.py`. Run your program with
     `python pizza.py regular.csv sicilian.csv`. Your program should
     output:
+
     ``` highlight
     Too many command-line arguments
     ```
--   <span class="fa-li"></span>Run your program with
+
+- Run your program with
     `python pizza.py invalid_file.csv`. Assuming `invalid_file.csv`
     doesn’t exist, your program should exit using `sys.exit` and provide
     an error message:
+
     ``` highlight
     File does not exist
     ```
--   <span class="fa-li"></span>Create a file named `sicilian.txt`. Run
+
+- Create a file named `sicilian.txt`. Run
     your program with `python pizza.py sicilian.txt`. Your program
     should exit using `sys.exit` and provide an error message:
+
     ``` highlight
     Not a CSV file
     ```
--   <span class="fa-li"></span>Run your program with
+
+- Run your program with
     `python pizza.py regular.csv`. Assuming you’ve downloaded
     [regular.csv](regular.csv), your program should print a table like
     the below:
+
     ``` highlight
     +-----------------+---------+---------+
     | Regular Pizza   | Small   | Large   |
@@ -192,9 +195,7 @@ indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
 
-<span id="how-to-submit" data-id="" style="top: -58px;"></span>
-
-## <a href="#how-to-submit" data-id="">How to Submit</a>
+## [How to Submit](#how-to-submit)
 
 In your terminal, execute the below to submit your work.
 
