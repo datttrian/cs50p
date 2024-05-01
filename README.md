@@ -49,7 +49,7 @@
 
 ## Week 6 File I/O
 
-- Lines of Code
+- [Lines of Code](lines)
 - Pizza Py
 - Scourgify
 - CS50 P-Shirt
