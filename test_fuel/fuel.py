@@ -11,20 +11,17 @@ def main():
             print(zde)
 
 
-def convert(fraction):
-    try:
-        numerator, denominator = map(int, fraction.split("/"))
-        if not isinstance(numerator, int) or not isinstance(denominator, int):
-            raise ValueError("Both numerator and denominator must be integers.")
-        if numerator > denominator:
-            raise ValueError("Numerator cannot be greater than denominator.")
-        if denominator == 0:
-            raise ZeroDivisionError("Denominator cannot be zero.")
-        return round((numerator / denominator) * 100)
-    except ValueError:
-        raise ValueError(
-            "Invalid fraction format. Please enter a fraction in X/Y format where X and Y are integers."
-        )
+def convert(f):
+    numerator, denominator = f.split("/")
+    if int(denominator) == 0:
+        raise ZeroDivisionError("Denominator cannot be zero.")
+    elif not numerator.isdigit() or not denominator.isdigit():
+        raise ValueError("Numerator and denominator must be integers.")
+    elif int(numerator) > int(denominator):
+        raise ValueError("Numerator cannot be greater than denominator.")
+    else:
+        return round(int(numerator) / int(denominator) * 100)
+
 
 
 def gauge(percentage):
