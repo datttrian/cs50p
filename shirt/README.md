@@ -1,6 +1,6 @@
-<span id="cs50-p-shirt" data-id="" style="top: -58px;"></span>
 
-# <a href="#cs50-p-shirt" data-id="">CS50 P-Shirt</a>
+
+# [CS50 P-Shirt](#cs50-p-shirt)
 
 <img src="took.png" class="w-100" alt="CS50 shirt" />
 
@@ -12,9 +12,9 @@ t-shirt. No need to buy one online, but like to try one on virtually?
 In a file called `shirt.py`, implement a program that expects exactly
 two command-line arguments:
 
--   <span class="fa-li"></span>in `sys.argv[1]`, the name (or path) of a
+-   in `sys.argv[1]`, the name (or path) of a
     JPEG or PNG to read (i.e., open) as input
--   <span class="fa-li"></span>in `sys.argv[2]`, the name (or path) of a
+-   in `sys.argv[2]`, the name (or path) of a
     JPEG or PNG to write (i.e., save) as output
 
 The program should then overlay [shirt.png](shirt.png) (which has a
@@ -33,13 +33,13 @@ and save the result with `Image.save`, per
 
 The program should instead exit via `sys.exit`:
 
--   <span class="fa-li"></span>if the user does not specify exactly two
+-   if the user does not specify exactly two
     command-line arguments,
--   <span class="fa-li"></span>if the input’s and output’s names do not
+-   if the input’s and output’s names do not
     end in `.jpg`, `.jpeg`, or `.png`, case-insensitively,
--   <span class="fa-li"></span>if the input’s name does not have the
+-   if the input’s name does not have the
     same extension as the output’s name, or
--   <span class="fa-li"></span>if the specified input does not exist.
+-   if the specified input does not exist.
 
 Assume that the input will be a photo of someone posing in just the
 right way, like [these demos](#demos), so that, when they’re resized and
@@ -54,15 +54,15 @@ communities](https://cs50.harvard.edu/python/communities)!
 
 Hints
 
--   <span class="fa-li"></span>Note that you can determine a file’s
+-   Note that you can determine a file’s
     extension with `os.path.splitext`, per
     [docs.python.org/3/library/os.path.html#os.path.splitext](https://docs.python.org/3/library/os.path.html#os.path.splitext).
 
--   <span class="fa-li"></span>Note that `open` can `raise` a
+-   Note that `open` can `raise` a
     `FileNotFoundError`, per
     [docs.python.org/3/library/exceptions.html#FileNotFoundError](https://docs.python.org/3/library/exceptions.html#FileNotFoundError).
 
--   <span class="fa-li"></span>Note that the `Pillow` package comes with
+-   Note that the `Pillow` package comes with
     quite a few classes and methods, per
     [pypi.org/project/Pillow](https://pypi.org/project/Pillow/). You
     might find its
@@ -98,7 +98,7 @@ Hints
     second `shirt` represents a “mask” indicating which pixels in
     `photo` to update.
 
--   <span class="fa-li"></span>Note that you can open an image (e.g.,
+-   Note that you can open an image (e.g.,
     `shirt.png`) in VS Code by running
 
     ``` highlight
@@ -107,29 +107,29 @@ Hints
 
     or by double-clicking its icon in VS Code’s file explorer.
 
-<span id="demo" data-id="" style="top: -58px;"></span>
 
-## <a href="#demo" data-id="">Demo</a>
 
-<span id="demos" data-id="" style="top: -58px;"></span>
+## [Demo](#demo)
 
-### <a href="#demos" data-id="">Before</a>
+
+
+### [Before](#demos)
 
 [<img src="before1.jpg" class="img-thumbnail w-25" alt="before" />](before1.jpg)
 [<img src="before2.jpg" class="img-thumbnail w-25" alt="before" />](before2.jpg)
 [<img src="before3.jpg" class="img-thumbnail w-25" alt="before" />](before3.jpg)
 
-<span id="after" data-id="" style="top: -58px;"></span>
 
-### <a href="#after" data-id="">After</a>
+
+### [After](#after)
 
 <img src="after1.jpg" class="img-thumbnail w-25" alt="after" />
 <img src="after2.jpg" class="img-thumbnail w-25" alt="after" />
 <img src="after3.jpg" class="img-thumbnail w-25" alt="after" />
 
-<span id="before-you-begin" data-id="" style="top: -58px;"></span>
 
-## <a href="#before-you-begin" data-id="">Before You Begin</a>
+
+## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
 and execute `cd` by itself. You should find that your terminal window’s
@@ -181,19 +181,19 @@ unzip muppets.zip
 
 to extract a collection of muppet photos!
 
-<span id="how-to-test" data-id="" style="top: -58px;"></span>
 
-## <a href="#how-to-test" data-id="">How to Test</a>
+
+## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   <span class="fa-li"></span>Run your program with `python shirt.py`.
+-   Run your program with `python shirt.py`.
     Your program should exit using `sys.exit` and provide an error
     message:
     ``` highlight
     Too few command-line arguments
     ```
--   <span class="fa-li"></span>Be sure to download
+-   Be sure to download
     [muppets.zip](muppets.zip) and extract a collection of muppet photos
     using `unzip muppets.zip`. Run your program with
     `python shirt.py before1.jpg before2.jpg before3.jpg`. Your program
@@ -201,25 +201,25 @@ Here’s how to test your code manually:
     ``` highlight
     Too many command-line arguments
     ```
--   <span class="fa-li"></span>Run your program with
+-   Run your program with
     `python shirt.py before1.jpg invalid_format.bmp`. Your program
     should exit using `sys.exit` and provide an error message:
     ``` highlight
     Invalid output
     ```
--   <span class="fa-li"></span>Run your program with
+-   Run your program with
     `python shirt.py before1.jpg after1.png`. Your program should exit
     using `sys.exit` and provide an error message:
     ``` highlight
     Input and output have different extensions
     ```
--   <span class="fa-li"></span>Run your program with
+-   Run your program with
     `python shirt.py non_existent_image.jpg after1.jpg`. Your program
     should exit using `sys.exit` and provide an error message:
     ``` highlight
     Input does not exist
     ```
--   <span class="fa-li"></span>Run your program with
+-   Run your program with
     `python shirt.py before1.jpg after1.jpg`. Assuming you’ve downloaded
     and unzipped [muppets.zip](muppets.zip), your program should create
     an image like the below:
@@ -238,9 +238,9 @@ indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
 
-<span id="how-to-submit" data-id="" style="top: -58px;"></span>
 
-## <a href="#how-to-submit" data-id="">How to Submit</a>
+
+## [How to Submit](#how-to-submit)
 
 In your terminal, execute the below to submit your work.
 
