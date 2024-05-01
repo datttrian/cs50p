@@ -1,28 +1,37 @@
-def calculate_fuel_percentage(fraction):
-    try:
-        numerator, denominator = map(int, fraction.split("/"))
-        if numerator > denominator or denominator == 0:
-            raise ValueError
-        percentage = (numerator / denominator) * 100
-        if percentage <= 1:
-            return "E"
-        elif percentage >= 99:
-            return "F"
-        else:
-            return str(round(percentage)) + "%"
-    except (ValueError, ZeroDivisionError):
-        return None
-
-
 def main():
     while True:
         fraction = input("Fraction: ")
-        result = calculate_fuel_percentage(fraction)
-        if result is not None:
-            print(result)
+        try:
+            percentage = convert(fraction)
+            print(gauge(percentage))
             break
-        else:
-            print("Invalid input. Please enter a valid fraction.")
+        except ValueError as ve:
+            print(ve)
+        except ZeroDivisionError as zde:
+            print(zde)
+
+
+def convert(fraction):
+    try:
+        numerator, denominator = map(int, fraction.split("/"))
+        if not isinstance(numerator, int) or not isinstance(denominator, int):
+            raise ValueError("Both numerator and denominator must be integers.")
+        if numerator > denominator:
+            raise ValueError("Numerator cannot be greater than denominator.")
+        if denominator == 0:
+            raise ZeroDivisionError("Denominator cannot be zero.")
+        return round((numerator / denominator) * 100)
+    except ValueError:
+        raise ValueError("Invalid fraction format. Please enter a fraction in X/Y format where X and Y are integers.")
+
+
+def gauge(percentage):
+    if percentage <= 1:
+        return "E"
+    elif percentage >= 99:
+        return "F"
+    else:
+        return str(percentage) + "%"
 
 
 if __name__ == "__main__":
