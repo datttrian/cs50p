@@ -2,8 +2,6 @@
 
 # [CS50 P-Shirt](#cs50-p-shirt)
 
-<img src="took.png" class="w-100" alt="CS50 shirt" />
-
 After finishing CS50 itself, students on campus at Harvard traditionally
 receive their very own [I took
 CS50](https://cs50.harvardshop.com/collections/print/products/i-took-cs50-unisex-t-shirt)
