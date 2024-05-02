@@ -4,6 +4,7 @@ from tabulate import tabulate
 
 
 def main():
+    # Expect exactly one command-line argument Python file name
     if len(sys.argv) != 2:
         sys.exit("Too few or too many command-line arguments")
 
