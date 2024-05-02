@@ -2,10 +2,6 @@ import csv
 import sys
 
 
-def clean_name(full_name):
-    first_name, last_name = full_name.split(", ")
-    return first_name, last_name
-
 
 def main():
     if len(sys.argv) != 3:
@@ -25,7 +21,7 @@ def main():
                 writer.writeheader()
 
                 for row in reader:
-                    first_name, last_name = clean_name(row["name"])
+                    first_name, last_name = clean_name(row["name"]).split(", ")
                     writer.writerow(
                         {"first": first_name, "last": last_name, "house": row["house"]}
                     )
