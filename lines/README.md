@@ -67,6 +67,20 @@ Hints
 
 ## [Demo](#demo)
 
+``` highlight
+$ python lines.py
+Too few command-line arguments
+$ python lines.py foo
+Not a Python file
+$ python lines.py foo bar
+Too many command-line arguments
+$ python lines.py foo.py
+File does not exist
+$ python lines.py hello.py
+2
+$
+```
+
 ## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
