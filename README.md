@@ -51,5 +51,5 @@
 
 - [Lines of Code](lines)
 - [Pizza Py](pizza)
-- [Scourgify]()
+- [Scourgify](scourgify)
 - CS50 P-Shirt
