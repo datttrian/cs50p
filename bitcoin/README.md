@@ -95,7 +95,7 @@ Hints
 
 ## [Demo](#demo)
 
-``` hightlight
+``` highlight
 $ python bitcoin.py
 Missing command-line argument
 $ python bitcoin.py cat

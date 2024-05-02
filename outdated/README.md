@@ -69,7 +69,7 @@ Hints
 
 ## [Demo](#demo)
 
-``` hightlight
+``` highlight
 $ python outdated.py
 Date: 9/8/1636
 1636-09-08

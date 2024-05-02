@@ -49,7 +49,7 @@ Hints
 
 ## [Demo](#demo)
 
-``` hightlight
+``` highlight
 $ python grocery.py
 apple
 banana

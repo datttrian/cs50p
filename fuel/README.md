@@ -47,7 +47,7 @@ Hints
 
 ## [Demo](#demo)
 
-``` hightlight
+``` highlight
 $ python fuel.py
 Fraction: cat/dog
 Fraction: 1/4

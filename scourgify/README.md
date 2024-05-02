@@ -122,6 +122,19 @@ Hints
 
 ## [Demo](#demo)
 
+``` highlight
+$ python scourgify.py
+Too few command-line arguments
+$ python scourgify.py 1.csv
+Too few command-line arguments
+$ python scourgify.py 1.csv 2.csv 3.csv
+Too many command-line arguments
+$ python scourgify.py 1.csv 2.csv
+Could not read 1.csv
+$ python scourgify.py before.csv after.csv
+$
+```
+
 ## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
