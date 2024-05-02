@@ -10,17 +10,14 @@ def main():
     file_name = sys.argv[1]
     if not file_name.endswith(".csv"):
         sys.exit("Not a CSV file")
-
-    # Format the table using the library’s grid format
     try:
         with open(file_name, newline="") as csvfile:
-            reader = csv.reader(csvfile)
-            data = list(reader)
-            headers = data[0]
-            rows = data[1:]
-            print(tabulate(rows, headers=headers, tablefmt="grid"))
+            csv.reader(csvfile)
     except FileNotFoundError:
         sys.exit("File does not exist")
+
+    # Format the table using the library’s grid format
+
 
 
 if __name__ == "__main__":
