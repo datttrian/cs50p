@@ -2,7 +2,7 @@ import sys
 
 
 def main():
-    # Expects exactly one command-line argument Python file name
+    # Expect exactly one command-line argument Python file name
     if len(sys.argv) != 2:
         sys.exit("Too few or too many arguments")
     file_name = sys.argv[1]
@@ -21,6 +21,7 @@ def main():
             print(len(non_empty_lines))
     except FileNotFoundError:
         sys.exit("File does not exist")
+
 
 if __name__ == "__main__":
     main()
