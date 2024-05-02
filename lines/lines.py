@@ -1,11 +1,6 @@
 import sys
 
 
-def count_lines(file):
-    # Outputs the number of lines of code excluding comments and blank lines
-    return None
-
-
 def main():
     # Expects exactly one command-line argument Python file name
     if len(sys.argv) != 2:
@@ -17,7 +12,13 @@ def main():
     # Count the lines of code in the file
     try:
         with open(file_name, "r") as file:
-            file.readlines()
+            lines = file.readlines()
+            non_empty_lines = [
+                line.strip()
+                for line in lines
+                if line.strip() and not line.strip().startswith("#")
+            ]
+            print(len(non_empty_lines))
     except FileNotFoundError:
         sys.exit("File does not exist")
 
