@@ -11,17 +11,16 @@ def main():
     if not file_name.endswith(".csv"):
         sys.exit("Not a CSV file")
 
-    
+
     try:
         with open(file_name, newline="") as csvfile:
             reader = csv.reader(csvfile)
             data = list(reader)
+            print(data)
     except FileNotFoundError:
         sys.exit("File does not exist")
 
-    headers = data[0]
-    rows = data[1:]
-    print(tabulate(rows, headers=headers, tablefmt="grid"))
+
 
 
 if __name__ == "__main__":
