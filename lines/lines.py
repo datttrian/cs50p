@@ -7,7 +7,7 @@ def count_lines(file_name):
             # Read all lines from the file
             lines = file.readlines()
 
-            # Filter out empty lines and lines that start with "#" (comments)
+            # Filter out empty lines and comments
             non_empty_lines = [
                 line.strip()
                 for line in lines
@@ -16,8 +16,8 @@ def count_lines(file_name):
 
             # Return the number of non-empty, non-comment lines
             return len(non_empty_lines)
+
     except FileNotFoundError:
-        # Handle the case when the specified file does not exist
         sys.exit("File does not exist")
 
 
