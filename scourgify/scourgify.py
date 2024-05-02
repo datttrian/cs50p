@@ -12,18 +12,20 @@ def main():
 
     try:
         modified_records = []
-        # Attempt to open the input CSV file
+        # Open the input CSV file
         with open(input_file, newline="") as infile:
-            # Open the output CSV file for writing
             reader = csv.DictReader(infile)
 
             # Iterate through each row of the input CSV file
             for row in reader:
                 # Split the 'name' field into first name and last name
                 first_name, last_name = row["name"].split(", ")
+                # 
                 modified_records.append(
                     {"first": last_name, "last": first_name, "house": row["house"]}
                 )
+
+        # Open the output CSV file for writing
         with open(output_file, "w", newline="") as outfile:
             columns = ["first", "last", "house"]
             writer = csv.DictWriter(outfile, columns=columns)
