@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    # Check if correct number of command-line arguments provided
+    # Expect the user to provide two command-line arguments:
     if len(sys.argv) != 3:
         sys.exit("Usage: python scourgify.py input.csv output.csv")
 
