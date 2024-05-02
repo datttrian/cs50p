@@ -15,7 +15,11 @@ def main():
         sys.exit("Not a Python file")
 
     # Count the lines of code in the file
-
+    try:
+        with open(file_name, "r") as file:
+            file.readlines()
+    except FileNotFoundError:
+        sys.exit("File does not exist")
 
 if __name__ == "__main__":
     main()
