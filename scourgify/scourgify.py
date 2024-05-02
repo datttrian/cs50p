@@ -3,7 +3,7 @@ import sys
 
 
 def main():
-    # Expect the user to provide two command-line arguments:
+    # Expect exactly two command-line argument CSV file names
     if len(sys.argv) != 3:
         sys.exit("Usage: python scourgify.py input.csv output.csv")
 
@@ -25,8 +25,8 @@ def main():
                     {"first": last_name, "last": first_name, "house": row["house"]}
                 )
         with open(output_file, "w", newline="") as outfile:
-            fieldnames = ["first", "last", "house"]
-            writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+            columns = ["first", "last", "house"]
+            writer = csv.DictWriter(outfile, columns=columns)
 
             # Write the header to the output CSV file
             writer.writeheader()
