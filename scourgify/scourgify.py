@@ -10,10 +10,8 @@ def main():
     output_file = sys.argv[2]
 
     try:
-
         # Open the input CSV file
         with open(input_file, newline="") as infile:
-
             # Reading input CSV file as a dictionary
             reader = csv.DictReader(infile)
 
@@ -22,7 +20,6 @@ def main():
 
             # Modify the rows of the input CSV file
             for row in reader:
-
                 # Split the 'name' field into first name and last name
                 first_name, last_name = row["name"].split(", ")
 
@@ -33,10 +30,9 @@ def main():
 
         # Open the output CSV file
         with open(output_file, "w", newline="") as outfile:
-
             # Create a CSV writer object with specified columns
             columns = ["first", "last", "house"]
-            writer = csv.DictWriter(outfile, columns=columns)
+            writer = csv.DictWriter(outfile, fieldnames=columns)
 
             # Write the header to the output CSV file
             writer.writeheader()
