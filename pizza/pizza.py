@@ -12,11 +12,15 @@ def main():
         sys.exit("Not a CSV file")
     try:
         with open(file_name, newline="") as csvfile:
-            csv.reader(csvfile)
+            reader = csv.reader(csvfile)
     except FileNotFoundError:
         sys.exit("File does not exist")
 
     # Format the table using the library’s grid format
+    data = list(reader)
+    headers = data[0]
+    rows = data[1:]
+    print(tabulate(rows, headers=headers, tabkefmt="grid"))
 
 
 
