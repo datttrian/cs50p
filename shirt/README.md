@@ -1,5 +1,3 @@
-
-
 # [CS50 P-Shirt](#cs50-p-shirt)
 
 After finishing CS50 itself, students on campus at Harvard traditionally
@@ -109,23 +107,31 @@ Hints
 
 ## [Demo](#demo)
 
-
+``` highlight
+$ python shirt.py
+Too few command-line arguments
+$ python shirt.py foo
+Too few command-line arguments
+$ python shirt.py foo bar
+Invalid input
+$ python shirt.py foo bar baz
+Too many command-line arguments
+$ python shirt.py before.jpg after.png
+Input and output have different extensions
+$ python shirt.py before.jpg after.jpg
+$ python shirt.py before.png after.png
+$
+```
 
 ### [Before](#demos)
 
-[<img src="before1.jpg" class="img-thumbnail w-25" alt="before" />](before1.jpg)
-[<img src="before2.jpg" class="img-thumbnail w-25" alt="before" />](before2.jpg)
-[<img src="before3.jpg" class="img-thumbnail w-25" alt="before" />](before3.jpg)
-
-
+![](before1.jpg =33%x) ![](before2.jpg =33%x) ![](before3.jpg =33%x)
 
 ### [After](#after)
 
-<img src="after1.jpg" class="img-thumbnail w-25" alt="after" />
-<img src="after2.jpg" class="img-thumbnail w-25" alt="after" />
-<img src="after3.jpg" class="img-thumbnail w-25" alt="after" />
-
-
+![](after1.jpg)
+![](after2.jpg)
+![](after3.jpg)
 
 ## [Before You Begin](#before-you-begin)
 
