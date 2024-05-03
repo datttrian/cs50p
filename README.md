@@ -52,4 +52,4 @@
 - [Lines of Code](lines)
 - [Pizza Py](pizza)
 - [Scourgify](scourgify)
-- CS50 P-Shirt
+- [CS50 P-Shirt](shirt)
