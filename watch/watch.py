@@ -1,8 +1,10 @@
 import re
 import sys
 
+
 def main():
     print(parse(input("HTML: ")))
+
 
 def parse(s):
     # Regular expression to find YouTube URL in src attribute
@@ -18,6 +20,7 @@ def parse(s):
         return f"https://youtu.be/{video_id}"
     else:
         return None
+
 
 if __name__ == "__main__":
     main()
