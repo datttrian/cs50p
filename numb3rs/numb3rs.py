@@ -1,4 +1,5 @@
 import re
+import sys
 
 
 def main():
@@ -6,9 +7,11 @@ def main():
 
 
 def validate(ip):
-    # Regular expression pattern for IPv4 address
-    pattern = r"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
-    if re.match(pattern, ip):
+    # Regular expression pattern for validating IPv4 addresses
+    ipv4_pattern = r"^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+
+    # Check if the input matches the IPv4 pattern
+    if re.match(ipv4_pattern, ip):
         return True
     else:
         return False
