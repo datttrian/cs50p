@@ -1,10 +1,10 @@
 from sys import exit, argv
-import os
+from os import path
 from PIL import Image, ImageOps
 
 
 def main():
-    # Check if the correct number of command-line arguments are provided
+    # Expect two command-line arguments the names of images to read and write
     if len(argv) < 3:
         exit("Too few command-line arguments")
     elif len(argv) > 3:
@@ -22,14 +22,11 @@ def main():
         exit("Invalid output")
 
     # Check if input and output file extensions match
-    if (
-        os.path.splitext(input_file)[1].lower()
-        != os.path.splitext(output_file)[1].lower()
-    ):
+    if path.splitext(input_file)[1].lower() != path.splitext(output_file)[1].lower():
         exit("Input and output have different extensions")
 
     # Check if the input file exists
-    if not os.path.exists(input_file):
+    if not path.exists(input_file):
         exit("Input does not exist")
 
     # Open the input image and the shirt image
