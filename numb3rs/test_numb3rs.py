@@ -23,7 +23,3 @@ def test_edge_cases():
     assert (
         validate("255.255.255.255") == True
     )  # Highest possible address, including broadcast
-
-
-if __name__ == "__main__":
-    pytest.main()

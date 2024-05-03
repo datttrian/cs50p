@@ -13,6 +13,3 @@ def test_invalid_formats():
 def test_invalid_times():
     with pytest.raises(ValueError):
         assert convert("13:00 AM to 69:30 PM")
-
-if __name__ == "__main__":
-    pytest.main()
