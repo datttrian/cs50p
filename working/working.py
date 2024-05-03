@@ -8,7 +8,7 @@ def main():
 
 def convert(s):
     # Regular expression to match the time formats
-    pattern = r'^(\d{1,2})(?::(\d{2}))? ([AP]M) to (\d{1,2})(?::(\d{2}))? ([AP]M)$'
+    pattern = r"^(\d{1,2})(?::(\d{2}))? ([AP]M) to (\d{1,2})(?::(\d{2}))? ([AP]M)$"
 
     # Match the input string against the pattern
     match = re.match(pattern, s)
@@ -16,7 +16,14 @@ def convert(s):
         raise ValueError("Invalid input format")
 
     # Extract components from the matched groups
-    start_hour, start_minute, start_ampm, end_hour, end_minute, end_ampm = match.groups()
+    (
+        start_hour,
+        start_minute,
+        start_ampm,
+        end_hour,
+        end_minute,
+        end_ampm,
+    ) = match.groups()
 
     # Convert to 24-hour format
     start_hour = int(start_hour)
@@ -31,15 +38,15 @@ def convert(s):
         raise ValueError("Invalid end time")
 
     # Convert AM/PM to 24-hour format
-    if start_ampm == 'PM' and start_hour != 12:
+    if start_ampm == "PM" and start_hour != 12:
         start_hour += 12
-    if end_ampm == 'PM' and end_hour != 12:
+    if end_ampm == "PM" and end_hour != 12:
         end_hour += 12
 
     # Handle midnight (12:00 AM)
-    if start_ampm == 'AM' and start_hour == 12:
+    if start_ampm == "AM" and start_hour == 12:
         start_hour = 0
-    if end_ampm == 'AM' and end_hour == 12:
+    if end_ampm == "AM" and end_hour == 12:
         end_hour = 0
 
     # Construct the 24-hour format string
