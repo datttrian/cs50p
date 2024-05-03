@@ -299,7 +299,7 @@ your program.
 
 ## [How to Test](#how-to-test)
 
-#### [How to Test working.py](#how-to-test-workingpy)
+#### [How to Test `working.py`](#how-to-test-workingpy)
 
 Here’s how to test `working.py` manually:
 
