@@ -1,6 +1,4 @@
-<span id="response-validation" data-id="" style="top: -58px;"></span>
-
-# <a href="#response-validation" data-id="">Response Validation</a>
+# [Response Validation](#response-validation)
 
 When creating a [Google Form](https://www.google.com/forms/about/) that
 prompts users for a short answer (or paragraph), it’s possible to enable
@@ -19,7 +17,7 @@ Or you could more easily use Google’s built-in support for validating an
 email address, per the screenshot below, much like you could use a
 library in your own code:
 
-![Google Form](form.png)
+![Google Form](https://cs50.harvard.edu/python/2022/psets/7/response/form.png)
 
 In a file called `response.py`, using either
 [validator-collection](https://pypi.org/project/validator-collection/)
@@ -31,7 +29,7 @@ validate whether the email address’s domain name actually exists.
 
 Hints
 
--   <span class="fa-li"></span>Note that you can install
+-   Note that you can install
     validator-collection with:
 
     ``` highlight
@@ -40,7 +38,7 @@ Hints
 
     Click **Homepage** to find your way to the library’s documentation.
 
--   <span class="fa-li"></span>Note that you can install validators
+-   Note that you can install validators
     with:
 
     ``` highlight
@@ -49,13 +47,23 @@ Hints
 
     Click **Homepage** to find your way to the library’s documentation.
 
-<span id="demo" data-id="" style="top: -58px;"></span>
 
-## <a href="#demo" data-id="">Demo</a>
+## [Demo](#demo)
 
-<span id="before-you-begin" data-id="" style="top: -58px;"></span>
+``` highlight
+$ python response.py
+What's your email address? malan
+Invalid
+$ python response.py
+What's your email address? malan at harvard dot edu
+Invalid
+$ python response.py
+What's your email address? malan@harvard.edu
+Valid
+$
+```
 
-## <a href="#before-you-begin" data-id="">Before You Begin</a>
+## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
 and execute `cd` by itself. You should find that your terminal window’s
@@ -88,23 +96,22 @@ code response.py
 
 to make a file called `response.py` where you’ll write your program.
 
-<span id="how-to-test" data-id="" style="top: -58px;"></span>
 
-## <a href="#how-to-test" data-id="">How to Test</a>
+## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   <span class="fa-li"></span>Run your program with
+-   Run your program with
     `python response.py`. Ensure your program prompts you for an email,
     then type `malan@harvard.edu`, followed by Enter. Your program
     should output `Valid`.
--   <span class="fa-li"></span>Run your program with
+-   Run your program with
     `python response.py`. Type your own email, followed by Enter. Your
     program should output `Valid`.
--   <span class="fa-li"></span>Run your program with
+-   Run your program with
     `python response.py`. Type `malan@@@harvard.edu`, followed by Enter.
     Your program should output `Invalid`.
--   <span class="fa-li"></span>Run your program with
+-   Run your program with
     `python response.py`. Mistype your own email, including an extra `.`
     before `.com`, for example. Press enter and your program should
     output `Invalid`.
@@ -122,9 +129,8 @@ indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
 
-<span id="how-to-submit" data-id="" style="top: -58px;"></span>
 
-## <a href="#how-to-submit" data-id="">How to Submit</a>
+## [How to Submit](#how-to-submit)
 
 In your terminal, execute the below to submit your work.
 
