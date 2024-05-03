@@ -34,4 +34,4 @@ def test_invalid_times():
         convert("12:30 AM to 5:00 PP")  # Invalid AM/PM
 
 if __name__ == "__main__":
-    pytest.main(["-v", "test_working.py"])
+    pytest.main()
