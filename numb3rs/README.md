@@ -1,3 +1,5 @@
+
+
 # [NUMB3RS](#numb3rs)
 
 In Season 5, Episode 23 of
@@ -97,9 +99,10 @@ True
 $ python numb3rs.py
 IPv4 Address: 275.3.6.28
 False
-$ python numb3rs.py  
+$ python numb3rs.py
 IPv4 Address: cat
 False
+$
 ```
 
 ## [Before You Begin](#before-you-begin)
@@ -147,8 +150,7 @@ your program.
 ## [How to Test](#how-to-test)
 
 
-#### [<](#how-to-test-numb3rspy[How to Test</a> <a href="#how-to-test-numb3rspy)
-class="language-plaintext highlighter-rouge">numb3rs.py</code></a>
+#### [How to Test](#how-to-test-numb3rspy) `numb3rs.py`
 
 Here’s how to test `numb3rs.py` manually:
 
@@ -169,10 +171,7 @@ Here’s how to test `numb3rs.py` manually:
     `python numb3rs.py`. Type `cat`, followed by Enter. Your `validate`
     function should return `False`.
 
-style="top: -58px;"></span>
-
-#### [<](#how-to-test-test_numb3rspy[How to Test</a> <a href="#how-to-test-test_numb3rspy)
-class="language-plaintext highlighter-rouge">test_numb3rs.py</code></a>
+#### [How to Test](#how-to-test-test_numb3rspy) `test_numb3rs.py`
 
 To test your tests, run `pytest test_numb3rs.py`. Try to use correct and
 incorrect versions of `numb3rs.py` to determine how well your tests spot
