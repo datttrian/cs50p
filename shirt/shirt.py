@@ -16,10 +16,10 @@ def main():
 
     # Check if input and output file extensions are valid
     valid_extensions = {".jpg", ".jpeg", ".png"}
-    if (not input_file.lower().endswith(tuple(valid_extensions))) or (
-        not output_file.lower().endswith(tuple(valid_extensions))
-    ):
+    if not input_file.lower().endswith(tuple(valid_extensions)):
         exit("Invalid input")
+    if not output_file.lower().endswith(tuple(valid_extensions)):
+        exit("Invalid output")
 
     # Check if input and output file extensions match
     if (
