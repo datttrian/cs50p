@@ -125,13 +125,11 @@ $
 
 ### [Before](#demos)
 
-![](before1.jpg =33%x) ![](before2.jpg =33%x) ![](before3.jpg =33%x)
+![](_before.png)
 
 ### [After](#after)
 
-![](after1.jpg)
-![](after2.jpg)
-![](after3.jpg)
+![](_after.png)
 
 ## [Before You Begin](#before-you-begin)
 
