@@ -56,7 +56,7 @@
 
 ## Week 6 File I/O
 
-- NUMB3RS
+- [NUMB3RS](numb3rs)
 - Watch on YouTube
 - Working 9 to 5
 - Regular, um, Expressions

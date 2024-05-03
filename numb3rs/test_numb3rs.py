@@ -17,8 +17,12 @@ def test_invalid_ipv4():
 
 def test_edge_cases():
     assert validate("0.0.0.0") == True  # Lowest possible address
-    assert validate("255.255.255.254") == True  # Highest possible address, excluding broadcast
-    assert validate("255.255.255.255") == True  # Highest possible address, including broadcast
+    assert (
+        validate("255.255.255.254") == True
+    )  # Highest possible address, excluding broadcast
+    assert (
+        validate("255.255.255.255") == True
+    )  # Highest possible address, including broadcast
 
 
 if __name__ == "__main__":
