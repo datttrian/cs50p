@@ -53,3 +53,11 @@
 - [Pizza Py](pizza)
 - [Scourgify](scourgify)
 - [CS50 P-Shirt](shirt)
+
+## Week 6 File I/O
+
+- NUMB3RS
+- Watch on YouTube
+- Working 9 to 5
+- Regular, um, Expressions
+- Response Validation
