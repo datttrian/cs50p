@@ -12,6 +12,11 @@ def validate(ip):
 
     # Check if the input matches the IPv4 pattern
     if re.match(ipv4_pattern, ip):
+        # Check if each byte is within the valid range
+        bytes = ip.split('.')
+        for byte in bytes:
+            if int(byte) > 255:
+                return False
         return True
     else:
         return False
