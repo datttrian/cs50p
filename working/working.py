@@ -1,12 +1,6 @@
-import re
-import sys
-
-def main():
-    print(convert(input("Hours: ")))
-
 def convert(s):
-    # Regular expression to match both formats
-    pattern = r'^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)\s*to\s*(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$'
+    # Regular expression to match both formats with spaces around AM/PM
+    pattern = r'^(\d{1,2})(?::(\d{2}))?\s+(AM|PM)\s+to\s+(\d{1,2})(?::(\d{2}))?\s+(AM|PM)$'
 
     match = re.match(pattern, s)
     if match:
@@ -32,6 +26,3 @@ def convert(s):
         return f"{hour1.zfill(2)}:{(minute1 or '00').zfill(2)} to {hour2.zfill(2)}:{(minute2 or '00').zfill(2)}"
     else:
         raise ValueError("Invalid input format")
-
-if __name__ == "__main__":
-    main()
