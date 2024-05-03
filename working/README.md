@@ -299,8 +299,7 @@ your program.
 
 ## [How to Test](#how-to-test)
 
-#### [How to Test</a> <a href="#how-to-test-workingpy" data-id=""><](#how-to-test-workingpy)
-class="language-plaintext highlighter-rouge">working.py</code></a>
+#### [How to Test working.py](#how-to-test-workingpy)
 
 Here’s how to test `working.py` manually:
 
@@ -335,8 +334,8 @@ Here’s how to test `working.py` manually:
     raise a `ValueError`.
 
 
-#### [How to Test</a> <a href="#how-to-test-test_workingpy" data-id=""><](#how-to-test-test_workingpy)
-class="language-plaintext highlighter-rouge">test_working.py</code></a>
+#### [How to Test `test_working.py`](#how-to-test-test_workingpy)
+
 
 To test your tests, run `pytest test_working.py`. Try to use correct and
 incorrect versions of `working.py` to determine how well your tests spot

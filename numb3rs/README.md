@@ -150,7 +150,7 @@ your program.
 ## [How to Test](#how-to-test)
 
 
-#### [How to Test](#how-to-test-numb3rspy) `numb3rs.py`
+#### [How to Test `numb3rs.py`](#how-to-test-numb3rspy)
 
 Here’s how to test `numb3rs.py` manually:
 
@@ -171,7 +171,7 @@ Here’s how to test `numb3rs.py` manually:
     `python numb3rs.py`. Type `cat`, followed by Enter. Your `validate`
     function should return `False`.
 
-#### [How to Test](#how-to-test-test_numb3rspy) `test_numb3rs.py`
+#### [How to Test `test_numb3rs.py`](#how-to-test-test_numb3rspy)
 
 To test your tests, run `pytest test_numb3rs.py`. Try to use correct and
 incorrect versions of `numb3rs.py` to determine how well your tests spot

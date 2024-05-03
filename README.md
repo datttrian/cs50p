@@ -54,7 +54,7 @@
 - [Scourgify](scourgify)
 - [CS50 P-Shirt](shirt)
 
-## Week 6 File I/O
+## Week 7 Regular Expressions
 
 - [NUMB3RS](numb3rs)
 - [Watch on YouTube](watch)
