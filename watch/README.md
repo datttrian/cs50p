@@ -47,7 +47,7 @@ and/or implement other functions as you see fit, but you may not import
 any other libraries. You’re welcome, but not required, to use `re`
 and/or `sys`.
 
-``` highlight
+``` python
 import re
 import sys
 
@@ -102,6 +102,18 @@ Hints
 
 ## [Demo](#demo)
 
+```
+$ python watch.py
+HTML: <iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo
+5PgG0" title="YouTube video player" frameborder="0" allow="accelerometer; autopl
+ay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullsc
+reen></iframe>
+https://youtu.be/xvFZjo5PgG0
+$ python watch.py
+HTML: <iframe src="https://www.youtube.com/embed/xvFZjo5PgG0"></iframe>
+https://youtu.be/xvFZjo5PgG0
+$
+```
 
 ## [Before You Begin](#before-you-begin)
 
