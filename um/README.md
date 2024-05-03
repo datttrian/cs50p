@@ -1,7 +1,4 @@
-<span id="regular-um-expressions" data-id="" style="top: -58px;"></span>
-
-# <a href="#regular-um-expressions" data-id="">Regular, um,
-Expressions</a>
+# [Regular, um, Expressions](#regular-um-expressions)
 
 It’s not uncommon, in English, at least, to say “um” when trying to, um,
 think of a word. The more you do it, though, the more noticeable it
@@ -19,7 +16,7 @@ and/or implement other functions as you see fit, but you may not import
 any other libraries. You’re welcome, but not required, to use `re`
 and/or `sys`.
 
-``` highlight
+``` python
 import re
 import sys
 
@@ -77,13 +74,29 @@ Hints
     [thefreedictionary.com/words-containing-um](https://www.thefreedictionary.com/words-containing-um)
     for some words that contain “um”.
 
-<span id="demo" data-id="" style="top: -58px;"></span>
 
-## <a href="#demo" data-id="">Demo</a>
+### [Demo](#demo)
 
-<span id="before-you-begin" data-id="" style="top: -58px;"></span>
+``` highlight
+$ python um.py
+Input: hello, um, world
+1
+$ python um.py
+Input: um, hello, um, world
+2
+$ python um.py
+Input: um...
+1
+$ python um.py
+Input: yum
+0
+$ python um.py
+Input: yummy
+0
+$
+```
 
-## <a href="#before-you-begin" data-id="">Before You Begin</a>
+### [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
 and execute `cd` by itself. You should find that your terminal window’s
@@ -124,14 +137,11 @@ code test_um.py
 to create a file called `test_um.py` where you’ll, um, write tests for
 your program.
 
-<span id="how-to-test" data-id="" style="top: -58px;"></span>
 
-## <a href="#how-to-test" data-id="">How to Test</a>
+### [How to Test](#how-to-test)
 
-<span id="how-to-test-umpy" data-id="" style="top: -58px;"></span>
 
-#### <a href="#how-to-test-umpy" data-id="">How to Test</a> <a href="#how-to-test-umpy" data-id=""><code
-class="language-plaintext highlighter-rouge">um.py</code></a>
+#### [How to Test `um.py`](#how-to-test-umpy)
 
 Here’s how to test `um.py` manually:
 
@@ -148,10 +158,8 @@ Here’s how to test `um.py` manually:
     Type `Um, thanks, um...`, followed by Enter. Your `count` function
     should return `2`.
 
-<span id="how-to-test-test_umpy" data-id="" style="top: -58px;"></span>
 
-#### <a href="#how-to-test-test_umpy" data-id="">How to Test</a> <a href="#how-to-test-test_umpy" data-id=""><code
-class="language-plaintext highlighter-rouge">test_um.py</code></a>
+#### [How to Test `test_um.py`](#how-to-test-test_umpy)
 
 To test your tests, run `pytest test_um.py`. Try to use correct and
 incorrect versions of `um.py` to determine how well your tests spot
@@ -184,9 +192,8 @@ indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
 
-<span id="how-to-submit" data-id="" style="top: -58px;"></span>
 
-## <a href="#how-to-submit" data-id="">How to Submit</a>
+### [How to Submit](#how-to-submit)
 
 In your terminal, execute the below to submit your work.
 
