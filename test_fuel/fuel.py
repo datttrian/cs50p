@@ -10,8 +10,6 @@ def main():
 
 
 def convert(fraction):
-
-
     try:
         numerator, denominator = map(int, fraction.split("/"))
         if denominator == 0:
