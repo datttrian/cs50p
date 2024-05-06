@@ -10,16 +10,18 @@ def main():
 
 
 def convert(fraction):
+
+
     try:
         numerator, denominator = map(int, fraction.split("/"))
-        if numerator > denominator or denominator == 0:
-            raise ValueError("Invalid fraction")
+        if denominator == 0:
+            raise ZeroDivisionError
+        elif numerator > denominator:
+            raise ValueError
         percentage = (numerator / denominator) * 100
         return round(percentage)
     except ValueError:
         raise ValueError("Invalid fraction")
-    except ZeroDivisionError:
-        raise ZeroDivisionError("Denominator cannot be zero")
 
 
 def gauge(percentage):
