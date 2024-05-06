@@ -11,7 +11,7 @@ def main():
     try:
         birth_date = date.fromisoformat(input("Date of Birth: "))
     except ValueError:
-        sys.exit("Invalid input.")
+        sys.exit("Invalid date")
 
     total_minutes = get_total_minutes(birth_date, date.today())
     p = inflect.engine()

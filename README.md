@@ -60,10 +60,10 @@
 - [Watch on YouTube](watch)
 - [Working 9 to 5](working)
 - [Regular, um, Expressions](um)
-- Response Validation
+- [Response Validation](response)
 
 ## Week 8 Object-Oriented Programming
 
-- Seasons of Love
+- [Seasons of Love](seasons)
 - Cookie Jar
 - CS50 Shirtificate
