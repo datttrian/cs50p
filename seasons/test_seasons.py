@@ -1,24 +1,16 @@
+import pytest
 from datetime import date
 from seasons import get_total_minutes
 
 
-def test_get_minutes():
-    assert get_total_minutes(date(1999, 1, 1), date(2000, 1, 1)) == 525600
-    assert get_total_minutes(date(2001, 1, 1), date(2003, 1, 1)) == 1051200
-    assert get_total_minutes(date(1995, 1, 1), date(2000, 1, 1)) == 2629440
-    assert get_total_minutes(date(2020, 6, 1), date(2032, 1, 1)) == 6092640
-
-from bank import value
-import pytest
-
-
 @pytest.mark.parametrize(
-    ("input_str", "expected"),
+    ("start_date", "end_date", "expected_minutes"),
     [
-        ("HeLLo", 0),
-        ("hi there", 20),
-        ("good morning", 100),
+        (date(1999, 1, 1), date(2000, 1, 1), 525600),
+        (date(2000, 1, 1), date(2012, 1, 1), 6311520),
+        (date(2024, 2, 29), date(2024, 5, 1), 89280),
+        (date(2024, 1, 1), date(2033, 1, 1), 4734720),
     ],
 )
-def test_value(input_str, expected):
-    assert value(input_str) == expected
+def test_get_minutes(start_date, end_date, expected_minutes):
+    assert get_total_minutes(start_date, end_date) == expected_minutes
