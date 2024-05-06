@@ -93,6 +93,21 @@ Hints
 
 Assume that this demo was recorded on January 1, 2000.
 
+``` highlight
+$ python seasons.py
+Date of Birth: January 1, 1999
+Invalid date
+$ python seasons.py
+Date of Birth: 1999-01-01
+Five hundred twenty-five thousand, six hundred minutes
+$ python seasons.py
+Date of Birth: 1999-12-31
+One thousand, four hundred forty minutes
+$ python seasons.py
+Date of Birth: 1970-01-01
+Fifteen million, seven hundred seventy-eight thousand eighty minutes
+$
+```
 
 ## [Before You Begin](#before-you-begin)
 
