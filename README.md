@@ -61,3 +61,9 @@
 - [Working 9 to 5](working)
 - [Regular, um, Expressions](um)
 - Response Validation
+
+## Week 8 Object-Oriented Programming
+
+- Seasons of Love
+- Cookie Jar
+- CS50 Shirtificate
