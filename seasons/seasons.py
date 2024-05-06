@@ -1,51 +1,57 @@
-from datetime import datetime, date
 import sys
+from attr import validate
+import inflect
+from datetime import datetime, date, timedelta
 
-def get_age_in_minutes(birthdate):
-    today = date.today()
-    age_in_years = today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))
-    age_in_minutes = age_in_years * 365 * 24 * 60
-    return age_in_minutes
 
-def age_in_words(age_in_minutes):
-    years = age_in_minutes // (365 * 24 * 60)
-    remainder = age_in_minutes % (365 * 24 * 60)
-    days = remainder // (24 * 60)
-    hours = (remainder % (24 * 60)) // 60
-    minutes = remainder % 60
+class DOB:
+    """A Date of Birth class that takes a user's birthday in YYYY-MM-DD format."""
 
-    age_words = ""
-    if years > 0:
-        age_words += f"{years} year"
-        if years != 1:
-            age_words += "s"
-    if days > 0:
-        age_words += f" {days} day"
-        if days != 1:
-            age_words += "s"
-    if hours > 0:
-        age_words += f" {hours} hour"
-        if hours != 1:
-            age_words += "s"
-    if minutes > 0:
-        age_words += f" {minutes} minute"
-        if minutes != 1:
-            age_words += "s"
+    def __init__(self, birthdate=0):
+        self.birthdate = self.validate(birthdate)
+        self.now = self.current_time()
+        self.time = self.time_delta()
 
-    return age_words.strip()
+    def __str__(self):
+        """Return the birthdate of this instance as a string."""
+        return str(self.time)
+
+    def validate(self, birthdate):
+        """Validate a YYYY-MM-DD format birthdate and create an instance."""
+        if birthdate == 0:
+            birthdate = input("Date of Birth: ").strip()
+
+        try:
+            if date := datetime.strptime(birthdate, "%Y-%m-%d"):
+                birthdate = datetime.combine(date, datetime.min.time())
+                return birthdate
+        except ValueError:
+            sys.exit("Invalid Date")
+
+    def current_time(self):
+        """Get's the current time the program is run and modifies the time to be midnight."""
+        now = datetime.combine(date.today(), datetime.min.time())
+        return now
+
+    def time_delta(self):
+        """Return the time delta in minutes as an integer."""
+        td = self.now - self.birthdate
+        time = int(td / timedelta(minutes=1))
+        return time
+
 
 def main():
-    user_input = input("Please enter your date of birth (YYYY-MM-DD): ")
-    try:
-        birthdate = datetime.strptime(user_input, "%Y-%m-%d").date()
-    except ValueError:
-        print("Invalid date format. Please enter date in YYYY-MM-DD format.")
-        sys.exit(1)
+    seasons = DOB()
+    print(sing(seasons))
 
-    age_in_minutes = get_age_in_minutes(birthdate)
-    age_words = age_in_words(age_in_minutes)
 
-    print(f"You are {age_words} old in minutes.")
+def sing(minutes: int) -> int:
+    """Use inflect to return a string of words that represent the input in minutes."""
+    p = inflect.engine()
+    lyrics = p.number_to_words(minutes, andword="")
+    lyrics = f"{lyrics} minutes".capitalize()
+    return lyrics
+
 
 if __name__ == "__main__":
     main()

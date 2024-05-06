@@ -1,9 +1,24 @@
-from datetime import date
-from seasons import get_age_in_minutes
+import pytest
+from seasons import DOB, sing
 
 
-def test_get_minutes():
-    assert get_age_in_minutes(date(1999, 1, 1), date(2000, 1, 1)) == 525600
-    assert get_age_in_minutes(date(2001, 1, 1), date(2003, 1, 1)) == 1051200
-    assert get_age_in_minutes(date(1995, 1, 1), date(2000, 1, 1)) == 2629440
-    assert get_age_in_minutes(date(2020, 6, 1), date(2032, 1, 1)) == 6092640
+def test_init():
+    """"""
+    testuser = DOB("2000-01-01")
+    assert str(testuser.birthdate) == "2000-01-01 00:00:00"
+    assert str(testuser) == "11796480"
+
+
+def test_sing():
+    """"""
+    testuser2 = DOB("2000-01-01")
+    assert (
+        sing(testuser2)
+        == "Eleven million, seven hundred ninety-six thousand, four hundred eighty minutes"
+    )
+
+
+def test_invalid_date():
+    """"""
+    with pytest.raises(SystemExit):
+        DOB("2000-13-13")
