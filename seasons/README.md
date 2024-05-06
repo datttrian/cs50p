@@ -1,4 +1,4 @@
-# [Seasons of Love</a>](#seasons-of-love)
+# [Seasons of Love](#seasons-of-love)
 
 > Five hundred twenty-five thousand, six hundred minutes
 > Five hundred twenty-five thousand moments so dear
@@ -89,12 +89,12 @@ Hints
     ```
 
 
-## [Demo</a>](#demo)
+## [Demo](#demo)
 
 Assume that this demo was recorded on January 1, 2000.
 
 
-## [Before You Begin</a>](#before-you-begin)
+## [Before You Begin](#before-you-begin)
 
 Log into [cs50.dev](https://cs50.dev/), click on your terminal window,
 and execute `cd` by itself. You should find that your terminal window’s
@@ -136,7 +136,7 @@ to create a file called `test_seasons.py` where you’ll write tests for
 your program.
 
 
-## [How to Test</a>](#how-to-test)
+## [How to Test](#how-to-test)
 
 
 #### [How to Test `seasons.py`](#how-to-test-seasonspy)
@@ -191,7 +191,7 @@ indicate your program output something unexpected. Visit the URL that
 what output it expected, and what output your program actually gave.
 
 
-## [How to Submit</a>](#how-to-submit)
+## [How to Submit](#how-to-submit)
 
 In your terminal, execute the below to submit your work.
 
