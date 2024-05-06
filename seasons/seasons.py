@@ -1,29 +1,28 @@
-from datetime import date, datetime
+from datetime import date
 import sys
-from inflect import engine
+import inflect
+
+def parse_date(input_date):
+    try:
+        year, month, day = map(int, input_date.split('-'))
+        return date(year, month, day)
+    except ValueError:
+        sys.exit("Invalid date")
+
+def minutes_difference(birth_date, current_date):
+    time_delta = current_date - birth_date
+    return time_delta.days * 24 * 60  # Days to minutes
+
+def number_to_words(number):
+    p = inflect.engine()
+    return p.number_to_words(number, andword="")
 
 def main():
-    dob_str = input("Enter your date of birth (YYYY-MM-DD): ")
-    try:
-        dob = datetime.strptime(dob_str, "%Y-%m-%d")
-        today = datetime.combine(date.today(), datetime.min.time())
-        if dob > today:
-            raise ValueError("Date of birth cannot be in the future.")
-        age_in_minutes = calculate_age_in_minutes(dob, today)
-        age_in_words = convert_minutes_to_words(age_in_minutes)
-        print(f"You are {age_in_words} minutes old.")
-    except ValueError:
-        print("Invalid date format. Please enter the date in YYYY-MM-DD format.")
-        sys.exit(1)
-
-def calculate_age_in_minutes(start, end):
-    delta = end - start
-    return round(delta.total_seconds() / 60)
-
-def convert_minutes_to_words(minutes):
-    p = engine()
-    words = p.number_to_words(minutes).replace("-", " ").replace(",", "")
-    return words
+    user_input = input("Date of Birth: ")
+    birth_date = parse_date(user_input)
+    current_date = date.today()
+    minutes = minutes_difference(birth_date, current_date)
+    print(number_to_words(minutes))
 
 if __name__ == "__main__":
     main()
