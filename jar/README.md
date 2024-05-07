@@ -88,7 +88,7 @@ as you normally would!
 
 Hints
 
-``` highlight
+``` python
 from jar import Jar
 
 
