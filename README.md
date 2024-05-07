@@ -65,5 +65,5 @@
 ## Week 8 Object-Oriented Programming
 
 - [Seasons of Love](seasons)
-- Cookie Jar
-- CS50 Shirtificate
+- [Cookie Jar](jar)
+- [CS50 Shirtificate](shirtificate)
