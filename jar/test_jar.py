@@ -1,5 +1,6 @@
 from jar import Jar
 
+
 def test_init():
     # Test default initialization
     jar1 = Jar()
@@ -19,6 +20,7 @@ def test_init():
     else:
         assert False, "Expected ValueError for negative capacity"
 
+
 def test_str():
     jar = Jar()
     assert str(jar) == ""
@@ -26,6 +28,7 @@ def test_str():
     assert str(jar) == "🍪"
     jar.deposit(11)
     assert str(jar) == "🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪"
+
 
 def test_deposit():
     jar = Jar()
@@ -48,6 +51,7 @@ def test_deposit():
         pass
     else:
         assert False, "Expected ValueError for negative number of cookies"
+
 
 def test_withdraw():
     jar = Jar()
@@ -72,6 +76,7 @@ def test_withdraw():
         pass
     else:
         assert False, "Expected ValueError for negative number of cookies"
+
 
 if __name__ == "__main__":
     test_init()
