@@ -48,32 +48,31 @@ pytest test_um.py
 
 Hints
 
--   <span class="fa-li"></span>Recall that the `re` module comes with
+- <span class="fa-li"></span>Recall that the `re` module comes with
     quite a few functions, per
     [docs.python.org/3/library/re.html](https://docs.python.org/3/library/re.html),
     including `findall`.
--   <span class="fa-li"></span>Recall that regular expressions support
+- <span class="fa-li"></span>Recall that regular expressions support
     quite a few special characters, per
     [docs.python.org/3/library/re.html#regular-expression-syntax](https://docs.python.org/3/library/re.html#regular-expression-syntax).
--   <span class="fa-li"></span>Because backslashes in regular
+- <span class="fa-li"></span>Because backslashes in regular
     expressions could be mistaken for escape sequences (like `\n`), best
     to use [Python’s raw string notation for regular expression
     patterns](https://docs.python.org/3/library/re.html#module-re). Just
     as format strings are prefixed with `f`, so are raw strings prefixed
     with `r`. For instance, instead of `"harvard\.edu"`, use
     `r"harvard\.edu"`.
--   <span class="fa-li"></span>Note that `\b` is “defined as the
+- <span class="fa-li"></span>Note that `\b` is “defined as the
     boundary between a `\w` and a `\W` character (or vice versa), or
     between `\w` at the beginning/end of the string,” per
     [docs.python.org/3/library/re.html#regular-expression-syntax](https://docs.python.org/3/library/re.html#regular-expression-syntax).
--   <span class="fa-li"></span>You might find
+- <span class="fa-li"></span>You might find
     [regex101.com](https://regex101.com/) or
     [regexr.com](https://regexr.com/) helpful for testing regular
     expressions (and visualizing matches).
--   <span class="fa-li"></span>See
+- <span class="fa-li"></span>See
     [thefreedictionary.com/words-containing-um](https://www.thefreedictionary.com/words-containing-um)
     for some words that contain “um”.
-
 
 ### [Demo](#demo)
 
@@ -137,27 +136,24 @@ code test_um.py
 to create a file called `test_um.py` where you’ll, um, write tests for
 your program.
 
-
 ### [How to Test](#how-to-test)
-
 
 #### [How to Test `um.py`](#how-to-test-umpy)
 
 Here’s how to test `um.py` manually:
 
--   <span class="fa-li"></span>Run your program with `python um.py`.
+- <span class="fa-li"></span>Run your program with `python um.py`.
     Ensure your program prompts you for an input. Type `um`, followed by
     Enter. Your `count` function should return `1`.
--   <span class="fa-li"></span>Run your program with `python um.py`.
+- <span class="fa-li"></span>Run your program with `python um.py`.
     Type `um?`, followed by Enter. Your `count` function should return
     `1`.
--   <span class="fa-li"></span>Run your program with `python um.py`.
+- <span class="fa-li"></span>Run your program with `python um.py`.
     Type `Um, thanks for the album.`, followed by Enter. Your `count`
     function should return `1`.
--   <span class="fa-li"></span>Run your program with `python um.py`.
+- <span class="fa-li"></span>Run your program with `python um.py`.
     Type `Um, thanks, um...`, followed by Enter. Your `count` function
     should return `2`.
-
 
 #### [How to Test `test_um.py`](#how-to-test-test_umpy)
 
@@ -165,15 +161,15 @@ To test your tests, run `pytest test_um.py`. Try to use correct and
 incorrect versions of `um.py` to determine how well your tests spot
 errors:
 
--   <span class="fa-li"></span>Ensure you have a correct version of
+- <span class="fa-li"></span>Ensure you have a correct version of
     `um.py`. Run your tests by executing `pytest test_um.py`. `pytest`
     should show that all of your tests have passed.
--   <span class="fa-li"></span>Modify the `count` function in the
+- <span class="fa-li"></span>Modify the `count` function in the
     correct version of `um.py`. `count` might, for example, mistakently
     also count any “um” that is part of a word. Run your tests by
     executing `pytest test_um.py`. `pytest` should show that at least
     one of your tests has failed.
--   <span class="fa-li"></span>Again modify the `count` function in the
+- <span class="fa-li"></span>Again modify the `count` function in the
     correct version of `um.py`. `count` might, for example, mistakenly
     only match an “um” that is surrounded on either side by a space. Run
     your tests by executing `pytest test_um.py`. `pytest` should show
@@ -191,7 +187,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
 
 ### [How to Submit](#how-to-submit)
 

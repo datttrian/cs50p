@@ -107,24 +107,32 @@ Here’s how to test your code manually:
 
 - Run your program with `python fuel.py`. Type `3/4` and press Enter.
   Your program should output:
+
   ``` highlight
   75%
   ```
+
 - Run your program with `python fuel.py`. Type `1/4` and press Enter.
   Your program should output:
+
   ``` highlight
   25%
   ```
+
 - Run your program with `python fuel.py`. Type `4/4` and press Enter.
   Your program should output:
+
   ``` highlight
   F
   ```
+
 - Run your program with `python fuel.py`. Type `0/4` and press Enter.
   Your program should output:
+
   ``` highlight
   E
   ```
+
 - Run your program with `python fuel.py`. Type `4/0` and press Enter.
   Your program should handle a
   [`ZeroDivisionError`](https://docs.python.org/3/library/exceptions.html#ZeroDivisionError)

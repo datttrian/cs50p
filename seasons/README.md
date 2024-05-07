@@ -71,7 +71,7 @@ pytest test_seasons.py
 
 Hints
 
--   Note that the `date` class comes with
+- Note that the `date` class comes with
     quite a few methods and “supported operations,” per
     [docs.python.org/3/library/datetime.html#date-objects](https://docs.python.org/3/library/datetime.html#date-objects).
     In particular, the class implements `__sub__`, per
@@ -80,14 +80,14 @@ Hints
     from another returns a `timedelta` object, which itself comes with
     several (read-only) “instance attributes,” per
     [docs.python.org/3/library/datetime.html#timedelta-objects](https://docs.python.org/3/library/datetime.html#timedelta-objects).
--   Note that the `inflect` module comes with
+- Note that the `inflect` module comes with
     quite a few methods, per
     [pypi.org/project/inflect](https://pypi.org/project/inflect/). You
     can install it with:
+
     ``` highlight
     pip install inflect
     ```
-
 
 ## [Demo](#demo)
 
@@ -150,24 +150,22 @@ code test_seasons.py
 to create a file called `test_seasons.py` where you’ll write tests for
 your program.
 
-
 ## [How to Test](#how-to-test)
-
 
 #### [How to Test `seasons.py`](#how-to-test-seasonspy)
 
 Here’s how to test `seasons.py` manually:
 
--   Run your program with
+- Run your program with
     `python seasons.py`. Ensure your program prompts you for a
     birthdate. Type a date one year ago from today, in the specified
     format, then press Enter. Your program should ~~sing~~ print
     `Five hundred twenty-five thousand, six hundred minutes`.
--   Run your program with
+- Run your program with
     `python seasons.py`. Type a date two years ago from today, in the
     specified format, then press Enter. Your program should print
     `One million, fifty-one thousand, two hundred minutes`.
--   Run your program with
+- Run your program with
     `python seasons.py`. Type a date of your choice, but this time use
     an invalid format. Press Enter and your program should exit using
     `sys.exit` without raising an Exception.
@@ -178,16 +176,16 @@ To test your tests, run `pytest test_seasons.py`. Try to use correct and
 incorrect versions of `seasons.py` to determine how well your tests spot
 errors:
 
--   Ensure you have a correct version of
+- Ensure you have a correct version of
     `seasons.py`. Run your tests by executing `pytest test_seasons.py`.
     `pytest` should show that all of your tests have passed.
--   Modify one of the functions you’ve
+- Modify one of the functions you’ve
     implemented in `seasons.py` and imported into `test_seasons.py`. One
     of your functions might, for example, fail to raise a `ValueError`
     when it should. Run your tests by executing
     `pytest test_seasons.py`. `pytest` should show that at least one of
     your tests has failed.
--   Continue to modify the behavior of
+- Continue to modify the behavior of
     `seasons.py`, creating (predictably) incorrect versions of your
     implementation. Run your tests by executing
     `pytest test_seasons.py`. Do the tests you expect to fail, fail?
@@ -204,7 +202,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
 
 ## [How to Submit](#how-to-submit)
 

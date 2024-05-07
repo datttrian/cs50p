@@ -115,24 +115,32 @@ Here’s how to test your code manually:
 
 - Run your program with `python meal.py`. Type `7:00` and press Enter.
   Your program should output:
+
   ``` highlight
   breakfast time
   ```
+
 - Run your program with `python meal.py`. Type `7:30` and press Enter.
   Your program should output:
+
   ``` highlight
   breakfast time
   ```
+
 - Run your program with `python meal.py`. Type `12:42` and press Enter.
   Your program should output
+
   ``` highlight
   lunch time
   ```
+
 - Run your program with `python meal.py`. Type `18:32` and press Enter.
   Your program should output
+
   ``` highlight
   dinner time
   ```
+
 - Run your program with `python meal.py`. Type `11:11` and press Enter.
   Your program should output nothing.
 

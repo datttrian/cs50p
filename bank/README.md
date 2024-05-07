@@ -88,21 +88,28 @@ Here’s how to test your code manually:
 
 - Run your program with `python bank.py`. Type `Hello` and press Enter.
   Your program should output:
+
   ``` highlight
   $0
   ```
+
 - Run your program with `python bank.py`. Type `Hello, Newman` and press
   Enter. Your program should output:
+
   ``` highlight
   $0
   ```
+
 - Run your program with `python bank.py`. Type `How you doing?` and
   press Enter. Your program should output
+
   ``` highlight
   $20
   ```
+
 - Run your program with `python bank.py`. Type `What's happening?` and
   press Enter. Your program should output
+
   ``` highlight
   $100
   ```

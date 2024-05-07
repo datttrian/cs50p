@@ -83,16 +83,21 @@ Here’s how to test your code manually:
 
 - Run your program with `python faces.py`. Type `Hello :)` and press
   Enter. Your program should output:
+
   ``` highlight
   Hello
   ```
+
 - Run your program with `python faces.py`. Type `Goodbye :(` and press
   Enter. Your program should output:
+
   ``` highlight
   Goodbye
   ```
+
 - Run your program with `python faces.py`. Type `Hello :) Goodbye :(`
   and press Enter. Your program should output
+
   ``` highlight
   Hello  Goodbye
   ```

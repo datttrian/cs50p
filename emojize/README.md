@@ -23,6 +23,7 @@ Hints
   [pypi.org/project/emoji](https://pypi.org/project/emoji/), one of
   which is `emojize`, which takes an optional, named parameter called
   `language`. You can install it with:
+
   ``` highlight
   pip install emoji
   ```
@@ -87,16 +88,21 @@ Here’s how to test your code manually:
 
 - Run your program with `python emojize.py`. Type `:1st_place_medal:`
   and press Enter. Your program should output:
+
   ``` highlight
   Output:
   ```
+
 - Run your program with `python emojize.py`. Type `:money_bag:` and
   press Enter. Your program should output:
+
   ``` highlight
   Output:
   ```
+
 - Run your program with `python emojize.py`. Type `:smile_cat:` and
   press Enter. Your program should output:
+
   ``` highlight
   Output:
   ```

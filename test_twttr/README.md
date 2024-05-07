@@ -1,5 +1,4 @@
 
-
 # [Testing my twttr](#testing-my-twttr)
 
 In a file called `twttr.py`, reimplement [Setting up my
@@ -32,7 +31,7 @@ pytest test_twttr.py
 
 Hints
 
--   Be sure to include
+- Be sure to include
 
     ``` python
     import twttr
@@ -46,9 +45,8 @@ Hints
 
     atop `test_twttr.py` so that you can call `shorten` in your tests.
 
--   Take care to `return`, not `print`, a `str` in `shorten`. Only
+- Take care to `return`, not `print`, a `str` in `shorten`. Only
     `main` should call `print`.
-
 
 ## [Before You Begin](#before-you-begin)
 
@@ -83,7 +81,6 @@ code test_twttr.py
 
 to make a file called `test_twttr.py` where you’ll write your tests.
 
-
 ## [How to Test](#how-to-test)
 
 To test your tests, run `pytest test_twttr.py`. Be sure you have a copy
@@ -91,10 +88,10 @@ of a `twttr.py` file in the same folder. Try to use correct and
 incorrect versions of `twttr.py` to determine how well your tests spot
 errors:
 
--   Ensure you have a correct version of `twttr.py`. Run your tests by
+- Ensure you have a correct version of `twttr.py`. Run your tests by
     executing `pytest test_twttr.py`. `pytest` should show that all of
     your tests have passed.
--   Modify the correct version of `twttr.py` in such a way as to create
+- Modify the correct version of `twttr.py` in such a way as to create
     a bug. Your program might, for example, mistakenly only omit
     lowercase vowels! Run your tests by executing
     `pytest test_twttr.py`. `pytest` should show that at least one of
@@ -113,7 +110,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
 
 ## [How to Submit](#how-to-submit)
 

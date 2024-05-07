@@ -25,10 +25,12 @@ Hints
   calories!
 - If `k` is a `str` and `d` is a `dict`, you can check whether `k` is a
   key in `d` with code like:
+
   ``` py
   if k in d:
     ...
   ```
+
 - Take care to output the fruit’s calories, not calories from fat!
 
 ## [Demo](#demo)
@@ -84,19 +86,25 @@ Here’s how to test your code manually:
 
 - Run your program with `python nutrition.py`. Type `Apple` and press
   Enter. Your program should output:
+
   ``` highlight
   Calories: 130
   ```
+
 - Run your program with `python nutrition.py`. Type `Avocado` and press
   Enter. Your program should output:
+
   ``` highlight
   Calories: 50
   ```
+
 - Run your program with `python nutrition.py`. Type `Sweet Cherries` and
   press Enter. Your program should output
+
   ``` highlight
   Calories: 100
   ```
+
 - Run your program with `python nutrition.py`. Type `Tomato` and press
   Enter. Your program should output nothing.
 

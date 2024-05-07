@@ -8,9 +8,9 @@ t-shirt. No need to buy one online, but like to try one on virtually?
 In a file called `shirt.py`, implement a program that expects exactly
 two command-line arguments:
 
--   in `sys.argv[1]`, the name (or path) of a
+- in `sys.argv[1]`, the name (or path) of a
     JPEG or PNG to read (i.e., open) as input
--   in `sys.argv[2]`, the name (or path) of a
+- in `sys.argv[2]`, the name (or path) of a
     JPEG or PNG to write (i.e., save) as output
 
 The program should then overlay [shirt.png](shirt.png) (which has a
@@ -29,13 +29,13 @@ and save the result with `Image.save`, per
 
 The program should instead exit via `sys.exit`:
 
--   if the user does not specify exactly two
+- if the user does not specify exactly two
     command-line arguments,
--   if the input’s and output’s names do not
+- if the input’s and output’s names do not
     end in `.jpg`, `.jpeg`, or `.png`, case-insensitively,
--   if the input’s name does not have the
+- if the input’s name does not have the
     same extension as the output’s name, or
--   if the specified input does not exist.
+- if the specified input does not exist.
 
 Assume that the input will be a photo of someone posing in just the
 right way, like [these demos](#demos), so that, when they’re resized and
@@ -50,15 +50,15 @@ communities](https://cs50.harvard.edu/python/communities)!
 
 Hints
 
--   Note that you can determine a file’s
+- Note that you can determine a file’s
     extension with `os.path.splitext`, per
     [docs.python.org/3/library/os.path.html#os.path.splitext](https://docs.python.org/3/library/os.path.html#os.path.splitext).
 
--   Note that `open` can `raise` a
+- Note that `open` can `raise` a
     `FileNotFoundError`, per
     [docs.python.org/3/library/exceptions.html#FileNotFoundError](https://docs.python.org/3/library/exceptions.html#FileNotFoundError).
 
--   Note that the `Pillow` package comes with
+- Note that the `Pillow` package comes with
     quite a few classes and methods, per
     [pypi.org/project/Pillow](https://pypi.org/project/Pillow/). You
     might find its
@@ -94,7 +94,7 @@ Hints
     second `shirt` represents a “mask” indicating which pixels in
     `photo` to update.
 
--   Note that you can open an image (e.g.,
+- Note that you can open an image (e.g.,
     `shirt.png`) in VS Code by running
 
     ``` highlight
@@ -102,8 +102,6 @@ Hints
     ```
 
     or by double-clicking its icon in VS Code’s file explorer.
-
-
 
 ## [Demo](#demo)
 
@@ -183,45 +181,53 @@ unzip muppets.zip
 
 to extract a collection of muppet photos!
 
-
-
 ## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   Run your program with `python shirt.py`.
+- Run your program with `python shirt.py`.
     Your program should exit using `sys.exit` and provide an error
     message:
+
     ``` highlight
     Too few command-line arguments
     ```
--   Be sure to download
+
+- Be sure to download
     [muppets.zip](muppets.zip) and extract a collection of muppet photos
     using `unzip muppets.zip`. Run your program with
     `python shirt.py before1.jpg before2.jpg before3.jpg`. Your program
     should output:
+
     ``` highlight
     Too many command-line arguments
     ```
--   Run your program with
+
+- Run your program with
     `python shirt.py before1.jpg invalid_format.bmp`. Your program
     should exit using `sys.exit` and provide an error message:
+
     ``` highlight
     Invalid output
     ```
--   Run your program with
+
+- Run your program with
     `python shirt.py before1.jpg after1.png`. Your program should exit
     using `sys.exit` and provide an error message:
+
     ``` highlight
     Input and output have different extensions
     ```
--   Run your program with
+
+- Run your program with
     `python shirt.py non_existent_image.jpg after1.jpg`. Your program
     should exit using `sys.exit` and provide an error message:
+
     ``` highlight
     Input does not exist
     ```
--   Run your program with
+
+- Run your program with
     `python shirt.py before1.jpg after1.jpg`. Assuming you’ve downloaded
     and unzipped [muppets.zip](muppets.zip), your program should create
     an image like the below:
@@ -239,8 +245,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
-
 
 ## [How to Submit](#how-to-submit)
 

@@ -38,9 +38,9 @@ such URL will be in one of the formats below. Assume that the value of
 will contain no more than one such URL. If the input does not contain
 any such URL at all, return `None`.
 
--   `http://youtube.com/embed/xvFZjo5PgG0`
--   `https://youtube.com/embed/xvFZjo5PgG0`
--   `https://www.youtube.com/embed/xvFZjo5PgG0`
+- `http://youtube.com/embed/xvFZjo5PgG0`
+- `https://youtube.com/embed/xvFZjo5PgG0`
+- `https://www.youtube.com/embed/xvFZjo5PgG0`
 
 Structure `watch.py` as follows, wherein you’re welcome to modify `main`
 and/or implement other functions as you see fit, but you may not import
@@ -69,21 +69,21 @@ if __name__ == "__main__":
 
 Hints
 
--   Recall that the `re` module comes with
+- Recall that the `re` module comes with
     quite a few functions, per
     [docs.python.org/3/library/re.html](https://docs.python.org/3/library/re.html),
     including `search`.
--   Recall that regular expressions support
+- Recall that regular expressions support
     quite a few special characters, per
     [docs.python.org/3/library/re.html#regular-expression-syntax](https://docs.python.org/3/library/re.html#regular-expression-syntax).
--   Because backslashes in regular
+- Because backslashes in regular
     expressions could be mistaken for escape sequences (like `\n`), best
     to use [Python’s raw string notation for regular expression
     patterns](https://docs.python.org/3/library/re.html#module-re). Just
     as format strings are prefixed with `f`, so are raw strings prefixed
     with `r`. For instance, instead of `"harvard\.edu"`, use
     `r"harvard\.edu"`.
--   Note that `re.search`, if passed a
+- Note that `re.search`, if passed a
     pattern with “capturing groups” (i.e., parentheses), returns a
     “match object,” per
     [docs.python.org/3/library/re.html#match-objects](https://docs.python.org/3/library/re.html#match-objects),
@@ -92,13 +92,12 @@ Hints
     [docs.python.org/3/library/re.html#re.Match.group](https://docs.python.org/3/library/re.html#re.Match.group),
     or collectively with `groups`, per
     [docs.python.org/3/library/re.html#re.Match.groups](https://docs.python.org/3/library/re.html#re.Match.groups).
--   Note that `*` and `+` are “greedy,”
+- Note that `*` and `+` are “greedy,”
     insofar as “they match as much text as possible,” per
     [docs.python.org/3/library/re.html#regular-expression-syntax](https://docs.python.org/3/library/re.html#regular-expression-syntax).
     Adding `?` immediately after either, a la `*?` or `+?`, “makes it
     perform the match in non-greedy or minimal fashion; as few
     characters as possible will be matched.”
-
 
 ## [Demo](#demo)
 
@@ -148,12 +147,11 @@ code watch.py
 
 to make a file called `watch.py` where you’ll write your program.
 
-
 ## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   Run your program with `python watch.py`.
+- Run your program with `python watch.py`.
     Ensure your program prompts you for HTML, then copy/paste the below:
 
     ``` highlight
@@ -165,7 +163,7 @@ Here’s how to test your code manually:
     attribute is prefixed with `http://www.youtube.com/embed/`, the
     resulting link is prefixed with `https://youtu.be/`.
 
--   Run your program with `python watch.py`.
+- Run your program with `python watch.py`.
     Ensure your program prompts you for HTML, then copy/paste the below:
 
     ``` highlight
@@ -175,7 +173,7 @@ Here’s how to test your code manually:
     Press enter and your program should still output
     `https://youtu.be/xvFZjo5PgG0`.
 
--   Run your program with `python watch.py`.
+- Run your program with `python watch.py`.
     Ensure your program prompts you for HTML, then copy/paste the below:
 
     ``` highlight
@@ -197,7 +195,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
 
 ## [How to Submit](#how-to-submit)
 

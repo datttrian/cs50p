@@ -29,7 +29,7 @@ validate whether the email address’s domain name actually exists.
 
 Hints
 
--   Note that you can install
+- Note that you can install
     validator-collection with:
 
     ``` highlight
@@ -38,7 +38,7 @@ Hints
 
     Click **Homepage** to find your way to the library’s documentation.
 
--   Note that you can install validators
+- Note that you can install validators
     with:
 
     ``` highlight
@@ -46,7 +46,6 @@ Hints
     ```
 
     Click **Homepage** to find your way to the library’s documentation.
-
 
 ## [Demo](#demo)
 
@@ -96,22 +95,21 @@ code response.py
 
 to make a file called `response.py` where you’ll write your program.
 
-
 ## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   Run your program with
+- Run your program with
     `python response.py`. Ensure your program prompts you for an email,
     then type `malan@harvard.edu`, followed by Enter. Your program
     should output `Valid`.
--   Run your program with
+- Run your program with
     `python response.py`. Type your own email, followed by Enter. Your
     program should output `Valid`.
--   Run your program with
+- Run your program with
     `python response.py`. Type `malan@@@harvard.edu`, followed by Enter.
     Your program should output `Invalid`.
--   Run your program with
+- Run your program with
     `python response.py`. Mistype your own email, including an extra `.`
     before `.com`, for example. Press enter and your program should
     output `Invalid`.
@@ -128,7 +126,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
 
 ## [How to Submit](#how-to-submit)
 

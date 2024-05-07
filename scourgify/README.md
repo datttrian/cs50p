@@ -13,7 +13,7 @@ values are in a consistent, if not more convenient, format. Consider,
 for instance, this CSV file of students, [before.csv](before.csv),
 below:
 
-```
+``` highlight
 name,house
 "Abbott, Hannah",Hufflepuff
 "Bell, Katie",Gryffindor

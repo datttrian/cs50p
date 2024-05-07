@@ -92,12 +92,14 @@ Here’s how to test your code manually:
 
 - Run your program with `python game.py`. Type `cat` at a prompt that
   says `Level:` and press Enter. Your program should reprompt you:
+
   ``` highlight
   Level:
   ```
 
 - Run your program with `python game.py`. Type `-1` at a prompt that
   says `Level:` and press Enter. Your program should reprompt you:
+
   ``` highlight
   Level:
   ```
@@ -105,6 +107,7 @@ Here’s how to test your code manually:
 - Run your program with `python game.py`. Type `10` at a prompt that
   says `Level:` and press Enter. Your program should now be ready to
   accept guesses:
+
   ``` highlight
   Guess:
   ```
@@ -112,6 +115,7 @@ Here’s how to test your code manually:
 - Run your program with `python game.py`. Type `10` at a prompt that
   says `Level:` and press Enter. Then type `cat`. Your program should
   reprompt you:
+
   ``` highlight
   Guess:
   ```
@@ -119,6 +123,7 @@ Here’s how to test your code manually:
 - Run your program with `python game.py`. Type `10` at a prompt that
   says `Level:` and press Enter. Then type `-1`. Your program should
   reprompt you:
+
   ``` highlight
   Guess:
   ```

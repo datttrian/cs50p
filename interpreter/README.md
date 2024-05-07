@@ -91,21 +91,28 @@ Here’s how to test your code manually:
 
 - Run your program with `python interpreter.py`. Type `1 + 1` and press
   Enter. Your program should output:
+
   ``` highlight
   2.0
   ```
+
 - Run your program with `python interpreter.py`. Type `2 - 3` and press
   Enter. Your program should output:
+
   ``` highlight
   -1.0
   ```
+
 - Run your program with `python interpreter.py`. Type `2 * 2` and press
   Enter. Your program should output
+
   ``` highlight
   4.0
   ```
+
 - Run your program with `python interpreter.py`. Type `50 / 5` and press
   Enter. Your program should output
+
   ``` highlight
   10.0
   ```

@@ -30,6 +30,7 @@ Hints
   over each of its characters in a loop. For instance, if `s` is a
   `str`, you could print each of its characters, one at a time, with
   code like:
+
   ``` py
   for c in s:
     print(c, end="")
@@ -89,16 +90,21 @@ Here’s how to test your code manually:
 
 - Run your program with `python camel.py`. Type `name` and press Enter.
   Your program should output:
+
   ``` highlight
   name
   ```
+
 - Run your program with `python camel.py`. Type `firstName` and press
   Enter. Your program should output:
+
   ``` highlight
   first_name
   ```
+
 - Run your program with `python camel.py`. Type `preferredFirstName` and
   press Enter. Your program should output
+
   ``` highlight
   preferred_first_name
   ```

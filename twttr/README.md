@@ -15,6 +15,7 @@ Hints
   over each of its characters in a loop. For instance, if `s` is a
   `str`, you could print each of its characters, one at a time, with
   code like:
+
   ``` highlight
   for c in s:
   print(c, end="")
@@ -74,16 +75,21 @@ Here’s how to test your code manually:
 
 - Run your program with `python twttr.py`. Type `Twitter` and press
   Enter. Your program should output:
+
   ``` highlight
   Twttr
   ```
+
 - Run your program with `python twttr.py`. Type `What's your name?` and
   press Enter. Your program should output:
+
   ``` highlight
   Wht's yr nm?
   ```
+
 - Run your program with `python twttr.py`. Type `CS50` and press Enter.
   Your program should output
+
   ``` highlight
   CS50
   ```

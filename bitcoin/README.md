@@ -25,6 +25,7 @@ In a file called `bitcoin.py`, implement a program that:
   any
   [exceptions](https://requests.readthedocs.io/en/latest/api/#exceptions),
   as with code like:
+
   ``` py
   import requests
 
@@ -33,6 +34,7 @@ In a file called `bitcoin.py`, implement a program that:
     except requests.RequestException:
         ...
   ```
+
 - Outputs the current cost of $n$ Bitcoins in USD to four decimal
   places, using `,` as a thousands separator.
 
@@ -47,10 +49,13 @@ Hints
   and `json`, per
   [requests.readthedocs.io/en/latest/user/quickstart/#json-response-content](https://requests.readthedocs.io/en/latest/user/quickstart/#json-response-content).
   You can install it with:
+
   ``` highlight
   pip install requests
   ```
+
 - Note that CoinDesk’s API returns a JSON response like:
+
   ``` highlight
   {
      "time":{
@@ -85,10 +90,12 @@ Hints
      }
   }
   ```
+
 - Recall that you can format USD to four decimal places with a
   [thousands
   separator](https://docs.python.org/3/library/string.html#formatspec)
   with code like:
+
   ``` highlight
   print(f"${amount:,.4f}")
   ```
@@ -148,14 +155,18 @@ Here’s how to test your code manually:
 
 - Run your program with `python bitcoin.py`. Your program should use
   `sys.exit` to exit with an error message:
+
   ``` highlight
   Missing command-line argument
   ```
+
 - Run your program with `python bitcoin.py cat`. Your program should use
   `sys.exit` to exit with an error message:
+
   ``` highlight
   Command-line argument is not a number
   ```
+
 - Run your program with `python bitcoin.py 1`. Your program should
   output the price of a single Bitcoin to four decimal places, using `,`
   as a [thousands

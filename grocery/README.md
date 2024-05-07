@@ -16,6 +16,7 @@ Hints
   catching an
   [`EOFError`](https://docs.python.org/3/library/exceptions.html#EOFError)
   with code like:
+
   ``` py
   try:
     item = input()
@@ -45,7 +46,6 @@ Hints
 - Be sure to avoid or catch any
   [`KeyError`](https://docs.python.org/3/library/exceptions.html#KeyError).
 - Note that you can sort a dictionary’s keys alphabetically by passing that dictionary as an argument to [`sorted`](https://docs.python.org/3/library/functions.html#sorted).
-
 
 ## [Demo](#demo)
 
@@ -112,19 +112,24 @@ Here’s how to test your code manually:
 - Run your program with `python grocery.py`. Type `mango` and press
   Enter, then type `strawberry` and press Enter, followed by control-d.
   Your program should output:
+
   ``` highlight
   1 MANGO
   1 STRAWBERRY
   ```
+
 - Run your program with `python grocery.py`. Type `milk` and press
   Enter, then type `milk` again and press Enter, followed by control-d.
   Your program should output:
+
   ``` highlight
   2 MILK
   ```
+
 - Run your program with `python grocery.py`. Type `tortilla` and press
   Enter, then type `sweet potato` and press Enter, followed by
   control-d. Your program should output:
+
   ``` highlight
   1 SWEET POTATO
   1 TORTILLA

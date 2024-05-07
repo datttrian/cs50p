@@ -103,16 +103,21 @@ Here’s how to test your code manually:
 
 - Run your program with `python tip.py`. Type `$50.00` and press Enter.
   Then, type `15%` and press Enter. Your program should output:
+
   ``` highlight
   Leave $7.50
   ```
+
 - Run your program with `python tip.py`. Type `$100.00` and press Enter.
   Then, type `18%` and press Enter. Your program should output:
+
   ``` highlight
   Leave $18.00
   ```
+
 - Run your program with `python tip.py`. Type `$15.00` and press Enter.
   Then, type `25%` and press Enter. Your program should output
+
   ``` highlight
   Leave $3.75
   ```

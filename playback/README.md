@@ -63,18 +63,23 @@ Here’s how to test your code manually:
 
 - Run your program with `python playback.py`. Type `This is CS50` and
   press Enter. Your program should output:
+
   ``` highlight
   This...is...CS50
   ```
+
 - Run your program with `python playback.py`. Type
   `This is our week on functions` and press Enter. Your program should
   output:
+
   ``` highlight
   This...is...our...week...on...functions
   ```
+
 - Run your program with `python playback.py`. Type
   `Let's implement a function called hello` and press Enter. Your
   program should output
+
   ``` highlight
   Let's...implement...a...function...called...hello
   ```

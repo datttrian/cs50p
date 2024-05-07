@@ -36,6 +36,7 @@ should exit via `sys.exit` with an error message.
 Hints
 
 - You can install `pyfiglet` with:
+
   ``` highlight
   pip install pyfiglet
   ```
@@ -147,21 +148,28 @@ Here’s how to test your code manually:
 
 - Run your program with `python figlet.py test`. Your program should
   exit via `sys.exit` and print an error message:
+
   ``` highlight
   Invalid usage
   ```
+
 - Run your program with `python figlet.py -a slant`. Your program should
   exit via `sys.exit` and print an error message:
+
   ``` highlight
   Invalid usage
   ```
+
 - Run your program with `python figlet.py -f invalid_font`. Your program
   should exit via `sys.exit` and print an error message:
+
   ``` highlight
   Invalid usage
   ```
+
 - Run your program with `python figlet.py -f slant`. Type `CS50`. Your
   program should print the following:
+
   ``` highlight
      ___________ __________
   / ____/ ___// ____/ __ \
@@ -169,8 +177,10 @@ Here’s how to test your code manually:
   / /___ ___/ /___/ / /_/ /
   \____//____/_____/\____/
   ```
+
 - Run your program with `python figlet.py -f rectangles`. Type
   `Hello, world`. Your program should print the following:
+
   ``` highlight
    _____     _ _                        _   _
   |  |  |___| | |___      _ _ _ ___ ___| |_| |
@@ -178,8 +188,10 @@ Here’s how to test your code manually:
   |__|__|___|_|_|___| |  |_____|___|_| |_|___|
     |_|
   ```
+
 - Run your program with `python figlet.py -f alphabet`. Type `Moo`. Your
   program should print the following:
+
   ``` highlight
   M   M
   MM MM

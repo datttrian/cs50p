@@ -156,8 +156,8 @@ and that there will be a space before each. Assume that these times are
 representative of actual times, not necessarily 9:00 AM and 5:00 PM
 specifically.
 
--   `9:00 AM to 5:00 PM`
--   `9 AM to 5 PM`
+- `9:00 AM to 5:00 PM`
+- `9 AM to 5 PM`
 
 Raise a `ValueError` instead if the input to `convert` is not in either
 of those formats or if either time is invalid (e.g., `12:60 AM`,
@@ -202,16 +202,16 @@ pytest test_working.py
 
 Hints
 
--   Recall that the `re` module comes with
+- Recall that the `re` module comes with
     quite a few functions, per
     [docs.python.org/3/library/re.html](https://docs.python.org/3/library/re.html),
     including `search`.
 
--   Recall that regular expressions support
+- Recall that regular expressions support
     quite a few special characters, per
     [docs.python.org/3/library/re.html#regular-expression-syntax](https://docs.python.org/3/library/re.html#regular-expression-syntax).
 
--   Because backslashes in regular
+- Because backslashes in regular
     expressions could be mistaken for escape sequences (like `\n`), best
     to use [Python’s raw string notation for regular expression
     patterns](https://docs.python.org/3/library/re.html#module-re), else
@@ -220,7 +220,7 @@ Hints
     strings are prefixed with `f`, so are raw strings prefixed with `r`.
     For instance, instead of `"harvard\.edu"`, use `r"harvard\.edu"`.
 
--   Note that `re.search`, if passed a
+- Note that `re.search`, if passed a
     pattern with “capturing groups” (i.e., parentheses), returns a
     “match object,” per
     [docs.python.org/3/library/re.html#match-objects](https://docs.python.org/3/library/re.html#match-objects),
@@ -230,7 +230,7 @@ Hints
     or collectively with `groups`, per
     [docs.python.org/3/library/re.html#re.Match.groups](https://docs.python.org/3/library/re.html#re.Match.groups).
 
--   Note that you can format an `int` with
+- Note that you can format an `int` with
     leading zeroes with code like
 
     ``` python
@@ -303,53 +303,51 @@ your program.
 
 Here’s how to test `working.py` manually:
 
--   Run your program with
+- Run your program with
     `python working.py`. Ensure your program prompts you for a time.
     Type `9 AM to 5 PM`, followed by Enter. Your program should output
     `09:00 to 17:00`.
--   Run your program with
+- Run your program with
     `python working.py`. Type `9:00 AM to 5:00 PM`, followed by Enter.
     Your program should again output `09:00 to 17:00`.
--   Run your program with
+- Run your program with
     `python working.py`. Ensure your program prompts you for a time.
     Type `10 PM to 8 AM`, followed by Enter. Your program should output
     `22:00 to 08:00`.
--   Run your program with
+- Run your program with
     `python working.py`. Ensure your program prompts you for a time.
     Type `10:30 PM to 8:50 AM`, followed by Enter. Your program should
     again output `22:30 to 08:50`.
--   Run your program with
+- Run your program with
     `python working.py`. Ensure your program prompts you for a time. Try
     intentionally inducing a `ValueError` by typing
     `9:60 AM to 5:60 PM`, followed by Enter. Your program should indeed
     raise a `ValueError`.
--   Run your program with
+- Run your program with
     `python working.py`. Ensure your program prompts you for a time. Try
     intentionally inducing a `ValueError` by typing `9 AM - 5 PM`,
     followed by Enter. Your program should indeed raise a `ValueError`.
--   Run your program with
+- Run your program with
     `python working.py`. Ensure your program prompts you for a time. Try
     intentionally inducing a `ValueError` by typing
     `09:00 AM - 17:00 PM`, followed by Enter. Your program should indeed
     raise a `ValueError`.
 
-
 #### [How to Test `test_working.py`](#how-to-test-test_workingpy)
-
 
 To test your tests, run `pytest test_working.py`. Try to use correct and
 incorrect versions of `working.py` to determine how well your tests spot
 errors:
 
--   Ensure you have a correct version of
+- Ensure you have a correct version of
     `working.py`. Run your tests by executing `pytest test_working.py`.
     `pytest` should show that all of your tests have passed.
--   Modify the correct version of
+- Modify the correct version of
     `working.py`, particularly its function `convert`. Your program
     might, for example, fail to raise a `ValueError` when it should. Run
     your tests by executing `pytest test_working.py`. `pytest` should
     show that at least one of your tests has failed.
--   Similarly, modify the correct version of
+- Similarly, modify the correct version of
     `working.py`, changing the return values of `convert`. Your program
     might, for example, mistakenly omit minutes. Run your tests by
     executing `pytest test_working.py`. `pytest` should show that at

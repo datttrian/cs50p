@@ -100,11 +100,14 @@ Here’s how to test your code manually:
 
 - Run your program with `python extensions.py`. Type `happy.jpg` and
   press Enter. Your program should output:
+
   ``` highlight
   image/jpeg
   ```
+
 - Run your program with `python extensions.py`. Type `document.pdf` and
   press Enter. Your program should output:
+
   ``` highlight
   application/pdf
   ```

@@ -129,14 +129,18 @@ Here’s how to test your code manually:
 
 - Run your program with `python outdated.py`. Type `9/8/1636` and press
   Enter. Your program should output:
+
   ``` highlight
   1636-09-08
   ```
+
 - Run your program with `python outdated.py`. Type `September 8, 1636`
   and press Enter. Your program should output:
+
   ``` highlight
   1636-09-08
   ```
+
 - Run your program with `python outdated.py`. Type `23/6/1912` and press
   Enter. Your program should reprompt the user.
 - Run your program with `python outdated.py`. Type `December 80, 1980`

@@ -1,5 +1,4 @@
 
-
 # [NUMB3RS](#numb3rs)
 
 In Season 5, Episode 23 of
@@ -58,14 +57,14 @@ pytest test_numb3rs.py
 
 Hints
 
--   Recall that the `re` module comes with
+- Recall that the `re` module comes with
     quite a few functions, per
     [docs.python.org/3/library/re.html](https://docs.python.org/3/library/re.html),
     including `search`.
--   Recall that regular expressions support
+- Recall that regular expressions support
     quite a few special characters, per
     [docs.python.org/3/library/re.html#regular-expression-syntax](https://docs.python.org/3/library/re.html#regular-expression-syntax).
--   Because backslashes in regular
+- Because backslashes in regular
     expressions could be mistaken for escape sequences (like `\n`), best
     to use [Python’s raw string notation for regular expression
     patterns](https://docs.python.org/3/library/re.html#module-re), else
@@ -73,7 +72,7 @@ Hints
     `DeprecationWarning: invalid escape sequence`. Just as format
     strings are prefixed with `f`, so are raw strings prefixed with `r`.
     For instance, instead of `"harvard\.edu"`, use `r"harvard\.edu"`.
--   Note that `re.search`, if passed a
+- Note that `re.search`, if passed a
     pattern with “capturing groups” (i.e., parentheses), returns a
     “match object,” per
     [docs.python.org/3/library/re.html#match-objects](https://docs.python.org/3/library/re.html#match-objects),
@@ -82,7 +81,6 @@ Hints
     [docs.python.org/3/library/re.html#re.Match.group](https://docs.python.org/3/library/re.html#re.Match.group),
     or collectively with `groups`, per
     [docs.python.org/3/library/re.html#re.Match.groups](https://docs.python.org/3/library/re.html#re.Match.groups).
-
 
 ## [Demo](#demo)
 
@@ -146,28 +144,26 @@ code test_numb3rs.py
 to create a file called `test_numb3rs.py` where you’ll write tests for
 your program.
 
-
 ## [How to Test](#how-to-test)
-
 
 #### [How to Test `numb3rs.py`](#how-to-test-numb3rspy)
 
 Here’s how to test `numb3rs.py` manually:
 
--   Run your program with
+- Run your program with
     `python numb3rs.py`. Ensure your program prompts you for an IPv4
     address. Type `127.0.0.1`, followed by Enter. Your `validate`
     function should return `True`.
--   Run your program with
+- Run your program with
     `python numb3rs.py`. Type `255.255.255.255`, followed by Enter. Your
     `validate` function should return `True`.
--   Run your program with
+- Run your program with
     `python numb3rs.py`. Type `512.512.512.512`, followed by Enter. Your
     `validate` function should return `False`.
--   Run your program with
+- Run your program with
     `python numb3rs.py`. Type `1.2.3.1000`, followed by Enter. Your
     `validate` function should return `False`.
--   Run your program with
+- Run your program with
     `python numb3rs.py`. Type `cat`, followed by Enter. Your `validate`
     function should return `False`.
 
@@ -177,15 +173,15 @@ To test your tests, run `pytest test_numb3rs.py`. Try to use correct and
 incorrect versions of `numb3rs.py` to determine how well your tests spot
 errors:
 
--   Ensure you have a correct version of
+- Ensure you have a correct version of
     `numb3rs.py`. Run your tests by executing `pytest test_numb3rs.py`.
     `pytest` should show that all of your tests have passed.
--   Modify the `validate` function in the
+- Modify the `validate` function in the
     correct version of `numb3rs.py`. `validate` might, for example, only
     check whether the first byte of the IPv4 address is valid. Run your
     tests by executing `pytest test_numb3rs.py`. `pytest` should show
     that at least one of your tests has failed.
--   Again modify the correct version of
+- Again modify the correct version of
     `numb3rs.py`. `validate` might, for example, mistakenly return
     `True` when the user inputs an incorrect IPv4 format. Run your tests
     by executing `pytest test_numb3rs.py`. `pytest` should show that at
@@ -203,7 +199,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
 
 ## [How to Submit](#how-to-submit)
 

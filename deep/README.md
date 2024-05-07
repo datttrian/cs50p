@@ -91,21 +91,28 @@ Here’s how to test your code manually:
 
 - Run your program with `python deep.py`. Type `42` and press Enter.
   Your program should output:
+
   ``` highlight
   Yes
   ```
+
 - Run your program with `python deep.py`. Type `Forty Two` and press
   Enter. Your program should output:
+
   ``` highlight
   Yes
   ```
+
 - Run your program with `python deep.py`. Type `forty-two` and press
   Enter. Your program should output
+
   ``` highlight
   Yes
   ```
+
 - Run your program with `python deep.py`. Type `50` and press Enter.
   Your program should output
+
   ``` highlight
   No
   ```

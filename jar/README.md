@@ -9,12 +9,12 @@ jar](https://en.wikipedia.org/wiki/Cookie_jar) in which to store
 cookies. In a file called `jar.py`, implement a `class` called `Jar`
 with these methods:
 
--   `__init__` should initialize a cookie jar
+- `__init__` should initialize a cookie jar
     with the given `capacity`, which represents the maximum number of
     cookies that can fit in the cookie jar. If `capacity` is not a
     non-negative `int`, though, `__init__` should instead raise a
     `ValueError`.
--   `__str__` should return a `str` with *n*
+- `__str__` should return a `str` with *n*
     <img src="https://twemoji.maxcdn.com/v/14.0.2/72x72/1f36a.png"
     class="emoji" draggable="false" alt="🍪" />, where *n* is the number
     of cookies in the cookie jar. For instance, if there are 3 cookies
@@ -23,16 +23,16 @@ with these methods:
     class="emoji" draggable="false" alt="🍪" /><img src="https://twemoji.maxcdn.com/v/14.0.2/72x72/1f36a.png"
     class="emoji" draggable="false" alt="🍪" /><img src="https://twemoji.maxcdn.com/v/14.0.2/72x72/1f36a.png"
     class="emoji" draggable="false" alt="🍪" />`"`
--   `deposit` should add `n` cookies to the
+- `deposit` should add `n` cookies to the
     cookie jar. If adding that many would exceed the cookie jar’s
     capacity, though, `deposit` should instead raise a `ValueError`.
--   `withdraw` should remove `n` cookies from
+- `withdraw` should remove `n` cookies from
     the cookie jar. Nom nom nom. If there aren’t that many cookies in
     the cookie jar, though, `withdraw` should instead raise a
     `ValueError`.
--   `capacity` should return the cookie jar’s
+- `capacity` should return the cookie jar’s
     capacity.
--   `size` should return the number of
+- `size` should return the number of
     cookies actually in the cookie jar, initially `0`.
 
 Structure your `class` per the below. You may not alter these methods’
@@ -113,8 +113,6 @@ def test_withdraw():
     ...
 ```
 
-
-
 ## [Demo](#demo)
 
 You’re welcome, but not required, to implement a `main` function, so
@@ -123,8 +121,6 @@ this is all we can demo!
 <img src="giphy2.gif" class="w-50" alt="Cookie Monster" />
 
 Source: Sesame Street
-
-
 
 ## [Before You Begin](#before-you-begin)
 
@@ -167,30 +163,28 @@ code test_jar.py
 to create a file called `test_jar.py` where you can write tests for your
 program.
 
-
-
 ## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   Open your `test_jar.py` file and import
+- Open your `test_jar.py` file and import
     your `Jar` class with `from jar import Jar`. Create a function
     called `test_init`, wherein you create a new instance of `Jar` with
     `jar = Jar()`. `assert` that this jar has the capacity it should,
     then run your tests with `pytest test_jar.py`.
--   Add another function to your
+- Add another function to your
     `test_jar.py` file called `test_str`. In `test_str`, create a new
     instance of your `Jar` class and `deposit` a few cookies. `assert`
     that `str(jar)` prints out as many cookies as have been `deposit`ed,
     then run your tests with `pytest test_jar.py`.
--   Add another function to your
+- Add another function to your
     `test_jar.py` file called `test_deposit`. In `test_deposit`, create
     a new instance of your `Jar` class and `deposit` a few cookies.
     `assert` that the jar’s `size` attribute is as large as the number
     of cookies that have been `deposit`ed. Also `assert` that, if you
     deposit more than the jar’s `capacity`, `deposit` should raise a
     `ValueError`. Run your tests with `pytest test_jar.py`.
--   Add another function to your
+- Add another function to your
     `test_jar.py` file called `test_withdraw`. In `test_withdraw`,
     create a new instance of your `Jar` class and first `deposit` a few
     cookies. `assert` that `withdraw`ing from the jar leaves the
@@ -211,8 +205,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
-
 
 ## [How to Submit](#how-to-submit)
 

@@ -3,9 +3,9 @@
 One of David’s first toys as a child, funny enough, was [Little
 Professor](https://en.wikipedia.org/wiki/Little_Professor), a
 “calculator” that would generate ten different math problems for David
-to solve. For instance, if the toy were to display `4 + 0 = `, David
+to solve. For instance, if the toy were to display `4 + 0 =`, David
 would (hopefully) answer with `4`. If the toy were to display
-`4 + 1 = `, David would (hopefully) answer with `5`. If David were to
+`4 + 1 =`, David would (hopefully) answer with `5`. If David were to
 answer incorrectly, the toy would display `EEE`. And after three
 incorrect answers for the same problem, the toy would simply display the
 correct answer (e.g., `4 + 0 = 4` or `4 + 1 = 5`).
@@ -14,7 +14,7 @@ In a file called `professor.py`, implement a program that:
 
 - Prompts the user for a level, $n$. If the user does not input `1`,
   `2`, or `3`, the program should prompt again.
-- Randomly generates ten (10) math problems formatted as `X + Y = `,
+- Randomly generates ten (10) math problems formatted as `X + Y =`,
   wherein each of `X` and `Y` is a non-negative integer with $n$ digits.
   No need to support operations other than addition (`+`).
 - Prompts the user to solve each of those problems. If an answer is not
@@ -54,9 +54,11 @@ if __name__ == "__main__":
 Hints
 
 - Note that you can raise an exception like `ValueError` with code like:
+
   ``` highlight
   raise ValueError
   ```
+
 - Note that the `random` module comes with quite a few functions, per
   [docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html).
 
@@ -130,12 +132,14 @@ Here’s how to test your code manually:
 
 - Run your program with `python professor.py`. Type `-1` and press
   Enter. Your program should reprompt you:
+
   ``` highlight
   Level:
   ```
 
 - Run your program with `python professor.py`. Type `4` and press Enter.
   Your program should reprompt you:
+
   ``` highlight
   Level:
   ```

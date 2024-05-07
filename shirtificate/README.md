@@ -15,19 +15,19 @@ user for their name and outputs, using
 called `shirtificate.pdf` similar to [this one for John
 Harvard](jharvard.pdf), with these specifications:
 
--   The
+- The
     [orientation](https://py-pdf.github.io/fpdf2/PageFormatAndOrientation.html)
     of the PDF should be Portrait.
--   The
+- The
     [format](https://py-pdf.github.io/fpdf2/PageFormatAndOrientation.html)
     of the PDF should be A4, which is 210mm wide by 297mm tall.
--   The top of the PDF should say “CS50
+- The top of the PDF should say “CS50
     Shirtificate” as [text](https://py-pdf.github.io/fpdf2/Text.html),
     centered horizontally.
--   The shirt’s
+- The shirt’s
     [image](https://py-pdf.github.io/fpdf2/Images.html) should be
     centered horizontally.
--   The user’s name should be on top of the
+- The user’s name should be on top of the
     shirt, in white
     [text](https://py-pdf.github.io/fpdf2/TextStyling.html).
 
@@ -49,28 +49,29 @@ communities](https://cs50.harvard.edu/python/communities)!
 
 Hints
 
--   Note that fpdf2 comes with a `class`
+- Note that fpdf2 comes with a `class`
     called `FPDF`, which has quite a few methods, per
     [py-pdf.github.io/fpdf2/fpdf/#fpdf.FPDF](https://py-pdf.github.io/fpdf2/fpdf/#fpdf.FPDF).
     You can install it with:
+
     ``` highlight
     pip install fpdf2
     ```
--   Note that you can extend `FPDF` and
+
+- Note that you can extend `FPDF` and
     instantiate your own subclass thereof in order to add a header to
     every page of a PDF, per
     [py-pdf.github.io/fpdf2/Tutorial.html#tuto-2-header-footer-page-break-and-image](https://py-pdf.github.io/fpdf2/Tutorial.html#tuto-2-header-footer-page-break-and-image).
     Or you can add it as text yourself.
--   Note that you can disable automatic page
+- Note that you can disable automatic page
     breaks, which might otherwise cause your PDF to overflow from one
     page to two, with `set_auto_page_break`, per
     [py-pdf.github.io/fpdf2/Margins.html](https://py-pdf.github.io/fpdf2/Margins.html).
--   Note that a
+- Note that a
     [cell](https://py-pdf.github.io/fpdf2/Text.html#cell)’s height can
     be negative, to move it upward.
--   You can open `shirtificate.pdf`, once
+- You can open `shirtificate.pdf`, once
     outputted, by clicking it in VS Code’s file explorer.
-
 
 ## [Demo](#demo)
 
@@ -79,7 +80,6 @@ $ python shirtificate.py
 Name: John Harvard                                                              
 $
 ```
-
 
 ## [Before You Begin](#before-you-begin)
 
@@ -121,17 +121,16 @@ code shirtificate.py
 
 to make a file called `shirtificate.py` where you’ll write your program.
 
-
 ## [How to Test](#how-to-test)
 
 Here’s how to test your code manually:
 
--   Run your program with `shirtificate.py`.
+- Run your program with `shirtificate.py`.
     Make sure your program prompts you for a name. Enter your own name
     and press Enter. Your program should create a file,
     `shirtificate.pdf`, containing the name you entered as input
     overlaid on a rendering of `shirtificate.png`.
--   Try a few other names for good measure,
+- Try a few other names for good measure,
     too!
 
 You can execute the below to check your code using `check50`, a program
@@ -146,7 +145,6 @@ Green smilies mean your program has passed a test! Red frownies will
 indicate your program output something unexpected. Visit the URL that
 `check50` outputs to see the input `check50` handed to your program,
 what output it expected, and what output your program actually gave.
-
 
 ## [How to Submit](#how-to-submit)
 

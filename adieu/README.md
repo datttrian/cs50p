@@ -37,6 +37,7 @@ Hints
 - Note that the `inflect` module comes with quite a few methods, per
   [pypi.org/project/inflect](https://pypi.org/project/inflect/). You can
   install it with:
+
   ``` highlight
   pip install inflect
   ```
@@ -101,18 +102,23 @@ Here’s how to test your code manually:
 
 - Run your program with `python adieu.py`. Type `Liesl` and press Enter,
   followed by control-d. Your program should output:
+
   ``` highlight
   Adieu, adieu, to Liesl
   ```
+
 - Run your program with `python adieu.py`. Type `Liesl` and press Enter,
   then type `Friedrich` and press Enter, followed by control-d. Your
   program should output:
+
   ``` highlight
   Adieu, adieu, to Liesl and Friedrich
   ```
+
 - Run your program with `python adieu.py`. Type `Liesl` and press Enter,
   then type `Friedrich` and press Enter. Now type `Louisa` and press
   Enter, followed by control-d. Your program should output:
+
   ``` highlight
   Adieu, adieu, to Liesl, Friedrich, and Louisa
   ```

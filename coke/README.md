@@ -83,7 +83,7 @@ to make a file called `coke.py` where you’ll write your program.
 
 Here’s how to test your code manually:
 
-- Run your program with `python coke.py`. At your `Insert Coin: `
+- Run your program with `python coke.py`. At your `Insert Coin:`
   prompt, type `25` and press Enter. Your program should output:
 
   ``` highlight
@@ -92,7 +92,7 @@ Here’s how to test your code manually:
 
   and continue prompting the user for coins.
 
-- Run your program with `python coke.py`. At your `Insert Coin: `
+- Run your program with `python coke.py`. At your `Insert Coin:`
   prompt, type `10` and press Enter. Your program should output:
 
   ``` highlight
@@ -101,7 +101,7 @@ Here’s how to test your code manually:
 
   and continue prompting the user for coins.
 
-- Run your program with `python coke.py`. At your `Insert Coin: `
+- Run your program with `python coke.py`. At your `Insert Coin:`
   prompt, type `5` and press Enter. Your program should output:
 
   ``` highlight
@@ -110,7 +110,7 @@ Here’s how to test your code manually:
 
   and continue prompting the user for coins.
 
-- Run your program with `python coke.py`. At your `Insert Coin: `
+- Run your program with `python coke.py`. At your `Insert Coin:`
   prompt, type `30` and press Enter. Your program should output:
 
   ``` highlight
@@ -120,17 +120,19 @@ Here’s how to test your code manually:
   because the machine doesn’t accept 30-cent coins! Your program should
   then continue prompting the user for coins.
 
-- Run your program with `python coke.py`. At your `Insert Coin: `
+- Run your program with `python coke.py`. At your `Insert Coin:`
   prompt, type `25` and press Enter, then type `25` again and press
   Enter. Your program should halt and display:
+
   ``` highlight
   Change Owed: 0
   ```
 
-- Run your program with `python coke.py`. At your `Insert Coin: `
+- Run your program with `python coke.py`. At your `Insert Coin:`
   prompt, type `25` and press Enter, then type `10` and press Enter.
   Type `25` again and press Enter, after which your program should halt
   and display:
+
   ``` highlight
   Change Owed: 10
   ```
